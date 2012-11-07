@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Data Service : Symbol Lookup
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_0" href="#Summary:_0" title="Link to this Section">&#0182;</a></h3>Returns a list of Symbols based on search criteria.    <br /><br /><i>note: result set is limited to 500</i><br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=1" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_1" href="#Details:_1" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>GET</b></li><li>Path: /data/symbols/search/{criteria}</li><li>URI Parameters:<ul><li>{criteria}=key/value pairs search criteria:<ul><li><b>C</b>: Asset categories. (Optional) Possible values:<ul><li><b>Future</b> or <b>FU</b></li><li><b>FutureOption</b> or <b>FO</b></li><li><b>Stock</b> or <b>S</b> (Default)</li><li><b>StockOption</b> or <b>SO</b> (If Root is specified, default category)</li><li><b>Index</b> or <b>IDX</b></li><li><b>CurrencyOption</b> or <b>CO</b></li><li><b>MutualFund</b> or <b>MF</b></li><li><b>MoneyMarketFund</b> or <b>MMF</b></li><li><b>IndexOption</b> or <b>IO</b></li><li><b>Bond</b> or <b>B</b></li><li><b>Forex</b> or <b>FX</b></li><li><strike><b>FutureRoot</b> or <b>FR</b></strike><br /> <br /> </li></ul></li><li><b>Cnt</b>: Country where the symbol is traded in. (Optional) Possible values:<ul><li>ALL if not presented (Default)</li><li>US</li><li>DE</li><li>CA<br /></li></ul></li></ul></li></ul></li></ul><br /><ul><li>Authentication: Requires a valid access token.  Can use the Client Credentials grant type.<br /></li></ul><br /><ul><li>Returns: <a target="mainFrame" class="pagelink" href="WebAPI-Docs.Symbol.htm" title="DataObject : Symbol">Symbol</a> object<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=2" class="editsectionlink"></a><h3 class="separator">For Equities lookups<a target="mainFrame" class="headeranchor" id="For_Equities_lookups_2" href="#For_Equities_lookups_2" title="Link to this Section">&#0182;</a></h3>The following behavior is also applied to categories which are not futures, options, or forex related.
+The user must provide either the name, description or both 
+<ul><li><b>N</b>: partial/full symbol name, will return all symbols that contain the provided name value</li><li><b>Desc</b>: Name of the company</li><li><b>Flg</b>: indicates whether symbols no longer trading should be included in the results returned. (Optional) This criteria is not returned in the symbol data.  Possible values:<ul><li>true</li><li>false (Default)</li></ul></li><li><b>Cnt</b>: Country where the symbol is traded in. (Optional) Possible values:<ul><li>ALL if not presented (Default)</li><li>US</li><li>DE</li><li>CA<br /></li></ul></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=3" class="editsectionlink"></a><h3 class="separator">For Options(Category=StockOption, IndexOption, FutureOption or CurrencyOption) lookups<a target="mainFrame" class="headeranchor" id="For_OptionsCategory=StockOption_IndexOption_FutureOption_or_CurrencyOption_lookups_3" href="#For_OptionsCategory=StockOption_IndexOption_FutureOption_or_CurrencyOption_lookups_3" title="Link to this Section">&#0182;</a></h3><ul><li><b>R</b>: Symbol root.  Required Field, the symbol the option is a derivative of, this search will not return options based on a partial root.<br /><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike></li><li><b>Stk</b>: Number of strikes prices above and below the underlying price<ul><li>Default value 3<br /><b>or</b></li></ul></li><li><b>Spl</b>: Strike price low</li><li><b>Sph</b>: Strike price high<br /><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike></li><li><b>Exd</b>: Number of expiration dates.  Default value 3<br />or</li><li><b>Edl</b>: Expiration date low, ex: 01-05-2011</li><li><b>Edh</b>: Expiration date high, ex: 01-20-2011<br /><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike></li><li><b>OT</b>: Option type.  Possible values:<ul><li>Both (Default)</li><li>Call</li><li>Put</li></ul></li><li><b>FT</b>: Future type for FutureOptions.  Possible values:<ul><li>Electronic (Default)</li><li>Pit</li></ul></li><li><b>ST</b>: Symbol type.  Possible values:<ul><li>Both</li><li>Composite (Default)</li><li>Regional</li></ul></li><li><b>Cnt</b>: Country where the symbol is traded in. (Optional) Possible values:<ul><li>US (Default)</li><li>DE</li><li>CA<br /></li></ul></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=4" class="editsectionlink"></a><h3 class="separator">For Futures (Category = Future, <strike>FutureRoot</strike> ) lookups<a target="mainFrame" class="headeranchor" id="For_Futures_Category_=_Future_strikeFutureRootstrike!_and_FutureOptionRoot_lookups_4" href="#For_Futures_Category_=_Future_strikeFutureRootstrike!_and_FutureOptionRoot_lookups_4" title="Link to this Section">&#0182;</a></h3> 
+The user must provide either the Description, root, and category=futures
+<ul><li><b>Desc</b>: Description of symbol traded</li><li><b>R</b>: Symbol root future trades</li><li><b>FT</b>: Futures type.  Possible values:<ul><li>None</li><li>PIT</li><li>Electronic (Default)</li><li>Combined</li></ul></li><li><b>Cur</b>: Currency.  Possible values:<ul><li>All</li><li>USD (Default)</li><li>AUD</li><li>CAD</li><li>CHF</li><li>DKK</li><li>EUR</li><li>GBP</li><li>HKD</li><li>JPY</li><li>NOK</li><li>NZD</li><li>SEK</li><li>SGD</li></ul></li><li><b>Exp</b>: whether to include expired contracts<ul><li>false (Default)</li><li>true</li></ul></li><li><b>Cnt</b>: Country where the symbol is traded in. (Optional) Possible values:<ul><li>ALL if not presented (Default)</li><li>US</li><li>DE</li><li>CA<br /></li></ul></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=5" class="editsectionlink"></a><h3 class="separator">For Forex lookups<a target="mainFrame" class="headeranchor" id="For_Forex_lookups_5" href="#For_Forex_lookups_5" title="Link to this Section">&#0182;</a></h3><ul><li><b>N</b>: partial/full symbol name.  Use "all" or null for a list of all forex symbols</li><li><b>Desc</b>: Description</li><li>The exchange returned for all forex searches will be <b>FX</b></li><li>The country returned for all forex searches will be <b>FOREX</b><br /></li></ul><br /><ul><li>Authentication: Requires a valid access token.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Symbol-Lookup&amp;Section=6" class="editsectionlink"></a><h3 class="separator">Examples<a target="mainFrame" class="headeranchor" id="Examples_6" href="#Examples_6" title="Link to this Section">&#0182;</a></h3>Example Request:
+<pre>GET https&#58;//api.tradestation.com/v2/data/symbols/search/n=msf&amp;c=stock HTTP/1.1
+Authorization&#58; Bearer accesstokengoeshere
+Accept&#58; application/JSON
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.tradestation.com
+</pre><br />Example Response: (<a target="mainFrame" class="pagelink" href="WebAPI-Docs.Symbol.htm" title="DataObject : Symbol">Symbol object details</a>)
+<pre>HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 1081
+Content-Type&#58; application/JSON; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Wed, 05 Jan 2011 18&#58;14&#58;30 GMT
+
+&#91;
+&#123;"Country"&#58;"United States","Description"&#58;"AMERISAFE Inc","Error"&#58;null,"Exchange"&#58;"NASDAQ","Name"&#58;"AMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Apamanshop.co Ltd Tokyo","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"APMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Asset Mgmt Software Sys Inc","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"ASMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Medwell Capital Corp","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"BOMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Bralorne Gold Mines Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"BPMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Caisse Regionale De Credit","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"CDMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Clifton Star Resources Inc","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"CFMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"CMSF Corp.","Error"&#58;null,"Exchange"&#58;"OTCBB","Name"&#58;"CMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Cemex CPO Part Ctf","Error"&#58;null,"Exchange"&#58;"OTCBB","Name"&#58;"CXMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"ETF Metal Securities Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"EFMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Elmec Sports Reg Shrs","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"EMSFF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"ETF Metal Securities Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"ETMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"FNM SPA","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"FNMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"First Trust 1626 Precious Meta","Error"&#58;null,"Exchange"&#58;"NASDAQ","Name"&#58;"FPMSFX"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Glamis Resources Ltd Rts","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"GLMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Genmab A\/S Dkk","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"GNMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Ims Intl Metal Service","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"IIMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Intermap Technologies Cp","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"ITMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Jumbo SA Reg","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"JUMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Klimasan Klima Sanayi Ve","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"KKMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Kawai Musical Intruments","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"KWMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Morgan Stan Emerging Mkt","Error"&#58;null,"Exchange"&#58;"NYSE","Name"&#58;"MSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"M\/S Protected lkd Secs Re MSFX","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MSFA"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Medical Safetec Inc","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MSFC"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mainsource Financial Group","Error"&#58;null,"Exchange"&#58;"NASDAQ","Name"&#58;"MSFG"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"IUB Cap Tr 8.75% Pfd","Error"&#58;null,"Exchange"&#58;"NASDAQ","Name"&#58;"MSFGP"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mercantil Servicios","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MSFJY"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mountain States Financial Corp","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MSFL"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Microsoft Corp","Error"&#58;null,"Exchange"&#58;"NASDAQ","Name"&#58;"MSFT"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mos Food Service s Inc","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MSFVF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mercantil Serv Finan ADR 'A'","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MSFZY"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mayen Minerals Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MYMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Northern Star Mining Corp","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"NSMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Numis Corporation","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"NUMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Park Elektrik Madencilik Reg S","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"PEMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Pt Indorama Synthetics","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"PIMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Purenun Mutual Svgs","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"PMSFF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Reno De Medici","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"RDMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Sams Seafood Hldgs Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"SMSFY"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Tamai Steamship Co Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"TAMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Van Kampen Unit 459 Ms U S Mut","Error"&#58;null,"Exchange"&#58;"NASDAQ","Name"&#58;"VKMSFX"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Wumart Stores Inc","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"WUMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Ybmsisa.com","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"YBMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Maxim Resources, Ltd","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"MXMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Aims Amp Capital Ind Tr Unts","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"AIMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Pulsion Medical Systems AG","Error"&#58;null,"Exchange"&#58;"OTC","Name"&#58;"PLMSF"&#125;,
+&#123;"Country"&#58;"United States","Description"&#58;"Mainstreet Financial Corp","Error"&#58;null,"Exchange"&#58;"OTCBB","Name"&#58;"MSFNE"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"BERSE","Name"&#58;"DE&#58;MSF-BE"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"DUSSE","Name"&#58;"DE&#58;MSF-DS"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"FSE","Name"&#58;"DE&#58;MSF-FS"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"HANSE","Name"&#58;"DE&#58;MSF-HN"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"HAMSE","Name"&#58;"DE&#58;MSF-HS"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"MUNSE","Name"&#58;"DE&#58;MSF-MX"&#125;,
+&#123;"Country"&#58;"DE","Description"&#58;"Microsoft    Dl-00000625","Error"&#58;null,"Exchange"&#58;"XETRA","Name"&#58;"DE&#58;MSF-XE"&#125;&#93;</pre><br /><h1 class="separator"> </h1>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

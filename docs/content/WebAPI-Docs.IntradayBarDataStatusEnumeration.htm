@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			WebAPI IntradayBarData Status Enumeration
+			
+		</div>
+
+		The status value in the intradaybar object can be converted to binary and the corresponding set bits map to the characteristics that apply.
+<table border="1">
+  <tr>
+   <td width="300px">Field</td>
+   <td width="175px">Type</td>
+   <td width="400px">Description</td>
+  </tr>	
+  <tr>
+   <td width="300px">NEW</td>
+   <td width="175px">bit position 0</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">REAL_TIME_DATA</td>
+   <td width="175px">bit position 1</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">HISTORICAL_DATA</td>
+   <td width="175px">bit position 2</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">STANDARD_CLOSE</td>
+   <td width="175px">bit position 3</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">END_OF_SESSION_CLOSE</td>
+   <td width="175px">bit position 4</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">UPDATE_CORPACTION</td>
+   <td width="175px">bit position 5</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">UPDATE_CORRECTION</td>
+   <td width="175px">bit position 6</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">ANALYSIS_BAR</td>
+   <td width="175px">bit position 7</td>
+   <td width="400px"></td>
+  </tr>            
+  <tr>
+   <td width="300px">EXTENDED_BAR</td>
+   <td width="175px">bit position 8</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">PREV_DAY_CORRECTION</td>
+   <td width="175px">bit position 19</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">AFTER_MARKET_CORRECTION</td>
+   <td width="175px">bit position 23</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">PHANTOM_BAR</td>
+   <td width="175px">bit position 24</td>
+   <td width="400px"></td>
+  </tr>             
+  <tr>
+   <td width="300px">EMPTY_BAR</td>
+   <td width="175px">bit position 25</td>
+   <td width="400px"></td>
+  </tr>		 
+  <tr>
+   <td width="300px">BACKFILL_DATA</td>
+   <td width="175px">bit position 26</td>
+   <td width="400px"></td>
+  </tr>	        
+  <tr>
+   <td width="300px">ARCHIVE_DATA</td>
+   <td width="175px">bit position 27</td>
+   <td width="400px"></td>
+  </tr>	        
+  <tr>
+   <td width="300px">GHOST_BAR</td>
+   <td width="175px">bit position 28</td>
+   <td width="400px">An empty bar but specifically for the end session</td>
+  </tr>
+  <tr>
+   <td width="300px">END_OF_HISTORY_STREAM</td>
+   <td width="175px">bit position 27</td>
+   <td width="400px">Identifies last historical bar in a stream of bars</td>
+  </tr>
+</table><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=10" class="editsectionlink"></a><h1 class="separator">EXAMPLE CONVERSION OF STATUS VALUE TO ITS MEANING<a target="mainFrame" class="headeranchor" id="EXAMPLE_CONVERSION_OF_STATUS_VALUE_TO_ITS_MEANING_10" href="#EXAMPLE_CONVERSION_OF_STATUS_VALUE_TO_ITS_MEANING_10" title="Link to this Section">&#0182;</a></h1>
+<img src="GetFile.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;File=intradaybar status examples.png" alt="Image" /><br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=11" class="editsectionlink"></a><h1 class="separator">THE MEANING OF THE STATUS VALUES:<a target="mainFrame" class="headeranchor" id="THE_MEANING_OF_THE_STATUS_VALUES:_11" href="#THE_MEANING_OF_THE_STATUS_VALUES:_11" title="Link to this Section">&#0182;</a></h1><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=0" class="editsectionlink"></a><h3 class="separator">REAL_TIME_DATA<a target="mainFrame" class="headeranchor" id="REAL_TIME_DATA_0" href="#REAL_TIME_DATA_0" title="Link to this Section">&#0182;</a></h3>Set when there is data in the bar and the data is being built in “real time” from a trade.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=1" class="editsectionlink"></a><h3 class="separator">HISTORICAL_DATA<a target="mainFrame" class="headeranchor" id="HISTORICAL_DATA_1" href="#HISTORICAL_DATA_1" title="Link to this Section">&#0182;</a></h3> 
+Set when there is data in the bar and the data is historical data, or is built from historical data.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=2" class="editsectionlink"></a><h3 class="separator">NEW<a target="mainFrame" class="headeranchor" id="NEW_2" href="#NEW_2" title="Link to this Section">&#0182;</a></h3> 
+Set the first time the bar is sent <br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=3" class="editsectionlink"></a><h3 class="separator">CLOSE<a target="mainFrame" class="headeranchor" id="CLOSE_3" href="#CLOSE_3" title="Link to this Section">&#0182;</a></h3> 
+Is a bitmask to determine if the bar is closed. <br /><br />( ORGS_BAR_STATUS_STANDARD_CLOSE | ORGS_BAR_STATUS_END_OF_SESSION_CLOSE )<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=4" class="editsectionlink"></a><h3 class="separator">STANDARD_CLOSE<a target="mainFrame" class="headeranchor" id="STANDARD_CLOSE_4" href="#STANDARD_CLOSE_4" title="Link to this Section">&#0182;</a></h3> 
+Set when the bar was closed “normally” ( a 2 tick tickchart bar was closed because of the second tick, a 10-min bar chart was closed due to time, etc).<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=5" class="editsectionlink"></a><h3 class="separator">END_OF_SESSION_CLOSE<a target="mainFrame" class="headeranchor" id="END_OF_SESSION_CLOSE_5" href="#END_OF_SESSION_CLOSE_5" title="Link to this Section">&#0182;</a></h3> 
+Set when the bar was closed “prematurely” due to the end of the trading session and the particular bar type is not meant to span trading sessions.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=6" class="editsectionlink"></a><h3 class="separator">ANALYSIS_BAR<a target="mainFrame" class="headeranchor" id="ANALYSIS_BAR_6" href="#ANALYSIS_BAR_6" title="Link to this Section">&#0182;</a></h3> 
+Set when the bar should not be considered except for analysis purposes.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=7" class="editsectionlink"></a><h3 class="separator">PHANTOM_BAR<a target="mainFrame" class="headeranchor" id="PHANTOM_BAR_7" href="#PHANTOM_BAR_7" title="Link to this Section">&#0182;</a></h3> 
+Set when the bar is synthetic – thus created only to fill gaps.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=8" class="editsectionlink"></a><h3 class="separator">GHOST_BAR<a target="mainFrame" class="headeranchor" id="GHOST_BAR_8" href="#GHOST_BAR_8" title="Link to this Section">&#0182;</a></h3> 
+An empty bar but specifically for the end session<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=12" class="editsectionlink"></a><h1 class="separator">VALUES  SENT FOR HISTORICAL DATA:<a target="mainFrame" class="headeranchor" id="VALUES__SENT_FOR_HISTORICAL_DATA:_12" href="#VALUES__SENT_FOR_HISTORICAL_DATA:_12" title="Link to this Section">&#0182;</a></h1>
+All complete historical bars will be sent with _BAR_STATUS_NEW, _BAR_STATUS_HISTORICAL_DATA, and one of the _BAR_STATUS_CLOSE bits set (currently, either _BAR_STATUS_STANDARD_CLOSE, or _BAR_STATUS_END_OF_SESSION_CLOSE).  <br /><br />If a bar contains data and is currently being built (possible only on the last bar sent with the historical data), it will be sent only with the _BAR_STATUS_NEW bit set, and the _BAR_STATUS_HISTORICAL_DATA bit set (because the data that it contains is historical and the bar is not being sent as the immediate result of a real time trade), but it will not have any of the “Close” bits set because it is not yet closed.<br /><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.IntradayBarDataStatusEnumeration&amp;Section=9" class="editsectionlink"></a><h3 class="separator">Examples for real time chart statuses sent:<a target="mainFrame" class="headeranchor" id="Examples_for_real_time_chart_statuses_sent:_9" href="#Examples_for_real_time_chart_statuses_sent:_9" title="Link to this Section">&#0182;</a></h3><pre>
+	                        First Tick	        Subsequent Ticks	Last Tick or End of Period	End of Session
+1 tick chart	                New|RTData|Close	New|RTData|Close	New|RTData|Close	        EOSClose
+3 tick chart&#42;	                New|RTData	        RTData	                RTData|StdClose	                EOSClose
+1 minute chart	                New|RTData	        RTData	                RTData|StdClose	                EOSClose
+1 min. chart (no trading)	N/A	                N/A	                New|StdClose	                EOSClose
+Point &amp; Figure chart	        New|RTData	        AnalysisBar	        RTData|StdClose	                N/A
+</pre><br />N/A 	= Not applicable to this scenario
+<ul><li>Volume charts behave the same as multi-tick tick charts.<br /></li></ul>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Implicit Authorization
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.ImplicitAuthorization&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_0" href="#Summary:_0" title="Link to this Section">&#0182;</a></h3>
+Unlike the authorization code grant type in which the client makes
+separate requests for authorization and access token, the client
+receives the access token as the result of the authorization request.<br /><br />The implicit grant type does not include client authentication, and
+relies on the presence of the resource owner and the registration of
+the redirection URI.  Because the access token is encoded into the
+redirection URI, it may be exposed to the resource owner and other
+applications residing on its device.<br /><br />For an API client to use implicit authorization, they must have a domain specified in their Client-Info profile.
+ 
+In version 2, the access token returned by the Implicit grant type will expire at midnight eastern time.
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.ImplicitAuthorization&amp;Section=1" class="editsectionlink"></a><h3 class="separator">Step-by-Step<a target="mainFrame" class="headeranchor" id="Step-by-Step_1" href="#Step-by-Step_1" title="Link to this Section">&#0182;</a></h3>
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.ImplicitAuthorization&amp;Section=2" class="editsectionlink"></a><h3 class="separator">1. Access the webapi/authorize resource with a valid query string parameters<a target="mainFrame" class="headeranchor" id="B_Access_the_webapiauthorize_resource_with_a_valid_query_string_parameters_2" href="#B_Access_the_webapiauthorize_resource_with_a_valid_query_string_parameters_2" title="Link to this Section">&#0182;</a></h3>
+Required query string parameters
+<ul><li>redirect_uri = must match the registered domain provided by the client</li><li>client_id = the client application's API key.</li><li>response_type = token<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.ImplicitAuthorization&amp;Section=3" class="editsectionlink"></a><h3 class="separator">2. Redirect user for authentication/authorization <a target="mainFrame" class="headeranchor" id="C_Redirect_user_for_authenticationauthorization_3" href="#C_Redirect_user_for_authenticationauthorization_3" title="Link to this Section">&#0182;</a></h3>The client application will route the end-user to our MFA (multi-factor authentication) login page web page.  <br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.ImplicitAuthorization&amp;Section=4" class="editsectionlink"></a><h3 class="separator">3. Upon successful authentication, redirect user to provided redirect_uri with access token provided in the fragment<a target="mainFrame" class="headeranchor" id="D_Upon_successful_authentication_redirect_user_to_provided_redirect_uri_with_access_token_provided_in_the_fragment_4" href="#D_Upon_successful_authentication_redirect_user_to_provided_redirect_uri_with_access_token_provided_in_the_fragment_4" title="Link to this Section">&#0182;</a></h3><br /><br />Authorize Uri
+<ul><li>https://api.tradestation.com/authorize<br /></li></ul><br />
+<b>Example Authorization Page Url</b>
+<pre>
+https&#58;//api.tradestation.com/v2/authorize/?redirect_uri=https&#58;//www.exampleclientapp.com&amp;client_id=D7635234&amp;response_type=token
+</pre><br /><b>Example Response</b>
+<pre>
+https&#58;//www.exampleclientapp.com&#35;access_token=1233452566
+</pre>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

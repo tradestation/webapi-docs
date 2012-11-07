@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Response Formats
+			
+		</div>
+
+		The TradeStation WebAPI currently supports JSON  and XML request/response body formats for all non-streaming methods.  The streaming services use JSON exclusively. JSON is the preferred format because it is lighter weight and generally faster to parse.<br /><br />The format is determined by the "Accept" header of the request.<br /><br />If no format is specified, the defaulted format is application/json.<br /><br />Example:
+<pre>
+GET https&#58;//api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
+Authorization&#58; QUNCSmI
+Accept&#58; application/json
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.tradestation.com
+
+HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 218
+Content-Type&#58; application/json; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Fri, 18 Mar 2011 18&#58;21&#58;45 GMT
+
+&#91;&#123;"Key"&#58;114275,"Name"&#58;"543061 QA","Type"&#58;"C","TypeDescription"&#58;"Cash"&#125;,&#123;"Key"&#58;114276,"Name"&#58;"5430611 QA","Type"&#58;"M","TypeDescription"&#58;"Margin"&#125;,&#123;"Key"&#58;114277,"Name"&#58;"5430612 QA","Type"&#58;"F","TypeDescription"&#58;"Futures"&#125;&#93;
+</pre><br /><i>
+Notes:
+<ul><li>Documentation examples use json format but support xml formatting unless otherwise specified.<br /></i><br /></li></ul>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Security Service : Authorize
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_0" href="#Summary:_0" title="Link to this Section">&#0182;</a></h3>Obtaining authorization to access controlled resources<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=1" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_1" href="#Details:_1" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>POST</b></li><li>Path: /Security/Authorize</li><li>URI Parameters:<ul><li><i>none</i><br /></li></ul></li></ul><br /><ul><li>Authentication: Client authorization only.<br /></li></ul><br /><ul><li>Returns: <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject-AccessTokenResponse2.htm" title="Data Object : Access Token Response">AccessTokenResponse</a> Object<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=2" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_2" href="#Errors:_2" title="Link to this Section">&#0182;</a></h3>
+<ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=3" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_3" href="#Examples:_3" title="Link to this Section">&#0182;</a></h3>
+Example Request:  (<a target="mainFrame" class="pagelink" href="WebAPI-Docs.Security.htm" title="Security Overview">Requesting authorization details</a>)
+<pre>
+POST https&#58;//api.tradestation.com/Security/Authorize HTTP/1.1
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.trad.tradestation.com
+Content-Length&#58; 610
+
+grant_type=authorization_code&amp;code=K29qbmpGSEFDMLS0c=&amp;client_id=42545245&amp;redirect_uri=/webapi/authorize/authcodetest.aspx&amp;client_secret=2452345
+</pre><br />Example Response: (<a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject-AccessTokenResponse2.htm" title="Data Object : Access Token Response">AccessTokenResponse object details</a>)
+<pre>
+HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 468
+Content-Type&#58; application/json; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Tue, 11 Jan 2011 17&#58;54&#58;16 GMT
+
+&#123;"expires_in"&#58;21943,"token"&#58;"ZFhZcGUzQ3lsblJEpiVDA9","token_type"&#58;null,"userid"&#58;"testuser"&#125;
+</pre><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=6" class="editsectionlink"></a><h2 class="separator">Using Refresh Tokens<a target="mainFrame" class="headeranchor" id="Using_Refresh_Tokens_6" href="#Using_Refresh_Tokens_6" title="Link to this Section">&#0182;</a></h2>
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=4" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_4" href="#Summary:_4" title="Link to this Section">&#0182;</a></h3>
+Beginning in v2, Refresh tokens will be returned with the Security/Authorize response.<br />   
+An Access Token will expire in 20 minutes and the Refresh Token that is returned with an Access Token request can be used to obtain a new access token. <br />
+Access Tokens obtained via the Implicit Grant Type cannot be refreshed, they will expire at midnight (EST) of the day issued.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.SecurityServiceMethods_Authorize&amp;Section=5" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_5" href="#Details:_5" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>POST</b></li><li>Path: /Security/Authorize</li><li>URI Parameters:<ul><li><i>none</i></li></ul></li><li>Form Parameters:<ul><li>grant_type = refresh_token</li><li>client_id</li><li>client_secret</li><li>redirect_uri</li><li>refresh_token<br /></li></ul></li></ul><br /><ul><li>Returns: <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject-AccessTokenResponse2.htm" title="Data Object : Access Token Response">AccessTokenResponse</a> Object<br /></li></ul><br />Example Request:  
+<pre>
+POST https&#58;//api.tradestation.com/Security/Authorize HTTP/1.1
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.trad.tradestation.com
+Content-Length&#58; 610
+
+grant_type=refresh_token&amp;client_id=123456&amp;redirect_uri=http&#58;//www.myredirect.com&amp;client_secret=789456&amp;refresh_token=1234myRefreshToken56789
+</pre><br /><br /><br /><br /><br />
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

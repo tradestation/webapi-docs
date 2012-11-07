@@ -1,0 +1,120 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Orders Service : Send Group Order
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.OrdersService2Methods_OrdersGroups&amp;Section=4" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_4" href="#Summary:_4" title="Link to this Section">&#0182;</a></h3>Sending a group of conditional orders.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.OrdersService2Methods_OrdersGroups&amp;Section=5" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_5" href="#Details:_5" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>POST</b></li><li>Path: /group</li><li>URI Parameters:<ul><li>none<br /></li></ul></li></ul><br /><ul><li>Request Body:<ul><li><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject-GroupOrder.htm" title="DataObject : GroupOrder">GroupOrder</a><br /></li></ul></li></ul><br /><ul><li>Authentication: Requires a valid access token.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.OrdersService2Methods_OrdersGroups&amp;Section=6" class="editsectionlink"></a><h3 class="separator">Returns:<a target="mainFrame" class="headeranchor" id="Returns:_6" href="#Returns:_6" title="Link to this Section">&#0182;</a></h3> 
+Collection of <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject-OrderResult.htm" title="DataObject : OrderResult">OrderResult</a> objects<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.OrdersService2Methods_OrdersGroups&amp;Section=7" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_7" href="#Errors:_7" title="Link to this Section">&#0182;</a></h3>
+<ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.OrdersService2Methods_OrdersGroups&amp;Section=8" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_8" href="#Examples:_8" title="Link to this Section">&#0182;</a></h3>
+<h4 class="separator">BRK Request:<a target="mainFrame" class="headeranchor" id="BRK_Request:_0" href="#BRK_Request:_0" title="Link to this Section">&#0182;</a></h4><pre>
+POST https&#58;//api.tradestation.com/v2/orders/groups HTTP/1.1
+Authorization&#58; Bearer accesstokengoeshere
+Accept&#58; application/JSON
+Content-Type&#58; application/json
+Content-Length&#58; 331
+Expect&#58; 100-continue
+Connection&#58; Keep-Alive
+Host&#58; api.tradestation.com
+
+&#123;"Type"&#58;"BRK",
+ "Orders"&#58;&#91;
+  &#123;"AssetType"&#58;"EQ",
+   "Symbol"&#58;"ARNA",
+   "Quantity"&#58;"10",
+   "LimitPrice"&#58;"5.00",
+   "OrderType"&#58;"Limit",
+   "Duration"&#58;"DAY",
+   "AccountKey"&#58;"123456",
+   "TradeAction"&#58;"Sell"&#125;,
+  &#123;"AssetType"&#58;"EQ",
+   "Symbol"&#58;"ARNA",
+   "Quantity"&#58;"10",
+   "StopPrice"&#58;"1.25",
+   "OrderType"&#58;"StopMarket",
+   "Duration"&#58;"DAY",
+   "AccountKey"&#58;"123465",
+   "TradeAction"&#58;"Sell"&#125;
+ &#93;
+&#125;
+</pre><br />
+<h4 class="separator">BRK Response:<a target="mainFrame" class="headeranchor" id="BRK_Response:_1" href="#BRK_Response:_1" title="Link to this Section">&#0182;</a></h4><pre>
+HTTP/1.1 200 OK
+Content-Length&#58; 294
+Content-Type&#58; application/JSON; charset=utf-8
+
+&#91;&#123;"Message"&#58;"Order failed. Reason&#58; No Day orders after 4&#58;00PM Eastern",
+  "OrderID"&#58;"207887696",
+  "OrderStatus"&#58;"Failed"&#125;,
+ &#123;"Message"&#58;"Order failed. Reason&#58; No market or stop orders after 4&#58;00 PM  Eastern",
+  "OrderID"&#58;"207887697",
+  "OrderStatus"&#58;"Failed"&#125;
+&#93;
+</pre><br /><h4 class="separator">OCO Request:<a target="mainFrame" class="headeranchor" id="OCO_Request:_2" href="#OCO_Request:_2" title="Link to this Section">&#0182;</a></h4> 
+<pre>
+POST https&#58;//api.tradestation.com/v2/orders/groups HTTP/1.1
+Authorization&#58; aflksdjfa
+Accept&#58; application/JSON
+Content-Type&#58; application/json
+Content-Length&#58; 328
+Expect&#58; 100-continue
+Connection&#58; Keep-Alive
+Host&#58; api.tradestation.com
+
+&#123;"Type"&#58;"OCO",
+ "Orders"&#58;&#91;
+  &#123;"AssetType"&#58;"EQ",
+   "Symbol"&#58;"WMT",
+   "Quantity"&#58;"10",
+   "LimitPrice"&#58;".25",
+   "OrderType"&#58;"Limit",
+   "Duration"&#58;"DYP",
+   "AccountKey"&#58;"123456",
+   "TradeAction"&#58;"Buy"&#125;,
+  &#123;"AssetType"&#58;"EQ",
+   "Symbol"&#58;"WMT",
+   "Quantity"&#58;"10",   
+   "LimitPrice"&#58;"2.00",
+   "OrderType"&#58;"Limit",
+   "Duration"&#58;"DYP",
+   "AccountKey"&#58;"123456",
+   "TradeAction"&#58;"SellShort"&#125;
+ &#93;
+&#125;
+</pre><br /><h4 class="separator">OCO Response:<a target="mainFrame" class="headeranchor" id="OCO_Response:_3" href="#OCO_Response:_3" title="Link to this Section">&#0182;</a></h4><pre>
+HTTP/1.1 200 OK
+Content-Length&#58; 238
+Content-Type&#58; application/JSON; charset=utf-8
+
+&#91;&#123;"Message"&#58;"Sent order&#58; Buy 10 WMT @ 0.25 Limit",
+  "OrderID"&#58;"207887717",
+  "OrderStatus"&#58;"Ok"&#125;,
+ &#123;"Message"&#58;"Sent order&#58; Sell Short 10 WMT @ 2.00 Limit",
+  "OrderID"&#58;"207887718",
+  "OrderStatus"&#58;"Ok"&#125;
+&#93;
+</pre>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

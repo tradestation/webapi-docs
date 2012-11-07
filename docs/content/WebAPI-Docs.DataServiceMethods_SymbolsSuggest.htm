@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Data Service : Symbol Suggest
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_SymbolsSuggest&amp;Section=2" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_2" href="#Summary:_2" title="Link to this Section">&#0182;</a></h3>Returns a list of symbol objects that have a symbol name or a description that contains a word that starts with the provided input<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_SymbolsSuggest&amp;Section=3" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_3" href="#Details:_3" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>GET</b></li><li>Path: /data/symbols/suggest/{suggestText}</li><li>URI Parameters:<ul><li>{suggestText}=search text<br /></li></ul></li></ul><br /><ul><li>Authentication: Currently only available to TradeStation. Requires a Client Access Token at a minimum<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_SymbolsSuggest&amp;Section=4" class="editsectionlink"></a><h3 class="separator">Returns:<a target="mainFrame" class="headeranchor" id="Returns:_4" href="#Returns:_4" title="Link to this Section">&#0182;</a></h3> 
+<a target="mainFrame" class="pagelink" href="WebAPI-Docs.Symbol.htm" title="DataObject : Symbol">Symbol</a> object<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_SymbolsSuggest&amp;Section=5" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_5" href="#Errors:_5" title="Link to this Section">&#0182;</a></h3>
+<ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_SymbolsSuggest&amp;Section=6" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_6" href="#Examples:_6" title="Link to this Section">&#0182;</a></h3>
+<h4 class="separator">Request:<a target="mainFrame" class="headeranchor" id="Request:_0" href="#Request:_0" title="Link to this Section">&#0182;</a></h4><pre>
+GET https&#58;//api.tradestation.com/v2/data/symbols/suggest/msf HTTP/1.1
+Authorization&#58; T1dEaXUwTGgxZEw
+Host&#58; api.tradestation.com
+Content-Length&#58; 0
+Content-Type&#58; application/json
+</pre><br /><h4 class="separator">Response:<a target="mainFrame" class="headeranchor" id="Response:_1" href="#Response:_1" title="Link to this Section">&#0182;</a></h4><pre>
+HTTP/1.1 200 OK
+Content-Length&#58; 2245
+Content-Type&#58; application/json
+
+&#91;&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Morgan Stan Emerging Mkt","Error"&#58;null,"Exchange"&#58;"NYSE","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSF","OptionType"&#58;0,"Root"&#58;"MSF","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Medical Safetec Inc","Error"&#58;null,"Exchange"&#58;"OTC","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFC","OptionType"&#58;0,"Root"&#58;"MSFC","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Mainsource Financial Group","Error"&#58;null,"Exchange"&#58;"NASDAQ","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFG","OptionType"&#58;0,"Root"&#58;"MSFG","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"IUB Cap Tr 8.75% Pfd","Error"&#58;null,"Exchange"&#58;"NASDAQ","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFGP","OptionType"&#58;0,"Root"&#58;"MSFGP","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Mercantil Servicios","Error"&#58;null,"Exchange"&#58;"OTC","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFJY","OptionType"&#58;0,"Root"&#58;"MSFJY","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Mountain States Financial Corp","Error"&#58;null,"Exchange"&#58;"OTC","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFL","OptionType"&#58;0,"Root"&#58;"MSFL","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Microsoft Corp","Error"&#58;null,"Exchange"&#58;"NASDAQ","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFT","OptionType"&#58;0,"Root"&#58;"MSFT","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Mercantil Serv Finan ADR 'A'","Error"&#58;null,"Exchange"&#58;"OTC","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFZY","OptionType"&#58;0,"Root"&#58;"MSFZY","StrikePrice"&#58;0&#125;,&#123;"Category"&#58;2,"Country"&#58;"United States","Currency"&#58;1,"Description"&#58;"Mainstreet Financial Corp","Error"&#58;null,"Exchange"&#58;"OTC","ExpirationDate"&#58;"\/Date(-62135578800000-0500)\/","FutureType"&#58;0,"Name"&#58;"MSFN","OptionType"&#58;0,"Root"&#58;"MSFN","StrikePrice"&#58;0&#125;&#93;
+</pre>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

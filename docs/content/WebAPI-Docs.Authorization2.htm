@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Authorization
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Authorization2&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Exchange Authorization Code for Access Token <a target="mainFrame" class="headeranchor" id="Exchange_Authorization_Code_for_Access_Token_0" href="#Exchange_Authorization_Code_for_Access_Token_0" title="Link to this Section">&#0182;</a></h3>The Client uses the Authorization Code to request an Access Token via the /security/authorize service method using the "authorization_code" grant type;<br /><br />Required Headers: 
+<ul><li>Content-Type: application/x-www-form-urlencoded</li><li>Content-Length = Length of body information in UTF8<br /></li></ul><br />Required form parameters:
+<ul><li>grant_type = authorization_code</li><li>client_id = The client application's API key.</li><li>redirect_uri = The redirect uri used when obtaining the Authorization Code being provided.</li><li>code = The Authorization Code value.</li><li>client_secret = The secret for the client application's API Key<br /></li></ul><br />
+<b>Example Request</b>
+<pre>
+POST https&#58;//api.tradestation.com/v2/Security/Authorize HTTP/1.1
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.tradestation.com
+Content-Length&#58; 630
+
+grant_type=authorization_code&amp;client_id=11111111-1111-1111-1111-111111111111&amp;redirect_uri=test.aspx&amp;client_secret=11111111-1111-1111-1111-111111111111&amp;code=YjlkWDRqVmxlRXphaZzM1NWQ1MzZtVVFJQXFkcmk3eldOSjRUSDJHSklqN1dMNkk=&amp;response_type=token
+</pre><br /><b>Example Response</b>
+<pre>
+HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 927
+Content-Type&#58; application/json; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Tue, 06 Dec 2011 20&#58;50&#58;32 GMT
+
+&#123;"RefreshToken"&#58;"eGlhc2xvTTVJaEdXMWs4VjhraWx4bk5QMHJMaA&#61;&#61;","expires_in"&#58;29367,"token"&#58;"eGlhc2xvozT2IxWnVITmdwGVFPQ&#61;&#61;","token_type"&#58;"AccessToken","userid"&#58;"testUser"&#125;
+</pre>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

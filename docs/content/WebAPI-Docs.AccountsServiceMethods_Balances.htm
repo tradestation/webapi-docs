@@ -1,0 +1,54 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Accounts Service : Balances
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.AccountsServiceMethods_Balances&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_0" href="#Summary:_0" title="Link to this Section">&#0182;</a></h3>Requesting balance information for a particular account<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.AccountsServiceMethods_Balances&amp;Section=1" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_1" href="#Details:_1" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>GET</b></li><li>Path /accounts/{accountkey}/balances</li><li>URI Parameters:<ul><li>{accountkey}<br /></li></ul></li></ul><br /><ul><li>Authentication: Requires a valid access token.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.AccountsServiceMethods_Balances&amp;Section=2" class="editsectionlink"></a><h3 class="separator">Returns:<a target="mainFrame" class="headeranchor" id="Returns:_2" href="#Returns:_2" title="Link to this Section">&#0182;</a></h3><ul><li>General <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_Account.htm" title="DataObject : Account">Account</a> object</li><li><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_AccountCurrencyDetail.htm" title="DataObject : AccountCurrencyDetail">Account Currency Detail</a> object</li><li><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_EquityAccount.htm" title="DataObject : EquityAccount"> Equity Account</a> object if requesting an Equity account</li><li><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_ForexAccount.htm" title="DataObject : ForexAccount"> Forex Account</a> & <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_ForexAccountCurrencyDetail.htm" title="DataObject : ForexAccountCurrencyDetail"> Forex Account  Currency Detail</a> objects if requesting a Forex account</li><li><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_FuturesAccount.htm" title="DataObject : FuturesAccount">Futures Account</a> & <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_FuturesAccountCurrencyDetail.htm" title="DataObject : FuturesAccountCurrencyDetail"> Futures Account Currency Detail</a> object if requesting a Futures account<br /></li></ul><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.AccountsServiceMethods_Balances&amp;Section=3" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_3" href="#Errors:_3" title="Link to this Section">&#0182;</a></h3>
+<ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.AccountsServiceMethods_Balances&amp;Section=4" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_4" href="#Examples:_4" title="Link to this Section">&#0182;</a></h3>
+Example Request:
+<pre>
+GET https&#58;//api.tradestation.com/accounts/114275/balances HTTP/1.1
+Authorization&#58; Bearer b0R4MHZ5WjhVUVBzQW5wT
+Accept&#58; application/JSON
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.tradestation.com
+</pre><br />Example Response: (<a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_Account.htm" title="DataObject : Account">Account object details</a>)
+<pre>
+HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 1028
+Content-Type&#58; application/json; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Tue, 31 May 2011 17&#58;27&#58;36 GMT
+
+&#123;"BODEquity"&#58;3247154.8600,"BODNetCash"&#58;2870974.6200,"ClosedPositions"&#58;&#91;&#93;,"Key"&#58;111111,"MarketValue"&#58;0,"Name"&#58;"111111QA","RealTimeAccountBalance"&#58;2870328.5200,"RealTimeBuyingPower"&#58;2867875.219800,"RealTimeEquity"&#58;3249600.160200,"RealTimeRealizedProfitLoss"&#58;0.0000,"RealTimeUnrealizedGains"&#58;2445.300200,"RealTimeUnrealizedProfitLoss"&#58;19638.14545186560000000000,"Status"&#58;"A","StatusDescription"&#58;"Active","Type"&#58;"C","TypeDescription"&#58;"Cash","UnclearedDeposit"&#58;0.0000,"BODAccountBalance"&#58;2870974.6200,"BODDayTradingMarginableEquitiesBuyingPower"&#58;2870328.5200,"BODOptionBuyingPower"&#58;2870328.5200,"BODOptionValue"&#58;0.0000,"BODOvernightBuyingPower"&#58;2870328.5200,"CanDayTrade"&#58;true,"Commission"&#58;0,"DayTrades"&#58;7,"DayTradingQualified"&#58;true,"OptionApprovalLevel"&#58;5,"PatternDayTrader"&#58;false,"RealTimeCostOfPositions"&#58;359005.8545,"RealTimeDayTradingMarginableEquitiesBuyingPower"&#58;2870326.520000,"RealTimeOptionBuyingPower"&#58;2867877.2198,"RealTimeOptionValue"&#58;0.0000000000,"RealTimeOvernightBuyingPower"&#58;2870326.520000,"UnsettledFund"&#58;646.1000&#125;
+</pre>
+<h1 class="separator"> </h1>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,236 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Error Handling
+			
+		</div>
+
+		<TABLE><THEAD> 
+<tr>
+  <td >Service</td>
+  <td >HTTP Code</td>
+  <td >Error</td>
+  <td >Message</td>
+ </tr>
+ <tr >
+  <td >Authorize</td>
+  <td >401</td>
+  <td >Code Expires</td>
+  <td >Authorization code
+  expired</td>
+ </tr>
+ <tr>
+  <td >&nbsp;</td>
+  <td >401</td>
+  <td >Redirect Uri doesn't  match</td>
+  <td >Exception of type 'TradeStation.Web.Services.AuthorizationException' was thrown.</td>
+ </tr>
+ <tr >
+  <td >&nbsp;</td>
+  <td >401</td>
+  <td >Invalid User credentials</td>
+  <td >Authorization failed</td>
+ </tr><br /><br /> <tr >
+  <td >&nbsp;</td>
+  <td >401</td>
+  <td >Invalid Client credentials</td>
+  <td >API key failure</td>
+ </tr>
+ <tr >
+  <td >&nbsp;</td>
+  <td></td>
+  <td></td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr >
+  <td >Accounts</td>
+  <td >401</td>
+  <td >Unauthorized</td>
+  <td >&nbsp;</td>
+ </tr><br /><br /> <tr >
+  <td >&nbsp;</td>
+  <td >400</td>
+  <td >Invalid URI</td>
+  <td >&nbsp;</td>
+ </tr>
+ <tr >
+  <td height=20 class=xl79 style='height:15.0pt'>&nbsp;</td>
+  <td></td>
+  <td></td>
+  <td >&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'>Users</td>
+  <td  style='border-left:none'>401</td>
+  <td  style='border-left:none'>Unauthorized</td>
+  <td  style='border-left:none'>User is not authorized to retrieve
+  this account</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20  style='height:15.0pt'>&nbsp;</td>
+  <td style='border-top:none;border-left:none'>400</td>
+  <td style='border-top:none;border-left:none'>Invalid URI</td>
+  <td style='border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl79 style='height:15.0pt'>&nbsp;</td>
+  <td ></td>
+  <td></td>
+  <td class=xl76>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'>Orders</td>
+  <td  style='border-left:none'>401</td>
+  <td  style='border-left:none'>Unauthorized</td>
+  <td  style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl74 style='height:15.0pt'>&nbsp;</td>
+  <td  style='border-top:none;border-left:none'>400</td>
+  <td  style='border-top:none;border-left:none'>Invalid Request</td>
+  <td  style='border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl74 style='height:15.0pt'>&nbsp;</td>
+  <td  style='border-top:none;border-left:none'>400</td>
+  <td  style='border-top:none;border-left:none'>Missing Field</td>
+  <td  style='border-top:none;border-left:none'>Invalid Request.Order
+  input is incomplete, missing field :<span style='mso-spacerun:yes'> </span></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl74 style='height:15.0pt'>&nbsp;</td>
+  <td  style='border-top:none;border-left:none'>400</td>
+  <td  style='border-top:none;border-left:none'>Invalid Account</td>
+  <td  style='border-top:none;border-left:none'>Invalid
+  Request.Failed to send order for execution.</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl74 style='height:15.0pt'>&nbsp;</td>
+  <td  style='border-top:none;border-left:none'>401</td>
+  <td  style='border-top:none;border-left:none'>Not authorized
+  account</td>
+  <td  style='border-top:none;border-left:none'>Order failed. Reason:
+  Request originator is not authorized to trade this account</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl74 style='height:15.0pt'>&nbsp;</td>
+  <td style='border-top:none;border-left:none'>400</td>
+  <td  style='border-top:none;border-left:none'>Invalid Limit Price</td>
+  <td  style='border-top:none;border-left:none'>Invalid
+  Request.Failed to build order</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl75 style='height:15.0pt'>&nbsp;</td>
+  <td  style='border-top:none;border-left:none'>400</td>
+  <td  style='border-top:none;border-left:none'>Invalid TIF</td>
+  <td  style='border-top:none;border-left:none'>Order failed. Reason:
+  Missing TIF</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td >&nbsp;</td>
+  <td >200</td>
+  <td ></td>
+  <td >An order may fail during processing but if call returns an orderid, the response will be 200 with an error message</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl79 style='height:15.0pt'>&nbsp;</td>
+  <td ></td>
+  <td></td>
+  <td class=xl76>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'>Quote</td>
+  <td  style='border-left:none'>400</td>
+  <td  style='border-left:none'>Invalid Request</td>
+  <td  style='border-left:none'>Invalid Request.Invalid search
+  criteria for symbol lookup service</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl75 style='height:15.0pt'>&nbsp;</td>
+  <td  style='border-top:none;border-left:none'>404</td>
+  <td  style='border-top:none;border-left:none'>Symbol not found</td>
+  <td  style='border-top:none;border-left:none'>INVALID SYMBOL</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl79 style='height:15.0pt'>&nbsp;</td>
+  <td ></td>
+  <td></td>
+  <td class=xl76>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'>Symbol Lookup</td>
+  <td class=xl77 style='border-left:none'>404</td>
+  <td class=xl78 style='border-left:none'>Symbol not found</td>
+  <td class=xl78 style='border-left:none'>NO DATA AVAILABLE</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl75 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none'>400</td>
+  <td class=xl78 style='border-top:none;border-left:none'>Invalid URI</td>
+  <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl79 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl67></td>
+  <td></td>
+  <td class=xl76>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'>Stream</td>
+  <td class=xl77 style='border-left:none'>400</td>
+  <td class=xl78 style='border-left:none'>Invalid Request</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl74 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none'>401</td>
+  <td class=xl78 style='border-top:none;border-left:none'>Not Entitled</td>
+  <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl75 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none'>404</td>
+  <td class=xl78 style='border-top:none;border-left:none'>Symbol not found</td>
+  <td class=xl78 style='border-top:none;border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl79 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl67></td>
+  <td></td>
+  <td class=xl76>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl73 style='height:15.0pt'>General</td>
+  <td class=xl77 style='border-left:none'>500</td>
+  <td class=xl78 style='border-left:none'>Cal down</td>
+  <td class=xl78 style='border-left:none'>&nbsp;</td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl75 style='height:15.0pt'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none'>400</td>
+  <td class=xl78 style='border-top:none;border-left:none'>Invalid URI</td>
+  <td class=xl78 style='border-top:none;border-left:none'>Not Found</td>
+ </tr>
+</TBODY></TABLE>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>
