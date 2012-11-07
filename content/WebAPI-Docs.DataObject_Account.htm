@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			DataObject : Account
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataObject_Account&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Fields common among all account types<a target="mainFrame" class="headeranchor" id="Fields_common_among_all_account_types_0" href="#Fields_common_among_all_account_types_0" title="Link to this Section">&#0182;</a></h3>
+<table border="1">
+  <tr>
+   <td width="300px">Field</td>
+   <td width="175px">Type</td>
+   <td width="400px">Description</td>
+  </tr>
+  <tr>
+   <td width="300px">Alias</td>
+   <td width="175px">string</td>
+   <td width="400px">User defined name</td>
+  </tr>
+  <tr>
+   <td width="300px">BODEquity</td>
+   <td width="175px">decimal
+</td>
+   <td width="400px"><i>BOD Account Net Worth</i> - Account’s net worth at the beginning of the day .
+The account’s net worth (known internally as ‘Net Equity') includes the account’s balance, the market value of the equities positions and  options positions marked to the previous day’s end–of-day quote.</td>
+  </tr>
+  <tr>
+   <td width="300px">BODNetCash</td>
+   <td width="175px">decimal </td>
+   <td width="400px"><i>BOD Account Balance</i> - Account balance at the beginning of the day</td>
+  </tr>
+  <tr>
+   <td width="300px">Key</td>
+   <td width="175px">integer</td>
+   <td width="400px">Account Identifier</td>
+  </tr>
+  <tr>
+   <td width="300px">ClosedPositions</td>
+   <td width="175px"><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_TodayClosedPositions.htm" title="DataObject : TodayClosedPositions">TodaysClosedPositions</a></td>
+   <td width="400px">Data object that describes positions that were closed today</td>
+  </tr>
+  <tr>
+   <td width="300px">MarketValue</td>
+   <td width="175px">decimal</td>
+   <td width="400px">Sum of market values for currently held positions</td>
+  </tr>
+  <tr>
+   <td width="300px">Name</td>
+   <td width="175px">string</td>
+   <td width="400px">Name associated to account</td>
+  </tr>
+ 
+  <tr>
+   <td width="300px">RealTimeBuyingPower</td>
+   <td width="175px">decimal</td>
+   <td width="400px">Real-time calculation for the account’s overnight buying power.</td>
+  </tr>
+  <tr>
+   <td width="300px">RealTimeEquity</td>
+   <td width="175px">decimal</td>
+   <td width="400px"><i>Intraday Account Net Worth</i> - Real-time Cash + MarketValue + Securities on Deposit</td>
+  </tr>
+  <tr>
+   <td width="300px">RealTimeAccountBalance</td>
+   <td width="175px">decimal</td>
+   <td width="400px"><i>Intraday Account Balance</i> - Real Time Cash Balance = Beginning Day Cash - Commissions</td>
+  </tr>
+  <tr>
+   <td width="300px">RealTimeRealizedProfitLoss</td>
+   <td width="175px">decimal
+</td>
+   <td width="400px">Real-time P&L realized during the day.  It is a per transaction value that does not need to be updated with market data quotes.
+This value includes commissions for transactions and P&L on positions that have been closed throughout the trading day.  This P&L should be calculated based on average price</td>
+  </tr>
+  <tr>
+   <td width="300px">RealTimeUnrealizedGains</td>
+   <td width="175px">decimal</td>
+   <td width="400px">Real-time unrealized P/L today</td>
+  </tr>
+  <tr>
+   <td width="300px">RealTimeUnrealizedProfitLoss</td>
+   <td width="175px">decimal
+</td>
+   <td width="400px">Real-time unrealized P&L based on average price.  It is a client side calculation based on current quotes.
+RT Unrealized P&L = SUM (unrealized P&L) for all positions held in the account.</td>
+  </tr>
+  <tr>
+   <td width="300px">Status</td>
+   <td width="175px">string</td>
+   <td width="400px">Current status of the account: A, C, D, F, I, R, L, X</td>
+  </tr>
+  <tr>
+   <td width="300px">StatusDescription</td>
+   <td width="175px">string</td>
+   <td width="400px">Active, Closing Transactions Only, 90 Day Restriction-Closing Transaction Only, Margin Call – Closing Transactions Only, Inactive, Restricted, Liquidating transactions Only, Closed</td>
+  </tr>
+  <tr>
+   <td width="300px">Type</td>
+   <td width="175px">string</td>
+   <td width="400px">Type of the account. C=Cash, M=Margin, F=Futures, X=Forex, D=DVP</td>
+  </tr>
+  <tr>
+   <td width="300px">TypeDescription</td>
+   <td width="175px">string
+</td>
+   <td width="400px">Cash, Margin, DVP, Futures, Forex</td>
+  </tr>
+  <tr>
+   <td width="300px">UnclearedDeposit</td>
+   <td width="175px">decimal</td>
+   <td width="400px">Funds that are not available for trading and are deducted from your account balance.</td>
+  </tr>
+</table>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

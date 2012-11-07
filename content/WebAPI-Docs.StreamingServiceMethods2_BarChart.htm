@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Streaming Service v2 &gt; BarChart
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.StreamingServiceMethods2_BarChart&amp;Section=4" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_4" href="#Summary:_4" title="Link to this Section">&#0182;</a></h3>Streams barchart information for a particular symbol from a given start date, or bars back.  Can also return a barchart for a given time-span.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.StreamingServiceMethods2_BarChart&amp;Section=5" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_5" href="#Details:_5" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>GET</b></li><li>Path /stream/barchart/{symbol}/{quantity}/{barInterval}/{startDate}/{endDate}</li><li>URI Parameters:<ul><li>{symbol} =</li><li>{barIntervalQuantity} <i>(Must be 1 for interval units Daily, Weekly and Monthly)</i></li><li>{barIntervalUnit} = {Second, Minute, Daily, Weekly, Monthly}</li><li>{startDate} = {m-d-yyyy}  - This date value is for time 00:00:00 of that day.</li><li>{endDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day.  <br /></li></ul></li></ul><br /><ul><li>Path /stream/barchart/{symbol}/{quantity}/{barInterval}/{barsBack}/{lastDate}</li><li>URI Parameters:<ul><li>{symbol} =</li><li>{barIntervalQuantity} <i>(Must be 1 for interval units Daily, Weekly and Monthly)</i></li><li>{barIntervalUnit} = {Second, Minute, Daily, Weekly, Monthly}</li><li>{barsBack} = Number of bars to go back from the current time or the value provided in lastDate</li><li>{lastDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day.  <br /></li></ul></li></ul><br /><ul><li>Authentication: Requires a valid access token.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.StreamingServiceMethods2_BarChart&amp;Section=6" class="editsectionlink"></a><h3 class="separator">Returns:<a target="mainFrame" class="headeranchor" id="Returns:_6" href="#Returns:_6" title="Link to this Section">&#0182;</a></h3><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_IntradayBarData.htm" title="DataObject : IntradayBarData">IntradayBarData</a> object<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.StreamingServiceMethods2_BarChart&amp;Section=7" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_7" href="#Errors:_7" title="Link to this Section">&#0182;</a></h3><ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.StreamingServiceMethods2_BarChart&amp;Section=8" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_8" href="#Examples:_8" title="Link to this Section">&#0182;</a></h3>
+<h4 class="separator">Request:<a target="mainFrame" class="headeranchor" id="Request:_0" href="#Request:_0" title="Link to this Section">&#0182;</a></h4> 
+<pre>
+GET https&#58;//api.tradestation.com/v2/stream/barchart/yhoo/1/minute/07-13-2011 HTTP/1.1
+Authorization&#58; Bearer accesstokengoeshere
+Accept&#58; application/JSON
+</pre><br /><h4 class="separator">Response:<a target="mainFrame" class="headeranchor" id="Response:_1" href="#Response:_1" title="Link to this Section">&#0182;</a></h4><pre>
+HTTP/1.1 200 OK
+Transfer-Encoding&#58; chunked
+Content-Type&#58; text/plain
+
+e9
+&#123;"Close"&#58;14.98,"DownTicks"&#58;2,"DownVolume"&#58;2500,"High"&#58;14.98,"Low"&#58;14.98,"Open"&#58;14.98,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1310584680000)\/","TotalTicks"&#58;2,"TotalVolume"&#58;2500,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;0,"UpVolume"&#58;0&#125;
+2
+f3
+&#123;"Close"&#58;14.94,"DownTicks"&#58;85,"DownVolume"&#58;23098,"High"&#58;14.98,"Low"&#58;14.94,"Open"&#58;14.97,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1310584740000)\/","TotalTicks"&#58;139,"TotalVolume"&#58;38498,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;54,"UpVolume"&#58;15400&#125;
+2
+ea
+&#123;"Close"&#58;14.94,"DownTicks"&#58;7,"DownVolume"&#58;900,"High"&#58;14.95,"Low"&#58;14.94,"Open"&#58;14.95,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1310584800000)\/","TotalTicks"&#58;8,"TotalVolume"&#58;1604,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;1,"UpVolume"&#58;704&#125;
+2
+f6
+&#123;"Close"&#58;14.92,"DownTicks"&#58;217,"DownVolume"&#58;138860,"High"&#58;14.96,"Low"&#58;14.9,"Open"&#58;14.94,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1310584860000)\/","TotalTicks"&#58;376,"TotalVolume"&#58;188562,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;159,"UpVolume"&#58;49702&#125;
+2
+ef
+&#123;"Close"&#58;14.93,"DownTicks"&#58;7,"DownVolume"&#58;1400,"High"&#58;14.93,"Low"&#58;14.91,"Open"&#58;14.91,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1310584920000)\/","TotalTicks"&#58;45,"TotalVolume"&#58;10600,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;38,"UpVolume"&#58;9200&#125;
+2
+f3
+&#123;"Close"&#58;14.92,"DownTicks"&#58;104,"DownVolume"&#58;32838,"High"&#58;14.93,"Low"&#58;14.91,"Open"&#58;14.93,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1310584980000)\/","TotalTicks"&#58;154,"TotalVolume"&#58;40677,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;50,"UpVolume"&#58;7839&#125;
+2
+</pre><br />
+<h4 class="separator">Bars Back Request:<a target="mainFrame" class="headeranchor" id="Bars_Back_Request:_2" href="#Bars_Back_Request:_2" title="Link to this Section">&#0182;</a></h4><pre>
+GET https&#58;//api.tradestation.com/v2/stream/barchart/spy/1/minute/5/12-09-2011?authorization=go HTTP/1.1
+Authorization&#58; Bearer accesstokengoeshere
+Host&#58; api.tradestation.com
+</pre><br /><h4 class="separator">Bars Back Response:<a target="mainFrame" class="headeranchor" id="Bars_Back_Response:_3" href="#Bars_Back_Response:_3" title="Link to this Section">&#0182;</a></h4><pre>
+HTTP/1.1 200 OK
+Transfer-Encoding&#58; chunked
+Content-Type&#58; text/plain
+
+100
+&#123;"Close"&#58;126.25,"DownTicks"&#58;993,"DownVolume"&#58;410376,"High"&#58;126.25,"Low"&#58;126.11,"Open"&#58;126.12,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1323464160000)\/","TotalTicks"&#58;3068,"TotalVolume"&#58;1679291,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;2075,"UpVolume"&#58;1268915&#125;
+2
+ff
+&#123;"Close"&#58;126.22,"DownTicks"&#58;1736,"DownVolume"&#58;651504,"High"&#58;126.27,"Low"&#58;126.2,"Open"&#58;126.24,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1323464220000)\/","TotalTicks"&#58;3492,"TotalVolume"&#58;1492705,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;1756,"UpVolume"&#58;841201&#125;
+2
+ff
+&#123;"Close"&#58;126.27,"DownTicks"&#58;1199,"DownVolume"&#58;486333,"High"&#58;126.27,"Low"&#58;126.2,"Open"&#58;126.23,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1323464280000)\/","TotalTicks"&#58;2754,"TotalVolume"&#58;1386424,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;1555,"UpVolume"&#58;900091&#125;
+2
+100
+&#123;"Close"&#58;126.18,"DownTicks"&#58;1936,"DownVolume"&#58;891842,"High"&#58;126.27,"Low"&#58;126.16,"Open"&#58;126.27,"Status"&#58;13,"TimeStamp"&#58;"\/Date(1323464340000)\/","TotalTicks"&#58;3441,"TotalVolume"&#58;1540261,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;1505,"UpVolume"&#58;648419&#125;
+2
+102
+&#123;"Close"&#58;126.02,"DownTicks"&#58;3000,"DownVolume"&#58;1862967,"High"&#58;126.18,"Low"&#58;125.99,"Open"&#58;126.17,"Status"&#58;29,"TimeStamp"&#58;"\/Date(1323464400000)\/","TotalTicks"&#58;5529,"TotalVolume"&#58;3183346,"UnchangedTicks"&#58;0,"UnchangedVolume"&#58;0,"UpTicks"&#58;2529,"UpVolume"&#58;1320379&#125;
+2
+3
+END
+0
+</pre>
+<h1 class="separator"> </h1>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>

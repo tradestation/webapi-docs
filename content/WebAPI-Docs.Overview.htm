@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Overview
+			
+		</div>
+
+		The WebAPI is a collection of restful services for interacting with TradeStation. These services accept and/or return object data via standard HTTP requests. <br /><br />All request are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. <a target="mainFrame" class="pagelink" href="WebAPI-Docs.Security.htm" title="Security Overview">Security</a> is based on the OAuth 2.0 spec and all requests require a user access token be included. <br /><br />We are currently on Version 2 of the WebAPI - baseurl = https://api.tradestation.com/v2<br /><br />Here is a simple example of requesting a list of accounts for a particular user:<br /><br />
+<pre>
+&#45;&#45;REQUEST&#45;&#45;
+GET https&#58;//api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
+Authorization&#58; QUNCSmI
+Accept&#58; application/json
+Content-Type&#58; application/x-www-form-urlencoded
+Host&#58; api.tradestation.com
+
+&#45;&#45;RESPONSE&#45;&#45;
+HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 218
+Content-Type&#58; application/json; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Fri, 18 Mar 2011 18&#58;21&#58;45 GMT
+
+&#91;&#123;"Key"&#58;114275,"Name"&#58;"543061 QA","Type"&#58;"C","TypeDescription"&#58;"Cash"&#125;,&#123;"Key"&#58;114276,"Name"&#58;"5430611 QA","Type"&#58;"M","TypeDescription"&#58;"Margin"&#125;,&#123;"Key"&#58;114277,"Name"&#58;"5430612 QA","Type"&#58;"F","TypeDescription"&#58;"Futures"&#125;&#93;
+</pre><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Overview&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Other notes<a target="mainFrame" class="headeranchor" id="Other_notes_0" href="#Other_notes_0" title="Link to this Section">&#0182;</a></h3><ul><li>urls are NOT case sensitive</li><li>all data is assumed to be UTF8 encoded.<br /></li></ul><br />
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>
