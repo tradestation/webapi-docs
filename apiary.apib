@@ -1,0 +1,89 @@
+HOST: https://api.tradestation.com/v2
+
+--- WebAPI Documentation ---
+---
+The WebAPI is a collection of RESTful web services for interacting with TradeStation. These services accept and/or return object data bia standard HTTP requests.
+
+All requests are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. Security is based on the OAuth 2.0 spec and all requests require a user access token be included.
+
+We are currently on Version 2 of the WebAPI - baseurl = https://api.tradestation.com/v2
+---
+-- Order Resources --
+Requesting order information for a particular account
+GET /accounts/{accountkey}/orders
+> Accept: application/json
+< 200
+< Content-Type: application/json
+[{
+    "AccountID": "QA",
+    "AdvancedOptions": "",
+    "AssetType": "OP",
+    "CommissionFee": 0.0000,
+    "ContractExpireDate": "8\/20\/2011 12:00:00 AM",
+    "ConversionRate": 0,
+    "Country": null,
+    "Denomination": "",
+    "Duration": "DAY",
+    "ExecuteQuantity": 0,
+    "FilledCanceled": "",
+    "FilledPriceText": "0.0000000000",
+    "GroupName": "",
+    "Legs": [{
+        "Ask": 2.6300000000,
+        "BaseSymbol": "MSFT",
+        "Bid": 2.5900000000,
+        "ExecPrice": 0.0000000000,
+        "ExecQuantity": 0,
+        "ExpireDate": "8\/20\/2011 12:00:00 AM",
+        "Leaves": 1,
+        "LegNumber": 1,
+        "LimitPrice": 2.5800000000,
+        "LimitPriceDisplay": "2.5800000000",
+        "Month": 8,
+        "OpenOrClose": "O",
+        "OrderID": 207885336,
+        "OrderType": 0,
+        "OrderTypeDescription": "Limit",
+        "PointValue": 100.0000000000,
+        "PriceUsedForBuyingPower": 2.5800000000,
+        "PutOrCall": "C",
+        "Quantity": 5,
+        "Side": "B",
+        "StopPrice": 0,
+        "StopPriceDisplay": "0",
+        "StrikePrice": 24.0000000000,
+        "Symbol": "MSFT 110820C24",
+        "TimeExecuted": "1\/1\/0001 12:00:00 AM",
+        "Year": 2011
+        }],
+        "LimitPriceText": "2.5800000000",
+        "OrderID": 207885336,
+        "Originator": 543061,
+        "Quantity": 5,
+        "QuantityLeft": 5,
+        "Routing": "Intelligent",
+        "Spread": "",
+        "Status": "ACK",
+        "StopPriceText": "0",
+        "Symbol": "MSFT 110820C24",
+        "TimeStamp": "8\/3\/2011 2:40:42 PM",
+        "TriggeredBy": "",
+        "Type": "Buy to Open"
+}]
+
+
+Save new products in your shopping cart
+POST /shopping-cart
+> Content-Type: application/json
+{ "product":"1AB23ORM", "quantity": 2 }
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/shopping-cart/2" }
+
+
+-- Payment Resources --
+This resource allows you to submit payment information to process your *shopping cart* items
+POST /payment
+{ "cc": "12345678900", "cvc": "123", "expiry": "0112" }
+< 200
+{ "receipt": "/payment/receipt/1" }
