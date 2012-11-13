@@ -72,18 +72,17 @@ GET /accounts/{accountkey}/orders
 }]
 
 
-Save new products in your shopping cart
-POST /shopping-cart
-> Content-Type: application/json
-{ "product":"1AB23ORM", "quantity": 2 }
-< 201
-< Content-Type: application/json
-{ "status": "created", "url": "/shopping-cart/2" }
-
-
--- Payment Resources --
-This resource allows you to submit payment information to process your *shopping cart* items
-POST /payment
-{ "cc": "12345678900", "cvc": "123", "expiry": "0112" }
+-- Security Resources --
+Obtaining authorization to access controlled resources
+POST /security/authorize
+> Content-Type: application/x-www-form-urlencoded
+grant_type=refresh_token&client_id=123456&redirect_uri=http://www.myredirect.com&client_secret=789456&refresh_token=1234myRefreshToken56789
 < 200
-{ "receipt": "/payment/receipt/1" }
+< Content-Type: application/json
+{
+    "expires_in": 21943,
+    "token": "ZFhZcGUzQ3lsblJEpiVDA9",
+    "token_type": null,
+    "userid": "testuser",
+    "refreshtoken": ""
+}
