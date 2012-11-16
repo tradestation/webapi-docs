@@ -92,7 +92,8 @@ Resources:
 
 --
 -- Balance Resources --
-Balances
+Requesting balance information for a particular account
+
 GET /accounts/{accountkey}/balances{?oauth_token}
 > Accept: application/json
 < 200
@@ -138,82 +139,3 @@ GET /accounts/{accountkey}/balances{?oauth_token}
     "UnsettledFund":0.0000
 }
 ]
-
--- Order Resources --
-Requesting order information for a particular account
-GET /accounts/{accountkey}/orders
-> Accept: application/json
-< 200
-< Content-Type: application/json
-[{
-    "AccountID": "QA",
-    "AdvancedOptions": "",
-    "AssetType": "OP",
-    "CommissionFee": 0.0000,
-    "ContractExpireDate": "8\/20\/2011 12:00:00 AM",
-    "ConversionRate": 0,
-    "Country": null,
-    "Denomination": "",
-    "Duration": "DAY",
-    "ExecuteQuantity": 0,
-    "FilledCanceled": "",
-    "FilledPriceText": "0.0000000000",
-    "GroupName": "",
-    "Legs": [{
-        "Ask": 2.6300000000,
-        "BaseSymbol": "MSFT",
-        "Bid": 2.5900000000,
-        "ExecPrice": 0.0000000000,
-        "ExecQuantity": 0,
-        "ExpireDate": "8\/20\/2011 12:00:00 AM",
-        "Leaves": 1,
-        "LegNumber": 1,
-        "LimitPrice": 2.5800000000,
-        "LimitPriceDisplay": "2.5800000000",
-        "Month": 8,
-        "OpenOrClose": "O",
-        "OrderID": 207885336,
-        "OrderType": 0,
-        "OrderTypeDescription": "Limit",
-        "PointValue": 100.0000000000,
-        "PriceUsedForBuyingPower": 2.5800000000,
-        "PutOrCall": "C",
-        "Quantity": 5,
-        "Side": "B",
-        "StopPrice": 0,
-        "StopPriceDisplay": "0",
-        "StrikePrice": 24.0000000000,
-        "Symbol": "MSFT 110820C24",
-        "TimeExecuted": "1\/1\/0001 12:00:00 AM",
-        "Year": 2011
-        }],
-        "LimitPriceText": "2.5800000000",
-        "OrderID": 207885336,
-        "Originator": 543061,
-        "Quantity": 5,
-        "QuantityLeft": 5,
-        "Routing": "Intelligent",
-        "Spread": "",
-        "Status": "ACK",
-        "StopPriceText": "0",
-        "Symbol": "MSFT 110820C24",
-        "TimeStamp": "8\/3\/2011 2:40:42 PM",
-        "TriggeredBy": "",
-        "Type": "Buy to Open"
-}]
-
-
--- Security Resources --
-Obtaining authorization to access controlled resources
-POST /security/authorize
-> Content-Type: application/x-www-form-urlencoded
-grant_type=refresh_token&client_id=123456&redirect_uri=http://www.myredirect.com&client_secret=789456&refresh_token=1234myRefreshToken56789
-< 200
-< Content-Type: application/json
-{
-    "expires_in": 21943,
-    "token": "ZFhZcGUzQ3lsblJEpiVDA9",
-    "token_type": null,
-    "userid": "testuser",
-    "refreshtoken": ""
-}
