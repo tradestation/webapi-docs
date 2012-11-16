@@ -8,6 +8,31 @@ All requests are made via HTTPS URIs that represent objects as a hierarchy of re
 
 We are currently on Version 2 of the WebAPI - baseurl = https://api.tradestation.com/v2
 ---
+--
+Security Overview
+
+Tradestation WebAPI authorization is based on the OAuth 2.0 specification
+
+All WebAPI clients require an Access Token in order to access protected resources. The application flow for obtaining a token will vary from application to application but all tokens are issued via the `/security/authorize` service which grants tokens based on "Grant Types". Currently, WebAPI supports OAuth 2.0's Authorization Code, Client Credentials, and Password grant types.
+
+The WebAPI issues Access Tokens of type Bearer.
+
+```
+Bearer Token
+    A security token with the property that any party in possession of
+    the token (a "bearer") can use the token in any way that any other
+    party in possession of it can. Using a bearer token does not
+    require a bearer to prove possession of crptographic key material
+    (proof-of-possession).
+```
+
+Notes:
+
+* Users authorizing an API client must have their Multi-Factor questions and answers defined, otherwise Authorization will fail.
+* The Password grant type is disabled since it requires the end-user to provide login credentials to the API Client directly.
+* All requests require HTTPS. Some examples may be from a test environment and use HTTP for demonstration only.
+
+--
 -- Balance Resources --
 Balances
 GET /accounts/{accountkey}/balances{?oauth_token}
