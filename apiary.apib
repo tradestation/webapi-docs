@@ -77,6 +77,20 @@ Notes:
 * All requests require HTTPS. Some examples may be from a test environment and use HTTP for demonstration only.
 
 --
+--
+Accounts Service
+
+The Accounts Service provides the consumer with resources to access balance, positions, and orders for a particular account.
+
+Service URI: `/accounts/{accountkey}/{method}`
+
+Resources:
+
+* Balances | Retrieves balance information for a given account
+* Positions | Retrieves the positions for a given account
+* Orders | Retrieves order information for a given account
+
+--
 -- Balance Resources --
 Balances
 GET /accounts/{accountkey}/balances{?oauth_token}
