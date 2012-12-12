@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			DataService : HotListDefinitions
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_HotListDefinitions&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_0" href="#Summary:_0" title="Link to this Section">&#0182;</a></h3>Search resource for available HotList requests.
+Can filter responses using OData protocol.<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_HotListDefinitions&amp;Section=1" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_1" href="#Details:_1" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>GET</b></li><li>Path: /data/hotlistdefinitions</li><li>URI Parameters:<ul><li>none<br /></li></ul></li></ul><br /><ul><li>Authentication: Requires a valid access token.<br /></li></ul><br /><ul><li>Returns: <a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_HotListDefinition.htm" title="DataObject : HotListDefinition">Hot List Definition</a> object<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_HotListDefinitions&amp;Section=2" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_2" href="#Errors:_2" title="Link to this Section">&#0182;</a></h3>
+<ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.DataServiceMethods_HotListDefinitions&amp;Section=3" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_3" href="#Examples:_3" title="Link to this Section">&#0182;</a></h3>
+Example Request:
+<pre>
+GET https&#58;//api.tradestation.com/v2/data/hotlistdefinitions?$filter=Activity%20eq%20'Rapidly%20Falling' HTTP/1.1
+Authorization&#58;  Bearer AccessTokenGoesHere
+</pre><br />Example Response: ()
+<pre>
+HTTP/1.1 200 OK
+Content-Length&#58; 561
+Content-Type&#58; application/json
+
+&#91;&#123;"Activity"&#58;"Rapidly Falling","AssetClass"&#58;"Equities","Exchange"&#58;"ALL","ID"&#58;"RAPFA","ListType"&#58;"Price Lists"&#125;,
+&#123;"Activity"&#58;"Rapidly Falling","AssetClass"&#58;"Equities","Exchange"&#58;"AMEX","ID"&#58;"RAPFAA","ListType"&#58;"Price Lists"&#125;,
+&#123;"Activity"&#58;"Rapidly Falling","AssetClass"&#58;"Equities","Exchange"&#58;"ARCX","ID"&#58;"RAPFAX","ListType"&#58;"Price Lists"&#125;,
+&#123;"Activity"&#58;"Rapidly Falling","AssetClass"&#58;"Equities","Exchange"&#58;"NASDAQ","ID"&#58;"RAPFAQ","ListType"&#58;"Price Lists"&#125;,
+&#123;"Activity"&#58;"Rapidly Falling","AssetClass"&#58;"Equities","Exchange"&#58;"NYSE","ID"&#58;"RAPFAN","ListType"&#58;"Price Lists"&#125;&#93;
+</pre>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>
