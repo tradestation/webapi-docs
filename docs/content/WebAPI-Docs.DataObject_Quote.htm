@@ -78,7 +78,7 @@
 <TD>Number of open contracts</TD></TR>
 <TR>
 <TD>Description</TD>
-<TD>integer</TD>
+<TD>string</TD>
 <TD></TD></TR>
 <TR>
 <TD>DisplayType</TD>
@@ -141,6 +141,10 @@
 <TD>string</TD>
 <TD>52 week high price.</TD></TR>
 <TR>
+<TD>IsDelayed</TD>
+<TD>bool</TD>
+<TD>True if the quote is a delayed quote and False if the quote is a real-time quote</TD></TR>
+<TR>
 <TD>Last</TD>
 <TD>decimal</TD>
 <TD>Last traded price.</TD></TR>
@@ -168,11 +172,12 @@
 <TR>
 <TD>MinMove</TD>
 <TD>integer</TD>
-<TD>Symbol's minmove.</TD></TR>
+<TD>Multiplying factor using the display type to determine the minimum price increment the asset trades in.
+</TD></TR>
 <TR>
 <TD>NameExt</TD>
 <TD>string</TD>
-<TD></TD>
+<TD>If the Quote is delayed this property will be set to(D)</TD>
 </TR>
 <TR>
 <TD>NetChange</TD>
@@ -232,7 +237,44 @@
 <TR>
 <TD>Volume</TD>
 <TD>integer</TD>
-<TD>Today's volume.</TD></TR></TBODY></TABLE>
+<TD>Today's volume.</TD></TR></TBODY></TABLE><br /><br />
+Japanese Equities Specific Quote Properties<br /><br /><table border="1">
+  <tr>
+   <td width="300px">Field</td>
+   <td width="175px">Type</td>
+   <td width="400px">Description</td>
+  </tr>
+  <tr>
+   <td width="300px">OpenTime</td>
+   <td width="175px">string</td>
+   <td width="400px">Time of symbol's open price today</td>
+  </tr>
+  <tr>
+   <td width="300px">HighTime</td>
+   <td width="175px">string</td>
+   <td width="400px">Time of symbol's high price today</td>
+  </tr>
+  <tr>
+   <td width="300px">LowTime</td>
+   <td width="175px">string</td>
+   <td width="400px">Time of symbol's low price today</td>
+  </tr>
+  <tr>
+   <td width="300px">LastTime</td>
+   <td width="175px">string</td>
+   <td width="400px">Time of symbol's last price today</td>
+  </tr>
+  <tr>
+   <td width="300px">LotSize</td>
+   <td width="175px">integer</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">Turnover</td>
+   <td width="175px">integer</td>
+   <td width="400px"></td>
+  </tr>
+</table>
 
 	</div>
 	

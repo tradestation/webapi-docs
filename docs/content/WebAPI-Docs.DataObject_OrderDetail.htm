@@ -26,104 +26,9 @@
    <td width="400px">Description</td>
   </tr>
   <tr>
-   <td width="300px">Alias</td>
-   <td width="175px">string</td>
-   <td width="400px">User defined name</td>
-  </tr>
-  <tr>
-   <td width="300px">OrderID</td>
-   <td width="175px">integer</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
    <td width="300px">AccountID</td>
    <td width="175px">string</td>
    <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">Originator</td>
-   <td width="175px">integer</td>
-   <td width="400px">FDCN Id of the user that placed the order</td>
-  </tr>
-  <tr>
-   <td width="300px">TimeStamp</td>
-   <td width="175px">string, M/D/YYYY h:m:s tt</td>
-   <td width="400px">Time in UTC/GMT that order was placed</td>
-  </tr>
-  <tr>
-   <td width="300px">FilledCanceled</td>
-   <td width="175px">string</td>
-   <td width="400px">Time that order was filled, cancelled, or rejected</td>
-  </tr>
-  <tr>
-   <td width="300px">Symbol</td>
-   <td width="175px">string</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">Spread</td>
-   <td width="175px">string</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">Type</td>
-   <td width="175px">string</td>
-   <td width="400px">Buy, Sell, Buy to Close, Sell to Open</td>
-  </tr>
-  <tr>
-   <td width="300px">Quantity</td>
-   <td width="175px">integer</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">ExecuteQuantity</td>
-   <td width="175px">integer</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">QuantityLeft</td>
-   <td width="175px">intger</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">StopPriceText</td>
-   <td width="175px">string</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">LimitPriceText</td>
-   <td width="175px">string</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">FilledPriceText</td>
-   <td width="175px">string</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">Status</td>
-   <td width="175px">string</td>
-   <td width="400px">Status of Order, described below</td>
-  </tr>
-  <tr>
-   <td width="300px">Routing</td>
-   <td width="175px">string</td>
-   <td width="400px"></td>
-  </tr>
-  <tr>
-   <td width="300px">Duration</td>
-   <td width="175px">string</td>
-   <td width="400px">FX - DAY, FU - </td>
-  </tr>
-  <tr>
-   <td width="300px">GroupName</td>
-   <td width="175px">string</td>
-   <td width="400px">For Conditional Orders</td>
-  </tr>
-  <tr>
-   <td width="300px">TriggeredBy</td>
-   <td width="175px">string</td>
-   <td width="400px">For Conditional Orders</td>
   </tr>
   <tr>
    <td width="300px">AdvancedOptions</td>
@@ -131,9 +36,9 @@
    <td width="400px">For Conditional Orders..RelationIdentifer</td>
   </tr>
   <tr>
-   <td width="300px">ContractExpireDate</td>
+   <td width="300px">Alias</td>
    <td width="175px">string</td>
-   <td width="400px">Expiration date in UTC formatted time.</td>
+   <td width="400px">User defined name</td>
   </tr>
   <tr>
    <td width="300px">CommissionFee</td>
@@ -141,9 +46,9 @@
    <td width="400px"></td>
   </tr>
   <tr>
-   <td width="300px">Denomination</td>
+   <td width="300px">ContractExpireDate</td>
    <td width="175px">string</td>
-   <td width="400px"></td>
+   <td width="400px">Expiration date in UTC formatted time.</td>
   </tr>
   <tr>
    <td width="300px">ConversionRate</td>
@@ -156,9 +61,109 @@
    <td width="400px"></td>
   </tr>
   <tr>
+   <td width="300px">Denomination</td>
+   <td width="175px">string</td>
+   <td width="400px">Currency security is traded in</td>
+  </tr>
+  <tr>
+   <td width="300px">DisplayName</td>
+   <td width="175px">string </td>
+   <td width="400px">Set to Alternate ID if it exists otherwise will be the TradeStation Account ID</td>
+  </tr>
+  <tr>
+   <td width="300px">Duration</td>
+   <td width="175px">string</td>
+   <td width="400px">FX - DAY, FU - </td>
+  </tr>
+  <tr>
+   <td width="300px">ExecuteQuantity</td>
+   <td width="175px">integer</td>
+   <td width="400px">Quantity executed for order</td>
+  </tr>
+  <tr>
+   <td width="300px">FilledCanceled</td>
+   <td width="175px">string</td>
+   <td width="400px">Time that order was filled, cancelled, or rejected</td>
+  </tr>
+  <tr>
+   <td width="300px">FilledPriceText</td>
+   <td width="175px">string</td>
+   <td width="400px">FilledPrice with decimal precision applied</td>
+  </tr>
+  <tr>
+   <td width="300px">GroupName</td>
+   <td width="175px">string</td>
+   <td width="400px">For Conditional Orders</td>
+  </tr>
+  <tr>
    <td width="300px"><a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_Leg.htm" title="DataObject : Leg">Legs</a></td>
    <td width="175px">Legs</td>
    <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">LimitPriceText</td>
+   <td width="175px">string</td>
+   <td width="400px">LimitPrice with decimal precision applied</td>
+  </tr>
+  <tr>
+   <td width="300px">OrderID</td>
+   <td width="175px">integer</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">Originator</td>
+   <td width="175px">integer</td>
+   <td width="400px">FDCN Id of the user that placed the order</td>
+  </tr>
+  <tr>
+   <td width="300px">Quantity</td>
+   <td width="175px">integer</td>
+   <td width="400px">Quantity of shares in the order</td>
+  </tr>
+  <tr>
+   <td width="300px">QuantityLeft</td>
+   <td width="175px">intger</td>
+   <td width="400px">Quantity remaining to execute on order</td>
+  </tr>
+  <tr>
+   <td width="300px">Routing</td>
+   <td width="175px">string</td>
+   <td width="400px">Route order was done</td>
+  </tr>
+  <tr>
+   <td width="300px">Spread</td>
+   <td width="175px">string</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">Status</td>
+   <td width="175px">string</td>
+   <td width="400px">Status of Order, described below</td>
+  </tr>
+  <tr>
+   <td width="300px">StopPriceText</td>
+   <td width="175px">string</td>
+   <td width="400px">StopPrice with decimal precision applied</td>
+  </tr>
+  <tr>
+   <td width="300px">Symbol</td>
+   <td width="175px">string</td>
+   <td width="400px"></td>
+  </tr>
+  <tr>
+   <td width="300px">TimeStamp</td>
+   <td width="175px">string, M/D/YYYY h:m:s tt</td>
+   <td width="400px">Time in UTC/GMT that order was placed</td>
+  </tr>
+  <tr>
+   <td width="300px">TriggeredBy</td>
+   <td width="175px">string</td>
+   <td width="400px">For Conditional Orders</td>
+  </tr>
+  <tr>
+   <td width="300px">Type</td>
+   <td width="175px">string</td>
+   <td width="400px">Buy, Sell, Buy to Close, Buy to Open, Sell to Open, Sell To Close, Buy To Cover, Sell to Short, </td>
   </tr>
 </table><br />Order Status Categories
 <pre>

@@ -19,7 +19,7 @@
 			
 		</div>
 
-		The WebAPI is a collection of restful services for interacting with TradeStation. These services accept and/or return object data via standard HTTP requests. <br /><br />All request are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. <a target="mainFrame" class="pagelink" href="WebAPI-Docs.Security.htm" title="Security Overview">Security</a> is based on the OAuth 2.0 spec and all requests require a user access token be included. <br /><br />We are currently on Version 2 of the WebAPI - baseurl = https://api.tradestation.com/v2<br /><br />Here is a simple example of requesting a list of accounts for a particular user:<br /><br />
+		The WebAPI is a collection of restful services for interacting with TradeStation. These services accept and/or return object data via standard HTTP requests. <br /><br />The WebAPI exposes streaming barchart resources, however, this data is throttled.<br /><br />All request are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. <a target="mainFrame" class="pagelink" href="WebAPI-Docs.Security.htm" title="Security Overview">Security</a> is based on the OAuth 2.0 spec and all requests require a user access token be included. <br /><br />We are currently on Version 2 of the WebAPI - baseurl = https://api.tradestation.com/v2<br /><br />Here is a simple example of requesting a list of accounts for a particular user:<br /><br />
 <pre>
 &#45;&#45;REQUEST&#45;&#45;
 GET https&#58;//api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
