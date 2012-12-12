@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Fundamentals
+			
+		</div>
+
+		<div style="border-top: solid 2px #FED626; border-bottom: solid 2px #FED626; padding: 4px 4px 4px 36px; vertical-align: middle; background-color: #FFF7C0; background-image: url(GetFile.aspx?File=Alert.png); background-repeat: no-repeat; background-position: 10px center;">
+This page is a <i>Draft</i>, its content is not complete and might contain errors.
+</div><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Fundamentals&amp;Section=1" class="editsectionlink"></a><h1 class="separator">Summary<a target="mainFrame" class="headeranchor" id="Summary_1" href="#Summary_1" title="Link to this Section">&#0182;</a></h1>Fundamental data includes financial information on U.S. equities such as corporate earnings and financial statements that can be used for fundamental analysis.  <br /><br /><h4 class="separator">Service URI<a target="mainFrame" class="headeranchor" id="Service_URI_0" href="#Service_URI_0" title="Link to this Section">&#0182;</a></h4><pre>
+https&#58;//api.tradestation.com/v2/fundamentals/&#123;symbol&#125;/&#123;field(s)&#125;
+</pre><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Fundamentals&amp;Section=2" class="editsectionlink"></a><h1 class="separator">Methods<a target="mainFrame" class="headeranchor" id="Methods_2" href="#Methods_2" title="Link to this Section">&#0182;</a></h1>
+<a target="mainFrame" class="pagelink" href="WebAPI-Docs.FundamentalsServiceMethod_SelectAllFields.htm" title="Fundamentals Service : Select All Fields">Select All Fundamental Fields</a> | Returns all fundamental fields available from TradeStation<br /><br /><a target="mainFrame" class="pagelink" href="WebAPI-Docs.FundamentalsServiceMethod_SelectFields.htm" title="Fundamentals Service : Select Fields">Select Fundamental Fields</a> | Returns fields provided in the url<br /><br />
+<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.Fundamentals&amp;Section=3" class="editsectionlink"></a><h1 class="separator">Fundamental Data Fields<a target="mainFrame" class="headeranchor" id="Fundamental_Data_Fields_3" href="#Fundamental_Data_Fields_3" title="Link to this Section">&#0182;</a></h1><ul><li>There are two groups of fundamental data fields in TradeStation, those that include a history of previous fundamental field values and those that just provide a snapshot of the current field value.    <br /></li></ul><br /><ul><li>Descriptions for fundamental data fields that can reference history are organized by financial category.  Lists of these fields appear on pages that are organized as they would commonly appear on their respective financial statements.<br /></li></ul><br /><ul><li>All units, except share values, are converted to Millions for all periods.  Percentages are returned as whole values (i.e. a value of 26.5 represents 26.5% and not 2650.00%)<br /></li></ul><br /><ul><li><a target="mainFrame" class="externallink" href="http://help.tradestation.com/09_02/tradestationhelp/Subsystems/elanalysis/fundamental/fundamental_data_-_balance_sheet_assets_liabilities.htm " title=" Balance Sheet Fundamental Fields" target="_blank"> Balance Sheet Fundamental Fields</a></li><li><a target="mainFrame" class="externallink" href="http://help.tradestation.com/09_02/tradestationhelp/Subsystems/elanalysis/fundamental/fundamental_data_-_cash_flow_statement_fields.htm " title=" Cash Flow Fundamental Fields" target="_blank"> Cash Flow Fundamental Fields</a></li><li><a target="mainFrame" class="externallink" href="http://help.tradestation.com/09_02/tradestationhelp/Subsystems/elanalysis/fundamental/fundamental_data_-_income_statement.htm  " title=" Income Statement Fundamental Fields" target="_blank"> Income Statement Fundamental Fields</a></li><li><a target="mainFrame" class="externallink" href="http://help.tradestation.com/09_02/tradestationhelp/Subsystems/elanalysis/fundamental/fundamental_data_-_shareholder_equity.htm " title=" Shareholder Equity Fundamental Fields" target="_blank"> Shareholder Equity Fundamental Fields</a><br /></li></ul><br />In addition, a separate group of fundamental data fields allow you see the most current value without reference to any history.  A list of these fields appear on a page that is organized alphabetically (by description) to help you locate related values.<br /><br /><ul><li><a target="mainFrame" class="externallink" href="http://help.tradestation.com/09_02/tradestationhelp/Subsystems/elanalysis/fundamental/fundamental_data_-_snapshot_fields.htm " title=" Snapshot Fundamental Fields" target="_blank"> Snapshot Fundamental Fields</a><br /></li></ul>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>
