@@ -1,6 +1,7 @@
 ---
 layout: en
 title: Security Overview
+category: getting-started
 permalink: security-overview/
 ---
 
@@ -350,4 +351,4 @@ The token, prefixed with `Bearer` and a space must be included in the `Authoriza
 *Notes:*
 
 * *Failing to provide a valid access token results in a HTTP 401 Unauthorized response.*
-* *The Access Token is only valid for the Date it was issued. All dates and timestamps are calculated using UTC.*
+* *The Access Token is only valid for the Date it was issued. All dates and timestamps are calculated using UTC.*
