@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: en
 ---
 
 ## What is the TradeStation WebAPI?
@@ -20,8 +20,7 @@ Create dynamic web, mobile, or stand-alone applications using your programming l
 4. Access to market data is granted on a per-user basis, which will require your application to manage each user's access independently, since each user will have a different set of entitlements for market data.
 
 ### Learn more
-
-[Read now](en/getting-started/overview) or Download the documentation by clicking on the links to the tar.gz or .zip files at the top of the page or by visiting [https://github.com/tradestation/webapi-docs](https://github.com/tradestation/webapi-docs) and cloning our repository. Extract the files and click on the docs/index.html file to view the documentation.
+[Read now]({{ site.baseurl }}/en/getting-started/overview) or Download the documentation by clicking on the links to the tar.gz or .zip files at the top of the page or by visiting [https://github.com/tradestation/webapi-docs](https://github.com/tradestation/webapi-docs) and cloning our repository. Extract the files and click on the docs/index.html file to view the documentation.
 
 *Please note: Market data requests, although made in real time, are not guaranteed to include every update sent by the data exchanges.*
 

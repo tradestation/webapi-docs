@@ -1,15 +1,6 @@
 <!-- NAVBAR -->
 <div class="navbar">
-{% assign categories = site.pages | map: 'to_liquid' | map: 'category' %}
-{% assign usedCategories = '' %}
-{% for category in categories %}{% if category %}
-    {% capture categoryToCheck %},{{category}},{% endcapture %}
-    {% unless usedCategories contains categoryToCheck %}
-    <h3 style="color: red; text-transform: capitalize;">{{ category | replace: '-', ' ' }}</h3>
-        {% for doc in site.pages %}{% if doc.category == category %}
-    <a href="{{ doc.url }}">{{ doc.title }}</a>
-        {% endif %}{% endfor %}
-        {% capture usedCategories %}{{ usedCategories }}{{ categoryToCheck }}{% endcapture %}
-    {% endunless %}
-{% endif %}{% endfor %}
+    <h3 style="color: red; text-transform: capitalize;">getting started</h3>
+    <a href="{{ site.baseurl }}/en/getting-started/overview">Overview</a>
+    <a href="{{ site.baseurl }}/en/getting-started/security-overview">Security Overview</a>
 </div>
