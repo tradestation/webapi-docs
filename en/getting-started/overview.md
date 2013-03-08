@@ -3,6 +3,7 @@ layout: en
 title: Overview
 category: getting-started
 permalink: overview/
+weight: 1
 ---
 
 The WebAPI is a collection of RESTful web services for interacting with TradeStation. These services accept and/or return object data via standard HTTP requests.

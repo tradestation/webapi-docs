@@ -3,6 +3,7 @@ layout: en
 title: Security Overview
 category: getting-started
 permalink: security-overview/
+weight: 2
 ---
 
 TradeStation WebAPI authorization is based on [OAuth 2.0](http://tools.ietf.org/html/rfc6749).
@@ -274,33 +275,6 @@ The result of the request will be a JSON object with these values:
         "token_type": null,
         "userid": "CLIENTONLYLOGIN"
     }
-
-## Refresh Tokens
-
-In v2, Refresh tokens will be returned with the `security/authorize` response. An Access Token will expire in 20 minutes and the Refresh Token that is returned with an Access Token can be used to obtain a new access token. Access Tokens obtained via the Implicit Grant Type cannot be refreshed, the will expire in 24 hours of the time issued.
-
-### Details:
-
-* Method: `POST`
-* Path: `/security/authorize`
-* URI Parameters:
-  * none
-* Form Parameters:
-  * grant_type = refresh_token
-  * client_id = the client application's API key
-  * client_secret = the client application's API secret
-  * redirect_uri
-  * refresh_token
-* Returns: `AccessTokenResponse` Object
-
-**Example Request**
-
-    POST https://api.tradestation.com/Security/Authorize HTTP/1.1
-    Content-Type: application/x-www-form-urlencoded
-    Host: api.trad.tradestation.com
-    Content-Length: 610
-    
-    grant_type=refresh_token&client_id=123456&redirect_uri=http://www.myredirect.com&client_secret=789456&refresh_token=1234myRefreshToken56789
 
 ## Accessing Protected Resources
 

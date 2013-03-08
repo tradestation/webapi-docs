@@ -1,15 +1,47 @@
 <!-- NAVBAR -->
-<div class="navbar">
+<nav>
+    <ul>
 {% assign categories = site.pages | map: 'to_liquid' | map: 'category' %}
 {% assign usedCategories = '' %}
 {% for category in categories %}{% if category %}
     {% capture categoryToCheck %},{{category}},{% endcapture %}
     {% unless usedCategories contains categoryToCheck %}
-    <h3 style="color: red; text-transform: capitalize;">{{ category | replace: '-', ' ' }}</h3>
-        {% for doc in site.pages %}{% if doc.category == category %}
-    <a href="{{ doc.url }}">{{ doc.title }}</a>
-        {% endif %}{% endfor %}
+        <li style="color: red; text-transform: capitalize;">
+        {% for doc in site.pages %}
+            {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+            {% capture cat %}{{ category | replace: '-', ' ' | upcase }}{% endcapture %}
+            {% if title == cat %}<a href="{{ site.baseurl }}/en/{{ category }}/">{% endif %}
+        {% endfor %}
+            {{ category | replace: '-', ' ' }}
+        {% for doc in site.pages %}
+            {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+            {% capture cat %}{{ category | replace: '-', ' ' | upcase }}{% endcapture %}
+            {% if title == cat %}</a>{% endif %}
+        {% endfor %}
+            <ul>
+        {% for weight in (1..10) %}
+            {% for doc in site.pages %}
+                {% if doc.category == category and doc.weight == weight %}
+                <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        {% for doc in site.pages %}
+            {% if doc.category == category %}
+                {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+                {% capture cat %}{{ category | replace: '-', ' ' | upcase }}{% endcapture %}
+                {% if title == cat %}
+                {% else %}
+                    {% unless doc.weight %}
+                <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
+                    {% endunless %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
         {% capture usedCategories %}{{ usedCategories }}{{ categoryToCheck }}{% endcapture %}
+            </ul>
+        </li>
     {% endunless %}
 {% endif %}{% endfor %}
-</div>
+    </ul>
+</nav>
