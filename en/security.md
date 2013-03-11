@@ -5,4 +5,14 @@ category: security
 permalink: security/
 ---
 
-Test
+### Summary
+
+Provides methods for obtaining access tokens for use with other services.
+
+### Service URI
+
+`https://api.tradestation.com/security/`
+
+### Methods
+
+* [Authorize](authorize) | Requests an Access Token from TradeStation
