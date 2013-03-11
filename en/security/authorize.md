@@ -14,6 +14,7 @@ Obtaining authorization to access controlled resources
 * Method: **POST**
 * Path: `/security/authorize`
 * URI Parameters:
+  
   * *none*
 * Authentication: Client authorization only
 * Returns: `AccessTokenResponse` Object
@@ -63,6 +64,7 @@ Beginning in `v2`, Refresh tokens will be returned with the `security/authorize`
 * Method: `POST`
 * Path: `/security/authorize`
 * URI Parameters:
+
   * *none*
 * Form Parameters:
   * grant_type = refresh_token

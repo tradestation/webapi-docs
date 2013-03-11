@@ -14,6 +14,7 @@ Requesting position information for a particular account
 * Method: `GET`
 * Path: `/accounts/{accountkey}/positions`
 * URI Parameters:
+
   * {accountkey}
 * Authentication: Requires a valid access token
 

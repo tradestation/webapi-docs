@@ -14,6 +14,7 @@ Requesting balance information for a particular account
 * Method: `GET`
 * Path: `/accounts/{accountkey}/balances`
 * URI Parameters:
+
   * {accountkey}
 * Authentication: Requires a valid access token
 
