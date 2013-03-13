@@ -15,11 +15,11 @@ Provides synchronous access to market data resources. Internally this service us
 
 ### Methods
 
-[Quote](quote) | Retrieves a snapshot for a given list of symbols
-[Symbol Lookup](symbol-lookup) | Resource that can be used to search for symbols that fit a given criteria
-[Get Symbol Lists](get-symbol-lists) | Resource that returns all pre-defined symbol lists
-[Get Symbol List](get-symbol-list) | Resource that returns a specific pre-defined symbol list
-[Get Symbols](get-symbols) | Resource that returns the symbols in the symbol list
+* [Quote](quote) | Retrieves a snapshot for a given list of symbols
+* [Symbol Lookup](symbol-lookup) | Resource that can be used to search for symbols that fit a given criteria
+* [Get Symbol Lists](get-symbol-lists) | Resource that returns all pre-defined symbol lists
+* [Get Symbol List](get-symbol-list) | Resource that returns a specific pre-defined symbol list
+* [Get Symbols](get-symbols) | Resource that returns the symbols in the symbol list
 
 ### Japanese Equities for our Monex Customers
 
