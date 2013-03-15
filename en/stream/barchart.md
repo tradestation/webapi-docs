@@ -199,3 +199,109 @@ Example Response:
         "UpVolume": 7839
     }
     2
+
+Bars Back Example Request:
+
+    GET https://api.tradestation.com/v2/stream/barchart/spy/1/minute/5/12-09-2011?authorization=go HTTP/1.1
+    Authorization: Bearer accesstokengoeshere
+    Host: api.tradestation.com
+
+Bars Back Example Response:
+
+    HTTP/1.1 200 OK
+    Transfer-Encoding: chunked
+    Content-Type: text/plain
+
+    100
+	{
+	    "Close": 126.25,
+	    "DownTicks": 993,
+	    "DownVolume": 410376,
+	    "High": 126.25,
+	    "Low": 126.11,
+	    "Open": 126.12,
+	    "Status": 13,
+	    "TimeStamp": "\/Date(1323464160000)\/",
+	    "TotalTicks": 3068,
+	    "TotalVolume": 1679291,
+	    "UnchangedTicks": 0,
+	    "UnchangedVolume": 0,
+	    "UpTicks": 2075,
+	    "UpVolume": 1268915
+	}
+    2
+    ff
+    {
+        "Close": 126.22,
+        "DownTicks": 1736,
+        "DownVolume": 651504,
+        "High": 126.27,
+        "Low": 126.2,
+        "Open": 126.24,
+        "Status": 13,
+        "TimeStamp": "\/Date(1323464220000)\/",
+        "TotalTicks": 3492,
+        "TotalVolume": 1492705,
+        "UnchangedTicks": 0,
+        "UnchangedVolume": 0,
+        "UpTicks": 1756,
+        "UpVolume": 841201
+    }
+    2
+    ff
+    {
+        "Close": 126.27,
+        "DownTicks": 1199,
+        "DownVolume": 486333,
+        "High": 126.27,
+        "Low": 126.2,
+        "Open": 126.23,
+        "Status": 13,
+        "TimeStamp": "\/Date(1323464280000)\/",
+        "TotalTicks": 2754,
+        "TotalVolume": 1386424,
+        "UnchangedTicks": 0,
+        "UnchangedVolume": 0,
+        "UpTicks": 1555,
+        "UpVolume": 900091
+    }
+    2
+    100
+    {
+        "Close": 126.18,
+        "DownTicks": 1936,
+        "DownVolume": 891842,
+        "High": 126.27,
+        "Low": 126.16,
+        "Open": 126.27,
+        "Status": 13,
+        "TimeStamp": "\/Date(1323464340000)\/",
+        "TotalTicks": 3441,
+        "TotalVolume": 1540261,
+        "UnchangedTicks": 0,
+        "UnchangedVolume": 0,
+        "UpTicks": 1505,
+        "UpVolume": 648419
+    }
+    2
+    102
+    {
+        "Close": 126.02,
+        "DownTicks": 3000,
+        "DownVolume": 1862967,
+        "High": 126.18,
+        "Low": 125.99,
+        "Open": 126.17,
+        "Status": 29,
+        "TimeStamp": "\/Date(1323464400000)\/",
+        "TotalTicks": 5529,
+        "TotalVolume": 3183346,
+        "UnchangedTicks": 0,
+        "UnchangedVolume": 0,
+        "UpTicks": 2529,
+        "UpVolume": 1320379
+    }
+    2
+    3
+    END
+    0

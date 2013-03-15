@@ -16,5 +16,5 @@ The Accounts Service provides the consumer with resources to access balance, pos
 ### Methods
 
 * [Balances](balances) | Retrieves balance information for a given account.
-* [Positions](postitions) | Retrieves the positions for a given account.
+* [Positions](positions) | Retrieves the positions for a given account.
 * [Orders](orders) | Retrieves order information for a given account.
