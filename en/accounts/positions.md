@@ -20,7 +20,7 @@ Requesting position information for a particular account
 
 ### Returns
 
-`Position` object
+[Position](../../objects/position) object
 
 ### Retults Filter
 
@@ -45,7 +45,7 @@ Example Request:
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
 
-Example Response (`Position object details`):
+Example Response ([Position](../../objects/position) object details):
 
     HTTP/1.1 200 OK
     Cache-Control: private

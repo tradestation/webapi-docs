@@ -20,11 +20,11 @@ Requesting balance information for a particular account
 
 ### Returns
 
-* General `Account` object
-* `Account Currency Detail` object
-* `Equity Account` object if requesting an Equity account
-* `Forex Account` & `Forex Account Currency Detail` objects if requesting a Forex account
-* `Futures Account` & `Futures Account Currency Detail` object if requesting a Futures account
+* General [Account](../../objects/account) object
+* [Account Currency Detail](../../objects/account-currency-detail) object
+* [Equity Account](../../objects/equity-account) object if requesting an Equity account
+* [Forex Account](../../objects/forex-account) & [Forex Account Currency Detail](../../objects/forex-account-currency-detail) objects if requesting a Forex account
+* [Futures Account](../../objects/futures-account) & [Futures Account Currency Detail](../../objects/futures-account-currency-detail) object if requesting a Futures account
 
 ### Errors
 
@@ -41,7 +41,7 @@ Example Request:
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
 
-Example Response: (`Account object details`)
+Example Response: ([Account](../../objects/account) object details)
 
     HTTP/1.1 200 OK
     Cache-Control: private

@@ -81,7 +81,7 @@ If a bar contains data and is currently being built (possibly only on the last b
 |                           | First Tick                 | Subsequent Ticks           | Last Tick or End of Period | End of Session |
 | ------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------- |
 | 1 tick chart              | New&#124;RTData&#124;Close | New&#124;RTData&#124;Close | New&#124;RTData&#124;Close | EOSClose       |
-| 3 tick chart*             | New&#124;RTData            | RTData                     | RTData&#124;StdClose       | EOSClose       |
+| 3 tick chart              | New&#124;RTData            | RTData                     | RTData&#124;StdClose       | EOSClose       |
 | 1 minute chart            | New&#124;RTData            | RTData                     | RTData&#124;StdClose       | EOSClose       |
 | 1 min. chart (no trading) | N/A                        | N/A                        | New&#124;StdClose          | EOSClose       |
 | Point & Figure chart      | New&#124;RTData            | AnalysisBar                | RTData&#124;StdClose       | N/A            |

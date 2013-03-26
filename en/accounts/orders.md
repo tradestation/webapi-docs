@@ -25,7 +25,7 @@ Requesting order information for a particular account
 
 ### Returns
 
-List of `OrderDetail` object
+List of [Order Detail](../../objects/order-detail) object
 
 ### Results Filter
 
@@ -50,7 +50,7 @@ Example Request:
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
     
-Example Response (`OrderDetail` object details)
+Example Response ([Order Detail](../../objects/order-detail) object details)
 
     HTTP/1.1 200 OK
     Cache-Control: private

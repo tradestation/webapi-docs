@@ -28,7 +28,7 @@ Returns estimated cost and commission information for a group of orders (OCO, BR
   * oauth_token = AccessToken
 * URL:
 
-        /jsonp/orders/groups/confirm?data=EncodedSerializedGroupOrderObjectGoesHere&callback=jQueryCallbackGoesHere&oauth_token=AccessTokenGoesHere
+      /jsonp/orders/groups/confirm?data=EncodedSerializedGroupOrderObjectGoesHere&callback=jQueryCallbackGoesHere&oauth_token=AccessTokenGoesHere
 * Authentication: Requires a valid access token
 
 ### Returns

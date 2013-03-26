@@ -17,10 +17,14 @@ Streams barchart information for a particular symbol from a given start date, ba
 
 #### Date Range
 
-* Path: `/stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}/{startDate}/{endDate}`
+* Path:
+
+      /stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}/{startDate}/{endDate}
+
+
 * URI Parameters:
   * {symbol}
-  * {barIntervalQuantity} = Must be ` for interval units Daily, Weekly and Monthly, and the max value for minute is 1440
+  * {barIntervalQuantity} = Must be 1 for interval units Daily, Weekly and Monthly, and the max value for minute is 1440
   * {barIntervalUnit} = {Minute, Daily, Weekly, Monthly}
   * {startDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day
     * An explicit time can also be specified by adding `t{hh:mm:ss}` to the date. Example: 7-20-2012t08:45:00
@@ -31,19 +35,22 @@ Streams barchart information for a particular symbol from a given start date, ba
 
 #### Bars Back
 
-* Path: `/stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}/{barsBack}/{lastDate}`
+* Path:
+
+      /stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}/{barsBack}/{lastDate}
+
 * URI Parameters:
   * {symbol}
   * {barIntervalQuantity} = Must be 1 for interval units Daily, Weekly and Monthly, and the max value for a chart for minute bars is 1440
   * {barIntervalUnit} = {Minute, Daily, Weekly, Monthly}
-  * [barsBack} = Number of bars to go back from the current time or the value provided in lastDate, max value permitted 60000
+  * {barsBack} = Number of bars to go back from the current time or the value provided in lastDate, max value permitted 60000
   * {lastDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day
 
 #### Days Back
 
 * Path:
 
-        /stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}?{daysBack}={number of trading days back you want to begin the stream from}&{lastDate}={Date to begin the look back from}
+      /stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}?{daysBack}={number of trading days back you want to begin the stream from}&{lastDate}={Date to begin the look back from}
     
   * This particular resource does not allow for an endDate, it only streams
 
@@ -61,7 +68,7 @@ Streams barchart information for a particular symbol from a given start date, ba
 
 ### Returns
 
-`IntradayBarData` object
+[Intraday Bar Data](../../objects/intraday-bar-data) object
 
 ### Errors
 

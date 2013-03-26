@@ -46,7 +46,8 @@ Resource for updating an open order. You cannot update an order that has been fi
   * oauth_token = AccessToken
 * URL:
 
-        /jsonp/orders/{orderid}/cancelreplace?data=EncodedSerializedOrderObjectGoesHere&callback=jQuery17105945590266492218_1328295375410&_=1328295376318&oauth_token=AccessTokenGoesHere
+      /jsonp/orders/{orderid}/cancelreplace?data=EncodedSerializedOrderObjectGoesHere&callback=jQuery17105945590266492218_1328295375410&_=1328295376318&oauth_token=AccessTokenGoesHere
+
 * Authentication: Requires a valid access token
 
 ### Returns

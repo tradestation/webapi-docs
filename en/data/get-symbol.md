@@ -17,7 +17,7 @@ Request symbol information for a given symbol
 
   * {symbol} = symbol
 * Authentication: Requires a valid access token
-* Returns: `Symbol` object
+* Returns: [Symbol](../../objects/symbol) object
 
 ### Errors
 
@@ -34,7 +34,7 @@ Example Request:
     Accept: application/JSON
     Host: api.tradestation.com
 
-Example Response: (`Symbol`)
+Example Response: ([Symbol](../../objects/symbol))
 
     HTTP/1.1 200 OK
 

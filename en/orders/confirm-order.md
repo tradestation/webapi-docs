@@ -28,7 +28,8 @@ Returns estimated cost and commission information for an order without the order
   * oauth_token = Access Token
 * URL:
 
-        /jsonp/orders/confirm?data=EncodedSerializedOrderObjectGoesHere&callback=jQueryCallbackGoesHere&oauth_token=AccessTokenGoesHere
+      /jsonp/orders/confirm?data=EncodedSerializedOrderObjectGoesHere&callback=jQueryCallbackGoesHere&oauth_token=AccessTokenGoesHere
+
 * Authentication: Requires a valid access token
 
 ### Returns

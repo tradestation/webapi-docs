@@ -17,7 +17,7 @@ Returns a specific Symbol List
 
   * symbolList ID
 * Authentication: Requires at a minimum, Client Level Credentials
-* Returns: A `SymbolList` object
+* Returns: A [Symbol List](../../objects/symbol-list) object
 
 ### Errors
 
@@ -34,7 +34,7 @@ Example Request:
     Accept: application/json
     Host: api.tradestation.com
 
-Example Response: (`SymbolLst`)
+Example Response: ([Symbol List](../../objects/symbol-list))
 
     HTTP/1.1 200 OK
     Cache-Control: private

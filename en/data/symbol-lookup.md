@@ -16,7 +16,9 @@ Returns a list of Symbols based on search criteria
 * Method: `GET`
 * Path: `/data/symbols/search/{criteria}`
 * URI Parameters:
+
   * {criteria} = key/value paris search criteria:
+  
     * `C`: Asset categories. (Optional) Possible values
       * Future or FU
       * FutureOption or FO
@@ -35,7 +37,7 @@ Returns a list of Symbols based on search criteria
       * DE
       * CA
 * Authentication: Requires a valid access token. Can use the client credentials grant type.
-* Returns: `Symbol` object
+* Returns: [Symbol](../../objects/symbol) object
 
 ### For Equities Lookups
 
@@ -134,7 +136,7 @@ Example Request:
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
 
-Example Response: (`Symbol` object details)
+Example Response: ([Symbol](../../objects/symbol) object details)
 
     [{
         "Country": "United States",

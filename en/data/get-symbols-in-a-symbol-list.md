@@ -17,7 +17,7 @@ Returns the symbols in a specific Symbol List. The first record returned contain
 
   * symbolList ID
 * Authentication: Requires at a minimum, Client Level Credentials
-* Returns: A collection of `SymbolInfo` objects
+* Returns: A collection of [Symbol Info](../../objects/symbol-info) objects
 
 ### Errors
 
@@ -34,7 +34,7 @@ Example Request:
     Accept: application/json
     Host: api.tradestation.com
 
-Example Response: (`SymbolInfo`)
+Example Response: ([Symbol Info](../../objects/symbol-info))
 
     HTTP/1.1 200 OK
     Cache-Control: private

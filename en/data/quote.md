@@ -20,13 +20,13 @@ Snapshot quote for the specified symbol(s)
 
   * {culture} = `en-US`, `ja-JP`, `ja-kana-JP`
 * Authentication: Requires a valid access token
-* Returns: `Quote` object
+* Returns: [Quote](../../objects/quote) object
 
 ### Errors
 
 * `401` | Unauthorized
 * `5xx` | Unknown internal service error. Contact TradeStation
-* An invalid symbol will still result in a `200`, but the ERROR property in the response will be set to: "Error":"FAILED, INVALID SYMBOL"
+* An invalid symbol will still result in a `200`, but the ERROR property in the response will be set to: "Error": "FAILED, INVALID SYMBOL"
 
 ### Examples
 
@@ -38,7 +38,7 @@ Example Request:
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
 
-Example Response: (`Quote` object details)
+Example Response: ([Quote](../../objects/quote) object details)
 
     HTTP/1.1 200 OK
     Cache-Control: private

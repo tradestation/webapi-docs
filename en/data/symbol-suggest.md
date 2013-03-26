@@ -25,7 +25,7 @@ Returns a list of symbol objects that have a symbol name or a description that c
 
 ### Returns
 
-A collection of `Symbol` objects
+A collection of [Symbol](../../objects/symbol) objects
 
 ### Results Filter
 

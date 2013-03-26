@@ -27,7 +27,9 @@ If no format is specified, the defaulted format is `application/json`.
     Server: Microsoft-IIS/7.5
     X-AspNet-Version: 4.0.30319
     X-Powered-By: ASP.NET
-    Date: Fri, 18 Mar 2011 18:21:45 GMT    [{
+    Date: Fri, 18 Mar 2011 18:21:45 GMT
+    
+    [{
         "Key": 114275,
         "Name": "543061 QA",
         "Type": "C",
