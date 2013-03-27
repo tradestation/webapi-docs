@@ -2,7 +2,7 @@
 layout: en
 title: Send Group Order
 category: orders
-permalink: groups/
+permalink: send-group-order/
 ---
 
 ### Summary
@@ -18,12 +18,12 @@ Sending a group of conditional orders
   * none
 * Request Body:
 
-  * `GroupOrder`
+  * [Group Order](../../objects/group-order)
 * Authentication: Requires a valid access token
 
 ### Returns
 
-Collection of `OrderResult` objects
+Collection of [Order Result](../../objects/order-result) objects
 
 ### Errors
 

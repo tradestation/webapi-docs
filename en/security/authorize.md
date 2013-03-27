@@ -17,25 +17,25 @@ Obtaining authorization to access controlled resources
   
   * *none*
 * Authentication: Client authorization only
-* Returns: `AccessTokenResponse` Object
+* Returns: [Access Token Response](../../objects/access-token-response) Object
 
 ### Errors
 
-* 401 | `Unauthorized`
-* 5xx | `Unknown internal service error` Contact TradeStation
+* 401 | Unauthorized
+* 5xx | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 
 Example Request: ([more info]({{site.baseurl}}/en/getting-started/security-overview/))
 
-    POST https://api.tradestation.com/Security/Authorize HTTP/1.1
+    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
     Host: api.trad.tradestation.com
     Content-Length: 610
     
     grant_type=authorization_code&code=K29qbmpGSEFDMLS0c=&client_id=42545245&redirect_uri=/webapi/authorize/authcodetest.aspx&client_secret=2452345
 
-Example Response: (`AccessTokenResponse` object)
+Example Response: ([Access Token Response](../../objects/access-token-response) object)
 
     HTTP/1.1 200 OK
     Cache-Control: private
@@ -72,11 +72,11 @@ Beginning in `v2`, Refresh tokens will be returned with the `security/authorize`
   * client_secret
   * redirect_uri
   * refresh_token
-* Returns: `AccessTokenResponse` Object
+* Returns: [Access Token Response](../../objects/access-token-response) Object
 
 **Example Request:**
 
-    POST https://api.tradestation.com/Security/Authorize HTTP/1.1
+    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
     Host: api.trad.tradestation.com
     Content-Length: 610

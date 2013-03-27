@@ -27,7 +27,7 @@ Resource for updating an open order. You cannot update an order that has been fi
   * {orderid}
 * Request Body
 
-  * Subset of `Order` object serialized in JSON or XML. Required fields:
+  * Subset of [Order](../../objects/order-result) object serialized in JSON or XML. Required fields:
     * AccountKey
     * OrderID
     * OrderType
@@ -41,7 +41,7 @@ Resource for updating an open order. You cannot update an order that has been fi
 
   * {orderid}
 * Query String Parameters
-  * data = URL Encoded JSON serialized `Order` object
+  * data = URL Encoded JSON serialized [Order](../../objects/order) object
   * callback = jQuery method to callback
   * oauth_token = AccessToken
 * URL:
@@ -52,7 +52,7 @@ Resource for updating an open order. You cannot update an order that has been fi
 
 ### Returns
 
-`Update Order` result object
+Updated [Order Result](../../objects/order-result) object
 
 ### Errors
 
@@ -62,11 +62,12 @@ Resource for updating an open order. You cannot update an order that has been fi
 * `400` | {"Message":"Missing order quantity.","StatusCode":400}
 * `400` | {"Message":"Missing order limit price.","StatusCode":400}
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation
+](mailto:webapi@tradestation.com)
 
 ### Examples
 
-Example Request: (`Update Order` request)
+Example Request: ([Update Order](../../objects/update-order) request)
 
     PUT https://api.tradestation.com/v2/orders/207924381 HTTP/1.1
     Authorization: Bearer accesstokengoeshere

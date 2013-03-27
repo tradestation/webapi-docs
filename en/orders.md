@@ -20,7 +20,7 @@ The Orders Service also provides the ability to send conditional orders.
 * [Place Order](place-order) | Submits an order to the order execution engine
 * [Cancel Order](cancel-order) | Cancels an order that is provided in the URI
 * [Update Order](update-order) | Cancels and Replaces an order provided to the URI
-* [Send Group Order](groups) | Submits a group order to the order execution engine
+* [Send Group Order](send-group-order) | Submits a group order to the order execution engine
 * [Confirm Order](confirm-order) | Returns estimated costs and commissions for an order without placing the order
 
 ### Conditional Orders
@@ -66,33 +66,7 @@ An OSO order is a group of orders (1 or more orders) whereby if the primary orde
 
 Trailing Stops can be placed for stop market order by points or by percentage. Whe setting a trailing stop with the points option, the user will enter an integer value for the number of points.
 
-Points are calculated for a particular symbol by multiplying the displayType enumeration in the quote object for the symbol, which maps to a particular decimal value, with the minMove value, which is also in the quote object.
-
-    Symbol's price display type based on the following enum:
-    0: "Automatic" Not used
-    1: "0 Decimals" => 1
-    2: "1 Decimals" => .1
-    3: "2 Decimals" => .01
-    4: "3 Decimals" => .001
-    5: "4 Decimals" => .0001
-    6: "5 Decimals" => .00001
-    7: "Simplest Fraction"
-    8: "1/2-Halves" => .5
-    9: "1/4-Fourths" => .25
-    10: "1/8-Eights" => .125
-    11: "1/16-Sixteenths" => .0625
-    12: "1/32-ThirtySeconds" => .03125
-    13: "1/64-SixtyFourths" => .015625
-    14: "1/128-OneTwentyEigths" => .0078125
-    15: "1/256-TwoFiftySixths" => .003906250
-    16: "10ths and Quarters" => .025
-    17: "32nds and Halves" => .015625
-    18: "32nds and Quarters" => .0078125
-    19: "32nds and Eights" => .00390625
-    20: "32nds and Tenths" => .003125
-    21: "64ths and Halves" => .0078125
-    22: "64ths and Tenths" => .0015625
-    23: "6 Decimals" => .000001
+Points are calculated for a particular symbol by multiplying the [Display Type enumeration](../objects/quote/#display_type_options) in the quote object for the symbol, which maps to a particular decimal value, with the minMove value, which is also in the quote object.
 
 Ex. ESZ11 -> DisplayType = 3 which maps to .01 and MinMove = 25 so the point value will be .25. So 1 point maps to .25, 2 points map to .50.
 

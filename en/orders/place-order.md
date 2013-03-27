@@ -18,7 +18,7 @@ Resource for placing orders
   * none
 * Request Body:
 
-  * `Order` object serialized in JSON or XML
+  * [Order](../../objects/order) object serialized in JSON or XML
 
 *JSONP*
 
@@ -26,7 +26,7 @@ Resource for placing orders
 
   * none
 * Query String Parameters
-  * data = URL Encoded JSON serialized `Order` object
+  * data = URL Encoded JSON serialized [Order](../../objects/order) object
   * callback = jQuery method to callback
   * oauth_token = AccessToken
 * URL:
@@ -38,12 +38,13 @@ Resource for placing orders
 
 ### Returns    
 
-A collection of the `OrderResult` object
+A collection of the [Order Result](../../objects/order-result) object
 
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation
+](mailto:webapi@tradestation.com)
 
 ### Examples
 

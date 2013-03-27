@@ -39,7 +39,7 @@ Resource for cancelling an open order
 * `401` | Unauthorized
 * `400` | {"Message":"Not an open order.","StatusCode":400}
 * `400` | {"Message":"Invalid order ID.","StatusCode":400}
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

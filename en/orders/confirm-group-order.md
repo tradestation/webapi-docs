@@ -18,12 +18,12 @@ Returns estimated cost and commission information for a group of orders (OCO, BR
   * none
 * Request Body:
 
-  * `GroupOrder` object serialized in JSON or XML
+  * [Group Order](../../objects/group-order) object serialized in JSON or XML
 
 *JSONP*
 
 * URI Parameters
-  * data = URL Encoded JSON serialized `GroupOrder` object
+  * data = URL Encoded JSON serialized [Group Order](../../objects/group-order) object
   * callback = jQuery method to callback
   * oauth_token = AccessToken
 * URL:
@@ -35,13 +35,13 @@ Returns estimated cost and commission information for a group of orders (OCO, BR
 
 A collection of:
 
-* Base `Confirm` object with a nested Asset specific object
-  * `Equity Confirm` object for equity orders
-  * `Forex Confirm` object for forex orders
-  * `Futures Confirm` object for futures orders
+* Base [Confirm](../../objects/order-confirmation) object with a nested Asset specific object
+  * [Equity Confirm](../../objects/equities-options-order-confirmation) object for equity orders
+  * [Forex Confirm](../../objects/forex-order-confirmation) object for forex orders
+  * [Futures Confirm](../../objects/futures-order-confirmation) object for futures orders
 
 ### Errors
 
 * `401` | Unauthorized
 * `400` | Bad Request
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)

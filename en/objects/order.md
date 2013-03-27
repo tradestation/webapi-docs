@@ -19,7 +19,7 @@ permalink: order/
 | AccountKey | string | |
 | GTDDate | string | |
 | TradeAction | string | |
-| AdvancedOptions | `AdvancedOptions` | Used for Trailing Stop orders |
+| AdvancedOptions | [Advanced Options](../advanced-options) | Used for Trailing Stop orders |
 | OSOs | [Group Order](../group-order/) | |
 
 ### Example JSON

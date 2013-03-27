@@ -108,7 +108,7 @@ The client application will route the end-user to our MFA (multi-factor authenti
 
 Authorize Uri
 
-* https://api.tradestation.com/authorize
+* [https://api.tradestation.com/v2/authorize](https://api.tradestation.com/v2/authorize)
 
 Required query string parameters
 
@@ -118,7 +118,7 @@ Required query string parameters
 
 **Example Authorization Page Url**
 
-    https://api.tradestation.com/authorize/?redirect_uri=https://exampleclientapp.com/authcode.aspx&client_id=D7635234&response_type=code
+    https://api.tradestation.com/v2/authorize/?redirect_uri=https://exampleclientapp.com/authcode.aspx&client_id=D7635234&response_type=code
 
 The URL will take you to a TradeStation login page.
 
@@ -207,7 +207,7 @@ The client application will route the end-user to our MFA (multi-form authentica
 
 Authorize URI
 
-* https://api.tradestation.com/authorize
+* [https://api.tradestation.com/v2/authorize](https`://api.tradestation.com/v2/authorize)
 
 **Example Authorization Page URL**
 
@@ -250,7 +250,7 @@ The result of the request will be a JSON object with these values:
 
 **Example Request**
 
-    POST https://api.tradestation.com/Security/Authorize HTTP/1.1
+    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Host: api.tradestation.com
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded
