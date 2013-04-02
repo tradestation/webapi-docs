@@ -3,6 +3,7 @@ layout: en
 title: Send Group Order
 category: orders
 permalink: send-group-order/
+weight: 4
 ---
 
 ### Summary
@@ -28,7 +29,7 @@ Collection of [Order Result](../../objects/order-result) objects
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

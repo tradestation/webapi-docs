@@ -3,6 +3,7 @@ layout: en
 title: Cancel Order
 category: orders
 permalink: cancel-order/
+weight: 2
 ---
 
 ### Summary

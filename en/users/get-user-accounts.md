@@ -3,6 +3,7 @@ layout: en
 title: Get User Accounts
 category: users
 permalink: accounts/
+weight: 1
 ---
 
 ### Summary
@@ -20,12 +21,12 @@ Requesting accounts associated to a particular user
 
 ### Returns
 
-`AccountInfo` object
+[Account Info](../../objects/account-info) object
 
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 
@@ -36,7 +37,7 @@ Example Request:
     Accept: application/JSON
     Host: api.tradestation.com
 
-Example Response: (`AccountInfo object details`)
+Example Response: ([Account Info](../../objects/account-info) object details)
 
     HTTP/1.1 200 OK
     Cache-Control: private

@@ -3,6 +3,7 @@ layout: en
 title: Tick Bars
 category: stream
 permalink: tick-bars/
+weight: 4
 ---
 
 ### Summary
@@ -21,7 +22,7 @@ Streams tick bar information for a particular symbol starting from a given numbe
 
 ### Returns
 
-`TickBarData` object
+[Tick Bar Data](../../objects/tick-bar-data) object
 
 ### Errors
 

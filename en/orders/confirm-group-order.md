@@ -3,6 +3,7 @@ layout: en
 title: Confirm Group Order
 category: orders
 permalink: confirm-group-order/
+weight: 6
 ---
 
 ### Summary

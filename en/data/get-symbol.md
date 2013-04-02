@@ -3,6 +3,7 @@ layout: en
 title: Get Symbol
 category: data
 permalink: get-symbol/
+weight: 3
 ---
 
 ### Summary
@@ -22,7 +23,7 @@ Request symbol information for a given symbol
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 * `404` | Invalid Symbol
 
 ### Examples

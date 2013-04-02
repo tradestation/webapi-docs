@@ -3,6 +3,7 @@ layout: en
 title: Stream
 category: stream
 permalink: stream/
+weight: 7
 ---
 
 ### Summary
@@ -11,7 +12,7 @@ The Streaming Service provides the consumer with asynchronous streaming quotes. 
 
 ### Service URI
 
-`https://api.tradestation.com/stream/{resource}`
+`https://api.tradestation.com/v2/stream/{resource}`
 
 *notes*: The streaming API methods sometimes behave differently than the other API calls with some error conditions. The non-streaming methods will only return a 200 status code on success but there are some streaming scenarios where the API will return a 200 status code followed by the data chunk `ERROR`. This will occur when the stream successfully starts but an error occurs on the server before any real data can be sent.
 

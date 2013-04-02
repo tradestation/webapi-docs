@@ -3,6 +3,7 @@ layout: en
 title: Balances
 category: accounts
 permalink: balances/
+weight: 1
 ---
 
 ### Summary
@@ -29,7 +30,7 @@ Requesting balance information for a particular account
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

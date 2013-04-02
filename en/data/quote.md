@@ -3,6 +3,7 @@ layout: en
 title: Quote
 category: data
 permalink: quote/
+weight: 1
 ---
 
 ### Summary
@@ -25,7 +26,7 @@ Snapshot quote for the specified symbol(s)
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 * An invalid symbol will still result in a `200`, but the ERROR property in the response will be set to: "Error": "FAILED, INVALID SYMBOL"
 
 ### Examples

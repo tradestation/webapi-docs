@@ -26,7 +26,7 @@ Obtaining authorization to access controlled resources
 
 ### Examples
 
-Example Request: ([more info]({{site.baseurl}}/en/getting-started/security-overview/))
+Example Request: ([Requesting Authorization details](../../getting-started/security-overview/))
 
     POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Content-Type: application/x-www-form-urlencoded

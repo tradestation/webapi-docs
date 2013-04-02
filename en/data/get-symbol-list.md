@@ -3,6 +3,7 @@ layout: en
 title: Symbol List
 category: data
 permalink: get-symbol-list/
+weight: 5
 ---
 
 ### Summary
@@ -23,7 +24,7 @@ Returns a specific Symbol List
 
 * `401` | Unauthorized
 * `400` | Bad Request
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

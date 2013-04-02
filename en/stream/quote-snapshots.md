@@ -3,6 +3,7 @@ layout: en
 title: Quote/Snapshots
 category: stream
 permalink: quote-snapshots/
+weight: 2
 ---
 
 ### Summary
@@ -25,8 +26,8 @@ Streams full quotes for a list of symbols
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
-* An invalid symbol will still result in a 200, however the ERROR property in the resonse will be set to: "Error":"FAILED, INVALID SYMBOL"
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
+* An invalid symbol will still result in a `200`, however the ERROR property in the resonse will be set to: "Error":"FAILED, INVALID SYMBOL"
 
 ### Examples
 

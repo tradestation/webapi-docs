@@ -3,6 +3,7 @@ layout: en
 title: Get User Positions
 category: users
 permalink: positions/
+weight: 2
 ---
 
 ### Summary
@@ -20,12 +21,12 @@ Requesting all the positions for a particular user
 
 ### Returns
 
-`Positions` object
+[Positions](../../objects/positions) object
 
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

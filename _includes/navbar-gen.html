@@ -2,44 +2,50 @@
 <nav style="float: left; background-color: #f2f2f2; border-top: 1px solid #111; padding: 20px;">
     <ul>
 {% assign usedCategories = '' %}
-{% for page in site.pages %}
-    {% unless usedCategories contains page.category %}{% if page.category %}
-        <li style="text-transform: capitalize;">
-        {% for doc in site.pages %}
-            {% capture title %}{{ doc.title | upcase }}{% endcapture %}
-            {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
-            {% if title == category %}<a href="{{ site.baseurl }}/en/{{ page.category }}/">{% endif %}
-        {% endfor %}
-            {{ page.category | replace: '-', ' ' }}
-        {% for doc in site.pages %}
-            {% capture title %}{{ doc.title | upcase }}{% endcapture %}
-            {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
-            {% if title == category %}</a>{% endif %}
-        {% endfor %}
-            <ul>
-        {% for weight in (1..10) %}
-            {% for doc in site.pages %}
-                {% if doc.category == page.category and doc.weight == weight %}
-                <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
-        {% for doc in site.pages %}
-            {% if doc.category == page.category %}
-                {% capture title %}{{ doc.title | upcase }}{% endcapture %}
-                {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
-                {% if title == category %}
-                {% else %}
-                    {% unless doc.weight %}
-                <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
-                    {% endunless %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-        {% capture usedCategories %}{{ usedCategories }}{{ page.category }}{% endcapture %}
-            </ul>
-        </li>
-    {% endif %}{% endunless %}
+{% for categoryweight in (1..10) %}
+    {% for page in site.pages %}
+        {% capture pagetitle %}{{ page.title | upcase }}{% endcapture %}
+        {% capture pagecategory %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
+        {% if pagetitle == pagecategory and page.weight == categoryweight %} 
+            {% unless usedCategories contains page.category %}{% if page.category %}
+                <li style="text-transform: capitalize;">
+                {% for doc in site.pages %}
+                    {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+                    {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
+                    {% if title == category %}<a href="{{ site.baseurl }}/en/{{ page.category }}/">{% endif %}
+                {% endfor %}
+                    {{ page.category | replace: '-', ' ' }}
+                {% for doc in site.pages %}
+                    {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+                    {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
+                    {% if title == category %}</a>{% endif %}
+                {% endfor %}
+                    <ul>
+                {% for docweight in (1..10) %}
+                    {% for doc in site.pages %}
+                        {% if doc.category == page.category and doc.weight == docweight %}
+                            {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+                            {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
+                            {% unless title == category %}
+                        <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
+                            {% endunless %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                {% for doc in site.pages %}
+                    {% if doc.category == page.category %}
+                        {% capture title %}{{ doc.title | upcase }}{% endcapture %}
+                        {% capture category %}{{ page.category | replace: '-', ' ' | upcase }}{% endcapture %}
+                        {% unless title == category %}{% unless doc.weight %}
+                        <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a></li>
+                        {% endunless %}{% endunless %}
+                    {% endif %}
+                {% endfor %}
+                {% capture usedCategories %}{{ usedCategories }}{{ page.category }}{% endcapture %}
+                    </ul>
+                </li>
+        {% endif %}{% endunless %}{% endif %}
+    {% endfor %}
 {% endfor %}
     </ul>
 </nav>

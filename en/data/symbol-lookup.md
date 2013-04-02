@@ -3,6 +3,7 @@ layout: en
 title: Symbol Lookup
 category: data
 permalink: symbol-lookup/
+weight: 2
 ---
 
 ### Summary

@@ -3,6 +3,7 @@ layout: en
 title: Users
 category: users
 permalink: users/
+weight: 4
 ---
 
 ### Summary
@@ -11,7 +12,7 @@ Provides a list of resources for a given user id.
 
 ### Service URI
 
-`https://api.tradestation.com/users/{userid}/{method}`
+`https://api.tradestation.com/v2/users/{userid}/{method}`
 
 ### Methods
 

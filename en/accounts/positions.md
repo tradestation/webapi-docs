@@ -3,6 +3,7 @@ layout: en
 title: Positions
 category: accounts
 permalink: positions/
+weight: 2
 ---
 
 ### Summary
@@ -33,7 +34,7 @@ Example positions request that filters results in symbol = AAPL
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation.
+* `5xx` | Unknown internal service error. C[ontact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

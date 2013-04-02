@@ -3,6 +3,7 @@ layout: en
 title: Orders
 category: orders
 permalink: orders/
+weight: 5
 ---
 
 ### Summary
@@ -13,7 +14,7 @@ The Orders Service also provides the ability to send conditional orders.
 
 ### Service URI
 
-`https://api.tradestation.com/orders/{method}`
+`https://api.tradestation.com/v2/orders/{method}`
 
 ### Methods
 
@@ -22,6 +23,7 @@ The Orders Service also provides the ability to send conditional orders.
 * [Update Order](update-order) | Cancels and Replaces an order provided to the URI
 * [Send Group Order](send-group-order) | Submits a group order to the order execution engine
 * [Confirm Order](confirm-order) | Returns estimated costs and commissions for an order without placing the order
+* [Confirm Group Order](confirm-group-order) | Returns estimated cost and comission information for a group of orders without orders actually being placed
 
 ### Conditional Orders
 

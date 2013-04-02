@@ -3,6 +3,7 @@ layout: en
 title: Quotes/Changes
 category: stream
 permalink: quote-changes/
+weight: 1
 ---
 
 ### Summary
@@ -25,7 +26,7 @@ Streams quote changes for a list of symbols. The first events that come across p
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation.
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 * An invalid symbol will still result in a `200`, however the ERROR property in the response will be set to: "Error":"FAILED, INVALID SYMBOL"
 
 ### Examples

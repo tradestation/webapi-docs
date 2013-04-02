@@ -3,6 +3,7 @@ layout: en
 title: Symbol Suggest
 category: data
 permalink: symbol-suggest/
+weight: 7
 ---
 
 ### Summary
@@ -38,7 +39,7 @@ Example symbols suggest request that filters result set to the top 20 where Coun
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

@@ -3,6 +3,7 @@ layout: en
 title: BarChart
 category: stream
 permalink: barchart/
+weight: 3
 ---
 
 ### Summary
@@ -82,7 +83,7 @@ Streams barchart information for a particular symbol from a given start date, ba
   * Invalid start date
   * endDate cannot be greater than today
   * lastDate cannot be greater than today
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

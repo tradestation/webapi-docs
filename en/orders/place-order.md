@@ -3,6 +3,7 @@ layout: en
 title: Place Order
 category: orders
 permalink: place-order/
+weight: 1
 ---
 
 ### Summary

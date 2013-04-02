@@ -3,6 +3,7 @@ layout: en
 title: Accounts
 category: accounts
 permalink: accounts/
+weight: 3
 ---
 
 ### Summary
@@ -11,7 +12,7 @@ The Accounts Service provides the consumer with resources to access balance, pos
 
 ### Service URI
 
-`https://api.tradestation.com/accounts/{accountkey}/{method}`
+`https://api.tradestation.com/v2/accounts/{accountkey}/{method}`
 
 ### Methods
 

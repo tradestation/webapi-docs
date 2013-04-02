@@ -3,6 +3,7 @@ layout: en
 title: Level2
 category: stream
 permalink: level2/
+weight: 5
 ---
 
 ### Summary
@@ -23,12 +24,12 @@ Streams Level 2 data for a given symbol
 
 ### Returns
 
-`Level2` object
+[Level2](../../objects/level2) object
 
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 

@@ -10,7 +10,7 @@ The WebAPI is a collection of RESTful web services for interacting with TradeSta
 
 The WebAPI exposes streaming barchart resources, however, this data is throttled.
 
-All requests are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. Security is based on the OAuth 2.0 spec and all requests require a user access token be included.
+All requests are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. [Security](../security-overview) is based on the OAuth 2.0 spec and all requests require a user access token be included.
 
 We are currently on Version 2 of the WebAPI - baseurl = [https://api.tradestation.com/v2](https://api.tradestation.com/v2)
 
@@ -18,7 +18,7 @@ Here is a simple example of requesting a list of accounts for a particular user:
 
 ### HTTP Request
 
-    GET https://api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
+    GET https://api.tradestation.com/v2/users/testuser/accounts HTTP/1.1
     Authorization: token
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded

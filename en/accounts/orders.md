@@ -3,6 +3,7 @@ layout: en
 title: Orders
 category: accounts
 permalink: orders/
+weight: 3
 ---
 
 ### Summary
@@ -38,7 +39,7 @@ Example orders request that filters results for symbol = AAPL
 ### Errors
 
 * `401` | Unauthorized
-* `5xx` | Unknown internal service error. Contact TradeStation
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 
