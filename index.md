@@ -4,7 +4,7 @@ layout: en
 
 ## What is the TradeStation WebAPI?
 
-Create dynamic web, mobile, or stand-alone applications using your programming language of choice. Whether it is C#, C++, Ruby on Rails, PHP, Python or any other language that can access the Internet, the TradeStation WebAPI lets you provide a custom solution that leverages TradeStation's real-time market data network and fast order-execution services without having to run the TradeStation platform simultaneously.
+Create dynamic web, mobile, or stand-alone applications using your programming language of choice. Whether it is VB.NET ([sample](https://github.com/tradestation/sample-webapi-authcode-vb)), JavaScript ([sample](https://github.com/tradestation/sample-webapi-implicitgrant-javascript)), C#, C++, Ruby on Rails, PHP, Python or any other language that can access the Internet, the TradeStation WebAPI lets you provide a custom solution that leverages TradeStation's historical/real-time market data network and fast order-execution services without having to run the TradeStation platform simultaneously.
 
 ### Here's how it works:
 
@@ -20,8 +20,8 @@ Create dynamic web, mobile, or stand-alone applications using your programming l
 4. Access to market data is granted on a per-user basis, which will require your application to manage each user's access independently, since each user will have a different set of entitlements for market data.
 
 ### Learn more
-[Read now]({{ site.baseurl }}/en/getting-started/overview) or Download the documentation by clicking on the links to the tar.gz or .zip files at the top of the page or by visiting [https://github.com/tradestation/webapi-docs](https://github.com/tradestation/webapi-docs) and cloning our repository. Extract the files and click on the docs/index.html file to view the documentation.
-
-*Please note: Market data requests, although made in real time, are not guaranteed to include every update sent by the data exchanges.*
+[Read now]({{ site.baseurl }}/en/getting-started/overview) or download the documentation by clicking on the links to the tar.gz or .zip files at the top of the page or by visiting [https://github.com/tradestation/webapi-docs](https://github.com/tradestation/webapi-docs) and cloning our repository. Extract the files and click on the docs/index.html file to view the documentation.
 
 TradeStation WebAPI is an exclusive offering for select TradeStation developers. If you would like to apply for consideration to our program, please contact [webapi@tradestation.com](mailto:webapi@tradestation.com).
+
+*Please note: Market data requests, although made in real time, are not guaranteed to include every update sent by the data exchanges.*
