@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tradestation Web API Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Styles -->
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+  
+
+     <link href="styles/styles.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+  </head>
+
+<body screen_capture_injected="true">
+
+<!--<nav id="main-nav" class="pinned">
+   <div class="container">
+      <div class="row">
+        <div class="span10">
+          <a href="/" class="logo icon" data-icon="B"><span>Tradestation</span></a>
+          <span class="hamburger icon" data-icon="C"><span>Table of Contents</span></span>
+        </div>
+      </div>
+    </div>
+</nav>
+
+    <!--
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">Project name</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="nav-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-form pull-right">
+                <input class="span2" type="text" placeholder="Email">
+                <input class="span2" type="password" placeholder="Password">
+                <button type="submit" class="btn">Sign in</button>
+              </form>
+            </div> .nav-collapse
+          </div>
+        </div>
+      </div>
+    -->
+
+  <div class="page-hero-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="span10 offset1">
+          <div class="page-hero">
+            <h1 class="page-hero-text animated fadeInLeft">Bar Chart</h1>
+            <h2 class="page-hero-description animated fadeInLeft">Stream bar chart information for a particular symbol.</h2>
+          </div>
+        </div><!--span-->
+      </div><!--row-->
+    </div><!--container-->
+  </div><!--hero-wrapper-->
+
+  <div class="page-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="span10 offset1">
+          <h1 class="feature-text ">Summary</h1>
+          <p>
+            Streams barchart information for a particular symbol from a given start date, bars back, or trading days back. This resource can also return a barchart for a given time-span. For Minute charts, the maximum date range for 1 minute bars is 40 calendar days. For 2 minute bars it’s 80, 3 minute bars 120 days. Maximum date range = Minute interval * 40.
+          </p>
+        </br>
+          <p>
+            When requesting barcharts with an explicit timestamp, the closed bars between the timest
+          
+          <h1 class="feature-text">Details</h1>
+
+          <ul>
+            <li>Method: <code>GET</code></li>
+          </ul>
+
+          <h3>Date Range</h3>
+
+          <ul>
+<li>
+<p>Path:</p>
+
+<pre><code>/stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}/{startDate}/{endDate}</code></pre>
+</li>
+
+<li>
+<p>URI Parameters:</p>
+
+<ul>
+<li>
+<p>{symbol}</p>
+</li>
+
+<li>
+<p>{barIntervalQuantity} = Must be 1 for interval units Daily, Weekly and Monthly, and the max value for minute is 1440</p>
+</li>
+
+<li>
+<p>{barIntervalUnit} = {Minute, Daily, Weekly, Monthly}</p>
+</li>
+
+<li>
+<p>{startDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day</p>
+
+<ul>
+<li>An explicit time can also be specified by adding <code>t{hh:mm:ss}</code> to the date. Example: 7-20-2012t08:45:00</li>
+
+<li>All time are in UTC unless an offset is specified. Example: 7-20-2012t08:45:00-06:00</li>
+</ul>
+</li>
+
+<li>
+<p>{endDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day. Optional parameter:</p>
+
+<ul>
+<li>An explicit time can also be specified by adding <code>t{hh:mm:ss}</code> to the date. Example: 7-20-2012t08:45:00</li>
+
+<li>All time are in UTC unless an offset is specified. Example: 7-20-2012t08:45:00-06:00</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>Bars Back</h3>
+
+<ul>
+<li>
+<p>Path:</p>
+
+<pre><code>/stream/barchart/{symbol}/{barIntervalQuantity}/{barIntervalUnit}/{barsBack}/{lastDate}</code></pre>
+</li>
+
+<li>
+<p>URI Parameters:</p>
+
+<ul>
+<li>{symbol}</li>
+
+<li>{barIntervalQuantity} = Must be 1 for interval units Daily, Weekly and Monthly, and the max value for a chart for minute bars is 1440</li>
+
+<li>{barIntervalUnit} = {Minute, Daily, Weekly, Monthly}</li>
+
+<li>{barsBack} = Number of bars to go back from the current time or the value provided in lastDate, max value permitted 60000</li>
+
+<li>{lastDate} = {m-d-yyyy} - This date value is for time 00:00:00 of that day</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="span10 offset1 center">
+          <div class="footer-icons center">
+            <ul class="clearfix">
+              <li>
+                <a href="#">
+                  <div class="footer-symbols" aria-hidden="true" data-icon=""></div>@tradestation</a>
+              </li>
+              <li>
+                <a href="#">
+                    <div class="footer-symbols" aria-hidden="true" data-icon="i"></div>Github</li>
+                  </a>
+              <li>
+              <a href="#">
+                <div class="footer-symbols" aria-hidden="true" data-icon="a"></div></span>Contact
+              </a>
+              </li>
+            </ul>
+          </div>
+
+          <p>Tradestation Web API</p>
+         </div><!--span-->
+      </div><!--row-->
+    </div><!--container-->
+  </footer>
+
+
+  <script>
+
+  </script>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/jquery.inview.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

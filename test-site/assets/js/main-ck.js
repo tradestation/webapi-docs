@@ -1,0 +1,1 @@
+$(function(){$("img.scroll-animate").one("inview",function(e,t){t&&$(this).addClass("animated fadeInUp")})});
