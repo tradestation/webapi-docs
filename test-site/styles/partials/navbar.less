@@ -1,0 +1,163 @@
+
+.nav-open #main-nav-drop {
+	-webkit-transform: translate(0,0);
+}
+
+.nav-open #main-nav {
+	background: #FFF;
+	color: #299BC9;
+
+	.box-shadow(~"0 1px 4px rgba(0,0,0,.14)");
+
+	&:hover {
+		background: #FFF;
+		color: #299BC9;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: inherit;
+		};
+	}
+}
+
+#main-nav {
+	position: fixed;
+	color: #299BC9;
+	opacity: 1;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: 100%;
+	-webkit-transform: translate(0,0);
+	transform: translate(0,0);
+	-webkit-transition: -webkit-transform .2s,background .3s,color .3s;
+	transition: transform .2s,background .3s,color .3s;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.2);
+		cursor: pointer;
+	}
+
+	.detatched {
+
+	}
+
+	.visible {
+
+	}
+
+	.hidden {
+
+	}
+
+	a {
+		color: #f2f2f2;
+
+		&:hover {
+			color: #f2f2f2;
+		} 
+	}
+}
+
+#main-nav-drop {
+	position: fixed;
+	opacity: 0;
+	z-index: 800;
+	height: 100%;
+	width: 100%;
+	margin-top: 60px;
+	background: url('../images/bg-menu.png');
+	-webkit-transform: translate(0,-110%);
+	transform: translate(0,-110%);
+	overflow-y: scroll;
+	padding-right: 100px;
+	padding-top: 80px;
+
+	-webkit-transition: -webkit-transform .5s,opacity 0 .6s;
+	transition: transform .5s,opacity 0 .6s;
+
+	ul {
+		margin-bottom: 30px;
+	}
+	
+	li { 
+		list-style: none;
+		font-size: 16px;
+		//margin-left: 20px;
+	}
+
+	li:first-child {
+		margin-left: 0;
+		padding-bottom: 7px;
+	}
+
+	li:first-child a {
+		font-size: 26px;
+		font-weight: bold;
+		margin-left: 0;
+
+	}
+}
+
+.nav-open #main-nav-drop {
+	-webkit-transform: translate(0,0);
+	transform: translate(0,0);
+	opacity: 1;
+
+	-webkit-transition: -webkit-transform .5s,opacity 0;
+	transition: transform .5s,opacity 0;
+}
+
+.story-containter {
+	position: relative;
+	z-index: 200;
+	height: 100%;
+}
+
+.nav-open {
+	overflow: hidden;
+}
+
+.nav {
+	padding: 19px 0;
+}
+
+.toc {
+	margin-right: 6px;
+}
+
+.floating-icon {
+	position: absolute;
+	left: -32px;
+	font-size: 26px;
+	top: -1px;
+	color: #3AD;
+	//color: #0088cc;
+}
+
+.menu-topic {
+	position: relative;
+}
+
+// Icon Customize
+
+
+.objects {
+	font-size: 21px;
+	left: -30px;
+	top: 0;
+}
+
+.orders {
+	font-size: 24px;
+	top: 0;
+}
+
+.getting-started {
+	left: -28px;
+}

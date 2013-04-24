@@ -28,20 +28,403 @@
 
   </head>
 
-<body screen_capture_injected="true">
+<body id="web-api" screen_capture_injected="true">
 
-<!--
-<nav id="main-nav" class="pinned">
+
+<!-- Navbar -->
+<nav id="main-nav" class="pinned nav">
    <div class="container">
       <div class="row">
         <div class="span10 offset1">
-          <a href="#" class="logo icon" data-icon="B"><span>Tradestation</span></a>
-          <a href="#"><span class="hamburger icon pull-right" data-icon="C"><span>Table of Contents</span> <span class="fs1" aria-hidden="true" data-icon=""></span></span>
+          <a id="menu-close" href="index.html" class="logo icon"><span>(Logo) Developers</span></a>
+          <a id="menu" href="#">
+            <span class="hamburger icon pull-right"><span class="toc">Table of Contents</span> <span class="fs1" aria-hidden="true" data-icon=""></span></span>
           </a>
         </div>
       </div>
     </div>
 </nav>
+
+
+
+<nav id="main-nav-drop" class="pinned">
+   <div class="container">
+      <div class="row">
+        <div class="span10 offset1">
+
+        <!-- Draft
+           <div class="row">
+              <div class="span10 text-center">
+                Table of Contents
+              </div>
+            </div>
+        -->
+
+          <!-- Row 1 Starts Here -->
+          <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                     
+                        <a href="test.html">
+                          Getting Started
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Overview</a></li>
+                <li><a href="test.html">Security Overview</a></li>
+                <li><a href="test.html">Responsive Formats<a/></li>
+                <li><a href="test.html">Error Handling</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Accounts
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Balances</a></li>
+                <li><a href="test.html">Positions</a></li>
+                <li><a href="test.html">Orders</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Streams
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Quote/Chances</a></li>
+                <li><a href="test.html">Quote/Snapshots</a></li>
+                <li><a href="test.html">Bar Chart</a></li>
+                <li><a href="test.html">Tick Bars</a></li>
+                <li><a href="test.html">Level 2</a></li>
+              </ul>
+            </div>
+        </div><!--End of Row1-->
+
+
+        <!-- Row 2 Starts Here -->
+          <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                     
+                        <a href="test.html">
+                          Orders
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Place Order</a>
+                <li><a href="test.html">Cancel Order</a></li>
+                <li><a href="test.html">Update Order</a></li>
+                <li><a href="test.html">Send Group Order</a></li>
+                <li><a href="test.html">Confirm Order</a></li>
+                <li><a href="test.html">Confirm Group Order</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                     
+                        <a href="test.html">
+                          Users
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Get User Accounts</a></li>
+                <li><a href="test.html">Get User Positions</a></li>
+              </ul>
+
+                             <ul>
+                  <li>
+                    <div class="menu-topic">
+                          <a href="test.html">
+                            Security
+                          </a>
+                    </div>
+                  </li>
+                  <li><a href="test.html">Authorize</a></li>
+                </ul>
+            </div>
+
+             <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Data
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Quote</a></li>
+                <li><a href="test.html">Symbol Lookup</a></li>
+                <li><a href="test.html">Get Symbol</a></li>
+                <li><a href="test.html">Symbol List Symbols</a></li>
+                <li><a href="test.html">Symbol List</a></li>
+                <li><a href="test.html">Symbol Lists</a></li>
+                <li><a href="test.html">Symbol Suggest</a></li>
+              </ul>
+            </div>
+          </div><!--End of Row 2 -->
+
+
+          <!-- Row 3 Starts Here -->
+         <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Objects
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Symbol List</a></li>
+                <li><a href="test.html">Quote</a></li>
+                <li><a href="test.html">Access Token Response</a></li>
+                <li><a href="test.html">Basic Order Response</a></li>
+                <li><a href="test.html">Tick Bar Data</a></li>
+                <li><a href="test.html">Futures Account</a></li>
+                <li><a href="test.html">Equity Account</a></li>
+                <li><a href="test.html">Account Info</a></li>
+                <li><a href="test.html">Order Confirmation</a></li>
+                <li><a href="test.html">Order Respsonse</a></li>
+                <li><a href="test.html">Today Closed Positions</a></li>
+                <li><a href="test.html">Order</a></li>
+                <li><a href="test.html">Forex Account Currency Detail</a></li>
+                <li><a href="test.html">Intraday Bar Data</a></li>
+                <li><a href="test.html">Leg</a></li>
+                
+              </ul>
+            </div>
+
+            <div class="span3">
+                <ul>
+                  <li>
+                        <a href="test.html">
+                          Objects (continued)
+                        </a></li>
+                        <li><a href="test.html">Group Order</a></li>
+                          <li><a href="test.html">Account</a></li>
+                <li><a href="test.html">Forex Account</a></li>
+                <li><a href="test.html">Futures Order Confirmation</a></li>
+                <li><a href="test.html">Error</a></li>
+                <li><a href="test.html">Client Info</a></li>
+                <li><a href="test.html">Forex Account Currency Detail</a></li>
+                <li><a href="test.html">Intraday Bar Data</a></li>
+                <li><a href="test.html">Leg</a></li>
+                <li><a href="test.html">Group Order</a></li>
+                <li><a href="test.html">Account</a></li>
+                <li><a href="test.html">Forex Account</a></li>
+                <li><a href="test.html">Futures Order Confirmation</a></li>
+                <li><a href="test.html">Error</a></li>
+                <li><a href="test.html">Client Info</a></li>
+                </ul>
+            </div>
+
+
+             <div class="span3">
+ 
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+<!-- Test Nav with Icons 
+<nav id="main-nav-drop" class="pinned">
+   <div class="container">
+      <div class="row">
+        <div class="span10 offset1">
+
+          <!-- Row 1 Starts Here 
+          <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon getting-started fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Getting Started
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Overview</a></li>
+                <li><a href="test.html">Security Overview</a></li>
+                <li><a href="test.html">Responsive Formats<a/></li>
+                <li><a href="test.html">Error Handling</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Accounts
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Balances</a></li>
+                <li><a href="test.html">Positions</a></li>
+                <li><a href="test.html">Orders</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Streams
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Quote/Chances</a></li>
+                <li><a href="test.html">Quote/Snapshots</a></li>
+                <li><a href="test.html">Bar Chart</a></li>
+                <li><a href="test.html">Tick Bars</a></li>
+                <li><a href="test.html">Level 2</a></li>
+              </ul>
+            </div>
+        </div><!--End of Row1
+
+
+        <!-- Row 2 Starts Here 
+          <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon orders fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Orders
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Place Order</a>
+                <li><a href="test.html">Cancel Order</a></li>
+                <li><a href="test.html">Update Order</a></li>
+                <li><a href="test.html">Send Group Order</a></li>
+                <li><a href="test.html">Confirm Order</a></li>
+                <li><a href="test.html">Confirm Group Order</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Users
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Get User Accounts</a></li>
+                <li><a href="test.html">Get User Positions</a></li>
+              </ul>
+            </div>
+
+             <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Data
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Quote</a></li>
+                <li><a href="test.html">Symbol Lookup</a></li>
+                <li><a href="test.html">Get Symbol</a></li>
+                <li><a href="test.html">Symbol List Symbols</a></li>
+                <li><a href="test.html">Symbol List</a></li>
+                <li><a href="test.html">Symbol Lists</a></li>
+                <li><a href="test.html">Symbol Suggest</a></li>
+              </ul>
+            </div>
+          </div><!--End of Row 2 
+
+
+          <!-- Row 3 Starts Here 
+         <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon objects fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Objects
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Symbol List</a></li>
+                <li><a href="test.html">Quote</a></li>
+                <li><a href="test.html">Access Token Response</a></li>
+                <li><a href="test.html">Basic Order Response</a></li>
+                <li><a href="test.html">Tick Bar Data</a></li>
+                <li><a href="test.html">Futures Account</a></li>
+                <li><a href="test.html">Equity Account</a></li>
+                <li><a href="test.html">Account Info</a></li>
+                <li><a href="test.html">Order Confirmation</a></li>
+                <li><a href="test.html">Order Respsonse</a></li>
+                <li><a href="test.html">Today Closed Positions</a></li>
+                <li><a href="test.html">Order</a></li>
+                <li><a href="test.html">Forex Account Currency Detail</a></li>
+                <li><a href="test.html">Intraday Bar Data</a></li>
+                <li><a href="test.html">Leg</a></li>
+                <li><a href="test.html">Group Order</a></li>
+                <li><a href="test.html">Account</a></li>
+                <li><a href="test.html">Forex Account</a></li>
+                <li><a href="test.html">Futures Order Confirmation</a></li>
+                <li><a href="test.html">Error</a></li>
+                <li><a href="test.html">Client Info</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+                <ul>
+                  <li>
+                  <div class="menu-topic">
+                      <span class="floating-icon fs1" aria-hidden="true" data-icon=""></span>
+                        <a href="test.html">
+                          Security
+                        </a>
+                  </div>
+                </li>
+                  <li><a href="test.html">Authorize</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
+-->
 
     <!--
       <div class="navbar navbar-inverse navbar-fixed-top">
@@ -81,6 +464,7 @@
         </div>
       </div>
     -->
+  <div id="page-container" class="story-containter">
 
   <div class="hero-wrapper">
     <div class="container">
@@ -194,7 +578,7 @@
       </div><!--row-->
     </div><!--container-->
   </footer>
-
+  </div>
 
   <script>
 
