@@ -28,57 +28,226 @@
 
   </head>
 
-<body screen_capture_injected="true">
+<body id="web-api" screen_capture_injected="true">
 
-<!--<nav id="main-nav" class="pinned">
+<!-- Navbar -->
+<nav id="main-nav" class="pinned nav">
    <div class="container">
       <div class="row">
-        <div class="span10">
-          <a href="/" class="logo icon" data-icon="B"><span>Tradestation</span></a>
-          <span class="hamburger icon" data-icon="C"><span>Table of Contents</span></span>
+        <div class="span10 offset1">
+          <a id="menu-close" href="index.html" class="logo icon"><span>(Logo) Developers</span></a>
+          <a id="menu" href="#">
+            <span class="hamburger icon pull-right"><span class="toc">Table of Contents</span> <span class="fs1" aria-hidden="true" data-icon=""></span></span>
+          </a>
         </div>
       </div>
     </div>
 </nav>
 
-    <!--
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="#">Project name</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
+<nav id="main-nav-drop" class="pinned">
+   <div class="container">
+      <div class="row">
+        <div class="span10 offset1">
+
+        <!-- Draft
+           <div class="row">
+              <div class="span10 text-center">
+                Table of Contents
+              </div>
+            </div>
+        -->
+
+          <!-- Row 1 Starts Here -->
+          <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                     
+                        <a href="test.html">
+                          Getting Started
+                        </a>
+                  </div>
                 </li>
+                <li><a href="test.html">Overview</a></li>
+                <li><a href="test.html">Security Overview</a></li>
+                <li><a href="test.html">Responsive Formats<a/></li>
+                <li><a href="test.html">Error Handling</a></li>
               </ul>
-              <form class="navbar-form pull-right">
-                <input class="span2" type="text" placeholder="Email">
-                <input class="span2" type="password" placeholder="Password">
-                <button type="submit" class="btn">Sign in</button>
-              </form>
-            </div> .nav-collapse
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Accounts
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Balances</a></li>
+                <li><a href="test.html">Positions</a></li>
+                <li><a href="test.html">Orders</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Streams
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Quote/Chances</a></li>
+                <li><a href="test.html">Quote/Snapshots</a></li>
+                <li><a href="test.html">Bar Chart</a></li>
+                <li><a href="test.html">Tick Bars</a></li>
+                <li><a href="test.html">Level 2</a></li>
+              </ul>
+            </div>
+        </div><!--End of Row1-->
+
+
+        <!-- Row 2 Starts Here -->
+          <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                     
+                        <a href="test.html">
+                          Orders
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Place Order</a>
+                <li><a href="test.html">Cancel Order</a></li>
+                <li><a href="test.html">Update Order</a></li>
+                <li><a href="test.html">Send Group Order</a></li>
+                <li><a href="test.html">Confirm Order</a></li>
+                <li><a href="test.html">Confirm Group Order</a></li>
+              </ul>
+            </div>
+
+            <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                     
+                        <a href="test.html">
+                          Users
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Get User Accounts</a></li>
+                <li><a href="test.html">Get User Positions</a></li>
+              </ul>
+
+                             <ul>
+                  <li>
+                    <div class="menu-topic">
+                          <a href="test.html">
+                            Security
+                          </a>
+                    </div>
+                  </li>
+                  <li><a href="test.html">Authorize</a></li>
+                </ul>
+            </div>
+
+             <div class="span3">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Data
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Quote</a></li>
+                <li><a href="test.html">Symbol Lookup</a></li>
+                <li><a href="test.html">Get Symbol</a></li>
+                <li><a href="test.html">Symbol List Symbols</a></li>
+                <li><a href="test.html">Symbol List</a></li>
+                <li><a href="test.html">Symbol Lists</a></li>
+                <li><a href="test.html">Symbol Suggest</a></li>
+              </ul>
+            </div>
+          </div><!--End of Row 2 -->
+
+
+          <!-- Row 3 Starts Here -->
+         <div class="row">
+            <div class="span3 offset1">
+              <ul>
+                <li>
+                  <div class="menu-topic">
+                      
+                        <a href="test.html">
+                          Objects
+                        </a>
+                  </div>
+                </li>
+                <li><a href="test.html">Symbol List</a></li>
+                <li><a href="test.html">Quote</a></li>
+                <li><a href="test.html">Access Token Response</a></li>
+                <li><a href="test.html">Basic Order Response</a></li>
+                <li><a href="test.html">Tick Bar Data</a></li>
+                <li><a href="test.html">Futures Account</a></li>
+                <li><a href="test.html">Equity Account</a></li>
+                <li><a href="test.html">Account Info</a></li>
+                <li><a href="test.html">Order Confirmation</a></li>
+                <li><a href="test.html">Order Respsonse</a></li>
+                <li><a href="test.html">Today Closed Positions</a></li>
+                <li><a href="test.html">Order</a></li>
+                <li><a href="test.html">Forex Account Currency Detail</a></li>
+                <li><a href="test.html">Intraday Bar Data</a></li>
+                <li><a href="test.html">Leg</a></li>
+                
+              </ul>
+            </div>
+
+            <div class="span3">
+                <ul>
+                  <li>
+                        <a href="test.html">
+                          Objects (continued)
+                        </a></li>
+                        <li><a href="test.html">Group Order</a></li>
+                          <li><a href="test.html">Account</a></li>
+                <li><a href="test.html">Forex Account</a></li>
+                <li><a href="test.html">Futures Order Confirmation</a></li>
+                <li><a href="test.html">Error</a></li>
+                <li><a href="test.html">Client Info</a></li>
+                <li><a href="test.html">Forex Account Currency Detail</a></li>
+                <li><a href="test.html">Intraday Bar Data</a></li>
+                <li><a href="test.html">Leg</a></li>
+                <li><a href="test.html">Group Order</a></li>
+                <li><a href="test.html">Account</a></li>
+                <li><a href="test.html">Forex Account</a></li>
+                <li><a href="test.html">Futures Order Confirmation</a></li>
+                <li><a href="test.html">Error</a></li>
+                <li><a href="test.html">Client Info</a></li>
+                </ul>
+            </div>
+
+
+             <div class="span3">
+ 
+            </div>
+
           </div>
         </div>
       </div>
-    -->
+    </div>
+</nav>
+
+  <div id="page-container" class="story-containter">
 
   <div class="page-hero-wrapper">
     <div class="container">
@@ -219,6 +388,7 @@
     </div><!--container-->
   </footer>
 
+</div>
 
   <script>
 
