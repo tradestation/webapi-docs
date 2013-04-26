@@ -41,6 +41,29 @@
 			<div class="container">
 				<div class="row">
 					<div class="span10 offset1">
+								{% assign usedcategories = '' %}
+								{% for categoryweight in (1..10) %}
+									{% for page in site.pages %}
+										{% capture pagetitle %}{{page.title | upcase}}{% endcapture %}
+										{% capture pagecategory %}{{page.category | replace: '-', ' ' | upcase}}{% endcapture %}
+										{% if pagetitle == pagecategory and page.weight == categoryweight %}
+											{% unless usedcategories contains page.category %}{% if page.category %}
+						<div class="row">
+							<div class="span3 offset1">
+								<ul>
+									<li><div class="menu-topic"><a href="#">{{page.category | replace: '-', ' '}}</a></div></li>
+									<li>Forloop Index: {{forloop.index}}</li>
+									<li>Forloop Length: {{forloop.length}}</li>
+									<li>UsedCategories: {{usedcategories}}</li>
+									<li>Category Weight: {{categoryweight}}</li>
+								</ul>
+								</div>
+						</div>
+												{% capture usedcategories %}{{usedcategories}}{{page.category}}{% endcapture %}
+											{% endif %}{% endunless %}
+										{% endif %}
+									{% endfor %}
+								{% endfor %}
 						<div class="row">
 							<div class="span3 offset1">
 								<ul>
