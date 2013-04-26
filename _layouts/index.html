@@ -22,7 +22,7 @@
 	</head>
 	<body id="web-api">
 		<!-- Navbar -->
-		<nav id="main-nav" class="pinned nav">
+		<div id="main-nav" class="pinned nav">
 			<div class="container">
 				<div class="row">
 					<div class="span10 offset1">
@@ -36,7 +36,7 @@
 					</div>
 				</div>
 			</div>
-		</nav>
+		</div>
 		<nav id="main-nav-drop" class="pinned">
 			<div class="container">
 				<div class="row">
@@ -48,129 +48,52 @@
 										{% capture pagecategory %}{{page.category | replace: '-', ' ' | upcase}}{% endcapture %}
 										{% if pagetitle == pagecategory and page.weight == categoryweight %}
 											{% unless usedcategories contains page.category %}{% if page.category %}
+												{% assign categorymod = categoryweight | modulo: 3 %}
+												{% if categorymod == 1 %}
 						<div class="row">
 							<div class="span3 offset1">
 								<ul>
-									<li><div class="menu-topic"><a href="#">{{page.category | replace: '-', ' '}}</a></div></li>
-									<li>Forloop Index: {{forloop.index}}</li>
-									<li>Forloop Length: {{forloop.length}}</li>
-									<li>UsedCategories: {{usedcategories}}</li>
-									<li>Category Weight: {{categoryweight}}</li>
+												{% else %}
+							<div class="span3">
+								<ul>
+												{% endif %}
+												{% for doc in site.pages %}{% if doc.category == page.category %}
+													{% capture title %}{{doc.title | upcase}}{% endcapture %}
+													{% capture category %}{{page.category | replace: '-', ' ' | upcase}}{% endcapture %}
+													{% if title == category %}
+									<li><div class="menu-topic" style="text-transform: capitalize"><a href="{{site.baseurl}}/en/{{page.category}}">{{page.category | replace: '-', ' '}}</a></div></li>								
+													{% endif %}
+												{% endif %}{% endfor %}
+												{% for docweight in (1..10) %}
+													{% for doc in site.pages %}
+														{% if doc.category == page.category and doc.weight == docweight %}
+															{% capture title %}{{doc.title | upcase}}{% endcapture %}
+															{% capture category %}{{page.category | replace: '-', ' ' | upcase}}{% endcapture %}
+															{% unless title == category %}
+									<li><a href="{{site.baseurl}}{{doc.url}}">{{doc.title}}</a></li>
+															{% endunless %}
+														{% endif %}
+													{% endfor %}
+												{% endfor %}
+												{% for doc in site.pages %}
+													{% if doc.category == page.category %}
+														{% capture title %}{{doc.title | upcase }}{% endcapture %}
+														{% capture category %}{{ page.category | replace: '-', ' ' | upcase}}{% endcapture %}
+														{% unless title == category %}{% unless doc.weight %}
+									<li><a href="{{site.baseurl}}{{doc.url}}">{{doc.title}}</a></li>
+														{% endunless %}{% endunless %}
+													{% endif %}
+												{% endfor %}
 								</ul>
-								</div>
+							</div>
+												{% if categorymod == 0 or categoryweight == categoryweight.size %}
 						</div>
+												{% endif %}
 												{% capture usedcategories %}{{usedcategories}}{{page.category}}{% endcapture %}
 											{% endif %}{% endunless %}
 										{% endif %}
 									{% endfor %}
 								{% endfor %}
-						<div class="row">
-							<div class="span3 offset1">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Getting Started</a></div></li>
-									<li><a href="test.html">Overview</a></li>
-									<li><a href="test.html">Security Overview</a></li>
-									<li><a href="test.html">Responsive Formats</a></li>
-									<li><a href="test.html">Error Handling</a></li>
-								</ul>
-							</div>
-							<div class="span3">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Accounts</a></div></li>
-									<li><a href="test.html">Balances</a></li>
-									<li><a href="test.html">Positions</a></li>
-									<li><a href="test.html">Orders</a></li>
-								</ul>
-							</div>
-							<div class="span3">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Streams</a></div></li>
-									<li><a href="test.html">Quote/Chances</a></li>
-									<li><a href="test.html">Quote/Snapshots</a></li>
-									<li><a href="test.html">Bar Chart</a></li>
-									<li><a href="test.html">Tick Bars</a></li>
-									<li><a href="test.html">Level 2</a></li>
-								</ul>
-							</div>
-						</div><!--End of Row1-->
-						<div class="row">
-							<div class="span3 offset1">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Orders</a></div></li>
-									<li><a href="test.html">Place Order</a></li>
-									<li><a href="test.html">Cancel Order</a></li>
-									<li><a href="test.html">Update Order</a></li>
-									<li><a href="test.html">Send Group Order</a></li>
-									<li><a href="test.html">Confirm Order</a></li>
-									<li><a href="test.html">Confirm Group Order</a></li>
-								</ul>
-							</div>
-							<div class="span3">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Users</a></div></li>
-									<li><a href="test.html">Get User Accounts</a></li>
-									<li><a href="test.html">Get User Positions</a></li>
-								</ul>
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Security</a></div></li>
-									<li><a href="test.html">Authorize</a></li>
-								</ul>
-							</div>
-							<div class="span3">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Data</a></div></li>
-									<li><a href="test.html">Quote</a></li>
-									<li><a href="test.html">Symbol Lookup</a></li>
-									<li><a href="test.html">Get Symbol</a></li>
-									<li><a href="test.html">Symbol List Symbols</a></li>
-									<li><a href="test.html">Symbol List</a></li>
-									<li><a href="test.html">Symbol Lists</a></li>
-									<li><a href="test.html">Symbol Suggest</a></li>
-								</ul>
-							</div>
-						</div><!--End of Row 2 -->
-						<div class="row">
-							<div class="span3 offset1">
-								<ul>
-									<li><div class="menu-topic"><a href="test.html">Objects</a></div></li>
-									<li><a href="test.html">Symbol List</a></li>
-									<li><a href="test.html">Quote</a></li>
-									<li><a href="test.html">Access Token Response</a></li>
-									<li><a href="test.html">Basic Order Response</a></li>
-									<li><a href="test.html">Tick Bar Data</a></li>
-									<li><a href="test.html">Futures Account</a></li>
-									<li><a href="test.html">Equity Account</a></li>
-									<li><a href="test.html">Account Info</a></li>
-									<li><a href="test.html">Order Confirmation</a></li>
-									<li><a href="test.html">Order Respsonse</a></li>
-									<li><a href="test.html">Today Closed Positions</a></li>
-									<li><a href="test.html">Order</a></li>
-									<li><a href="test.html">Forex Account Currency Detail</a></li>
-									<li><a href="test.html">Intraday Bar Data</a></li>
-									<li><a href="test.html">Leg</a></li>
-								</ul>
-							</div>
-							<div class="span3">
-								<ul>
-									<li><a href="test.html">Objects (continued)</a></li>
-									<li><a href="test.html">Group Order</a></li>
-									<li><a href="test.html">Account</a></li>
-									<li><a href="test.html">Forex Account</a></li>
-									<li><a href="test.html">Futures Order Confirmation</a></li>
-									<li><a href="test.html">Error</a></li>
-									<li><a href="test.html">Client Info</a></li>
-									<li><a href="test.html">Forex Account Currency Detail</a></li>
-									<li><a href="test.html">Intraday Bar Data</a></li>
-									<li><a href="test.html">Leg</a></li>
-									<li><a href="test.html">Group Order</a></li>
-									<li><a href="test.html">Account</a></li>
-									<li><a href="test.html">Forex Account</a></li>
-									<li><a href="test.html">Futures Order Confirmation</a></li>
-									<li><a href="test.html">Error</a></li>
-									<li><a href="test.html">Client Info</a></li>
-								</ul>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -183,7 +106,7 @@
 							<div class="home-hero">
 								<h1 class="hero-text animated fadeInDown">TradeStation WebAPI</h1>
 								<h2 class="hero-description animated fadeInDown">Create Standalone Apps Using Any Language of Choice</h2>
-								<a class="hero-btn hero-intro-btn animated fadeInUp" href="test.html">Get Started  <i class="icon-chevron-right"></i></a>
+								<a class="hero-btn hero-intro-btn animated fadeInUp" href="{{site.baseurl}}/en/getting-started/">Get Started  <i class="icon-chevron-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -193,7 +116,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="span10 offset1 featurette">
-							<img class="pull-right featurette-image" src="{{site.baseurl}}/assets/images/languages.png">
+							<img class="pull-right featurette-image" src="{{site.baseurl}}/assets/images/languages.png" alt="Programming Languages You Can Develop With" />
 							<h1 class="feature-text">What is the TradeStation WebAPI?</h1>
 							<p>
 								Create dynamic web, mobile, or stand-alone applications using your programming language of choice. Whether it is C#, C++, Ruby on Rails, PHP, Python or any other language that can access the Internet, the TradeStation WebAPI lets you provide a custom solution that leverages TradeStation’s real-time market data network and fast order-execution services without having to run the TradeStation platform simultaneously.
@@ -206,7 +129,7 @@
 							<p>
 								The Tradestation API allows you to sync your database with Tradestation for better list and campaign management. Create client portals, add a subscribe form to your checkout page, segment campaigns based on purchase history, link campaign stats to your database, sync email activity with your database, and more.
 							</p>
-							<img class="scroll-animate featurette-image-top" src="{{site.baseurl}}/assets/images/device-family.png">
+							<img class="scroll-animate featurette-image-top" src="{{site.baseurl}}/assets/images/device-family.png" alt="WebTrading Was Built On The TradeStation WebAPI" />
 						</div>
 					</div>
 				</div>
@@ -218,17 +141,17 @@
 							<h1 class="text-center feature-text-b">How It Works</h1>
 							<div class="row">
 								<div class="span3">
-									<img src="http://placehold.it/350x250" />
+									<img src="http://placehold.it/350x250" alt="Image Placeholder" />
 									<p class="hiw-p">Integrate the TradeStation WebAPI into your new or existing product.</p>
 								</div>
 								<div class="span3">
-									<img src="http://placehold.it/350x250" />
+									<img src="http://placehold.it/350x250" alt="Image Placeholder" />
 									<p class="hiw-p">
 										Provide a link to TradeStation’s authorization page, giving any TradeStation client the ability to authorize your product to use his market data entitlements as well as place orders and access account information on his behalf.
 									</p>
 								</div>
 								<div class="span3">
-									<img src="http://placehold.it/350x250" />
+									<img src="http://placehold.it/350x250" alt="Image Placeholder" />
 									<p class="hiw-p">Integrate the Tradestation WebAPI into your new or existing product.</p>
 								</div>
 							</div>
