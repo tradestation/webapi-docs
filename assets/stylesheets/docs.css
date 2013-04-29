@@ -54,7 +54,7 @@ body > .navbar .brand:hover {
 
 /* padding for in-page bookmarks and fixed navbar */
 section {
-  padding-top: 30px;
+  /*padding-top: 30px;*/
 }
 section > .page-header,
 section > .lead {
