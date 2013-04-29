@@ -14,10 +14,6 @@ $(window).scroll(function () {
 
   $('#web-api').bind('mousewheel', function(e){
     // 335 px is where we want the nav to detach
-    if(top_offset < 30) {
-      
-    }
-
     if(top_offset > 335) {
       $('#main-nav').addClass('detached visible');
     } else {
