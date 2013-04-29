@@ -1,6 +1,5 @@
 // Menu
 
-//TODO: This only works once. 
 $('#main-nav').click(function(){
     if ($('#web-api').hasClass("nav-open")) {
         $('#web-api').removeClass("nav-open");
@@ -9,20 +8,51 @@ $('#main-nav').click(function(){
     }
 });
 
-/*
-tl.Nav.detach = function () {
-    this._attached && !this._visible && (this._el.addClass("detached"), this._attached = !1),
-tl.Nav.open = function () {
-    $("body").addClass("nav-open"), this._open = !0
-},
-tl.Nav.close = function () {
-    $("body").removeClass("nav-open"), this._open = !1
-}, tl.Nav.toggle = function (t) {
-    t && !$(t.target).hasClass("logo") && (this._open ? this.close() : this.open())
-}, tl.Nav.isOpen = function () {
-    return this._open
+     $(window).scroll(function () {
+      
+      var top_offset = $(window).scrollTop();
+      
+      if (top_offset > 100) {
+          console.log('In the middle.');
+        }
+        
 
-    */
+      $('#web-api').bind('mousewheel', function(e){
+        if(e.originalEvent.wheelDelta /120 > 0) {
+          console.log('Up')
+
+          if ($('#main-nav').hasClass("hidden")) {
+            $('#main-nav').removeClass("hidden visible");
+          } 
+
+              else {
+                  $('#main-nav').addClass("detached visible");
+              }
+        }
+
+        if(e.originalEvent.wheelDelta /120 < 0 && top_offset > 500) {
+          console.log('Down')
+
+          if ($('#main-nav').hasClass("detached")) {
+                $('#main-nav').removeClass("visible");
+                $('#main-nav').addClass("hidden");
+          } 
+
+              else {
+                //$('#main-nav').addClass("hidden");
+              }
+        }
+
+            });
+        
+        if (top_offset < 30 && $('#main-nav').hasClass("detached")) {
+            $('#main-nav').removeClass('detached');
+            console.log('At the top');
+        } else {
+          //  $('.top_head_separator').addClass('fixed-top fade-in');
+        }
+    })
+
 
 // Page Animations
 

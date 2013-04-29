@@ -4,23 +4,87 @@
 }
 
 .nav-open #main-nav {
-	background: #FFF;
+	background: #333;
 	color: #299BC9;
 
 	.box-shadow(~"0 1px 4px rgba(0,0,0,.14)");
 
 	&:hover {
-		background: #FFF;
+		background: #333;
 		color: #299BC9;
 	}
 
 	a {
-		color: inherit;
+		color: #f2f2f2;
 
 		&:hover {
-			color: inherit;
+			color: #e5e5e5;
 		};
+
 	}
+
+	span.tradestation-logo {
+		color: #48D;
+	}
+
+	span.trade-text {
+		// color: #999;
+		color: #f2f2f2;
+	}
+}
+
+#main-nav.detached {
+	position: fixed;
+	background: #333;
+	color: #299BC9;
+	.box-shadow(~"0 1px 4px rgba(0,0,0,.14)");
+	-webkit-transition: -webkit-transform .1s,background .1s,color .1s;
+	transition: transform .1s,background .1s,color .1s;
+
+	a {
+		// for White BG
+		// color: #299BC9;
+		color: #f2f2f2;
+
+		&:hover {
+			color: #e5e5e5;
+		}
+	}
+
+	span.tradestation-logo {
+		color: #48D;
+	}
+
+	span.trade-text {
+		// color: #999;
+		color: #f2f2f2;
+	}
+
+	&:hover {
+		background: #333;
+	}
+}
+
+
+#main-nav.visible {
+	opacity: 1;
+	transform: translate(0,0);
+	-webkit-transform: translate(0,0);
+	transition: transform .2s,background .3s,color .3s;
+	-webkit-transition: -webkit-transform .2s,background .3s,color .3s;
+}
+
+#main-nav.hidden {
+	opacity: 0;
+	-webkit-transform: translate(0,-60px);
+	-moz-transform: translate(0,-60px);
+	-ms-transform: translate(0,-60px);
+	-o-transform: translate(0,-60px);
+	transform: translate(0,-60px);
+	-webkit-transition: -webkit-transform .2s,background .3s,color .3s,opacity 0 .3s;
+	-moz-transition: -moz-transform .2s,background .3s,color .3s,opacity 0 .3s;
+	-o-transition: -o-transform .2s,background .3s,color .3s,opacity 0 .3s;
+	transition: transform .2s,background .3s,color .3s,opacity 0 .3s;
 }
 
 #main-nav {
@@ -38,21 +102,17 @@
 	-webkit-transition: -webkit-transform .2s,background .3s,color .3s;
 	transition: transform .2s,background .3s,color .3s;
 
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
 	&:hover {
-		background: rgba(255, 255, 255, 0.2);
+		// WhiteBG
+		// background: rgba(255, 255, 255, 0.2);
+		background: rgba(0, 0, 0, 0.2);
 		cursor: pointer;
-	}
-
-	.detatched {
-
-	}
-
-	.visible {
-
-	}
-
-	.hidden {
-
 	}
 
 	a {
@@ -71,7 +131,7 @@
 	height: 100%;
 	width: 100%;
 	margin-top: 60px;
-	background: url('../images/bg-menu.png');
+	background: url('../images/bg-grey.png');
 	-webkit-transform: translate(0,-110%);
 	transform: translate(0,-110%);
 	overflow-y: scroll;
@@ -146,6 +206,10 @@
 
 // Icon Customize
 
+.tradestation-logo {
+	font-size: 24px;
+	margin-right: 3px;
+}
 
 .objects {
 	font-size: 21px;
@@ -161,3 +225,20 @@
 .getting-started {
 	left: -28px;
 }
+
+.trade-link {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+
+.logo-hover {
+	// Trade Logo 
+	// color: #69F;
+
+	//Tradestation Text
+	//color: #999;
+}
+
+
