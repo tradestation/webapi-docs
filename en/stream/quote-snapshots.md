@@ -21,21 +21,21 @@ Streams full quotes for a list of symbols
 
 ### Returns
 
-`Quote` object
+[Quote](../../objects/quote) object
 
 ### Errors
 
 * `401` | Unauthorized
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
-* An invalid symbol will still result in a `200`, however the ERROR property in the resonse will be set to: "Error":"FAILED, INVALID SYMBOL"
+* An invalid symbol will still result in a `200`, however the ERROR property in the response will be set to: "Error":"FAILED, INVALID SYMBOL"
 
 ### Examples
 
-Example Request
+Example Request:
 
-    GET https://api.tradestation.com/v2/stream/quote/snapshots/yhoo, msft HTTP/1.1
-    Authorization: Beraer accesstokengoeshere
-    Accept: application/JSON
+    GET https://api.tradestation.com/v2/stream/quote/snapshots/yhoo,msft HTTP/1.1
+    Authorization: Bearer accesstokengoeshere
+    Accept: application/json
 
 Example Response:
 

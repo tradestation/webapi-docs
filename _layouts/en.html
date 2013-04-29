@@ -1,10 +1,25 @@
-{% include head.html %}
-{% include navbar-gen.html %}
-        <!-- MAIN CONTENT -->
-        <div id="main_content_wrap" class="outer">
-            <section id="main_content" class="inner">
-                <h1>{{ page.title }}</h1>
-                {{ content }}
-            </section>
-        </div>
-{% include foot.html %}
+{% include newhead.html %}
+<div class="page-hero-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="page-hero">
+					<h1 class="page-hero-text animated fadeInLeft">{{page.title}}</h1>
+					{% if page.description %}
+					<h2 class="page-hero-description animated fadeInLeft">{{page.description}}</h2>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				{{content}}
+			</div>
+		</div>
+	</div>
+</div>
+{% include newfoot.html %}

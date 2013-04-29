@@ -21,7 +21,7 @@ Streams quote changes for a list of symbols. The first events that come across p
 
 ### Returns
 
-`Quote` object
+[Quote](../../objects/quote) object
 
 ### Errors
 
@@ -35,6 +35,7 @@ Example Request:
 
     GET https://api.tradestation.com/v2/stream/quote/changes/yhoo HTTP/1.1
     Authorization: Bearer accesstokengoeshere
+    Accept: application/json
 
 Example Response:
 
