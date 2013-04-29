@@ -13046,6 +13046,13 @@ you can use the generic selector below, but it's slower:
   -ms-animation-duration: 0.34s;
   animation-duration: 0.34s;
 }
+.line {
+  width: 100%;
+  height: 1px;
+  background: #DDD;
+  border-bottom: #FFF solid 1px;
+  clear: both;
+}
 .btn {
   cursor: pointer;
   vertical-align: center;
@@ -13111,8 +13118,21 @@ you can use the generic selector below, but it's slower:
   padding: 24px 62px;
 }
 .hero-intro-btn:hover {
-  color: #ccc;
+  color: #f2f2f2;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzViOWJkZSIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNjVhN2U5IiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+  background-image: -moz-linear-gradient(bottom, #5b9bde 0%, #65a7e9 100%);
+  background-image: -webkit-linear-gradient(bottom, #5b9bde 0%, #65a7e9 100%);
+  background-image: -o-linear-gradient(bottom, #5b9bde 0%, #65a7e9 100%);
+  background-image: linear-gradient(bottom, #5b9bde 0%, #65a7e9 100%);
   text-decoration: none;
+  /*
+			 -webkit-transition: background-image 1000ms linear;
+		     -moz-transition: background-image 1000ms linear;
+		     -o-transition: background-image 1000ms linear;
+		     -ms-transition: background-image 1000ms linear;
+		     transition: background-image 1000ms linear;
+	     */
+
 }
 .hero-mini-btn {
   -webkit-background-clip: padding-box;
@@ -13126,11 +13146,11 @@ you can use the generic selector below, but it's slower:
   -moz-box-shadow: inset 0 2px 1px rgba(117,175,232,.75);
   box-shadow: inset 0 2px 1px rgba(117,175,232,.75);
   color: inset 0 2px 1px rgba(117,175,232,.75);
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUxOTNkNyIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNjFhMmUzIiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+PC9zdmc+);
-  background-image: -moz-linear-gradient(bottom, #5193d7 0%, #61a2e3 100%);
-  background-image: -webkit-linear-gradient(bottom, #5193d7 0%, #61a2e3 100%);
-  background-image: -o-linear-gradient(bottom, #5193d7 0%, #61a2e3 100%);
-  background-image: linear-gradient(bottom, #5193d7 0%, #61a2e3 100%);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwYTZlYyIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzNiNWY4IiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+  background-image: -moz-linear-gradient(bottom, #60a6ec 0%, #73b5f8 100%);
+  background-image: -webkit-linear-gradient(bottom, #60a6ec 0%, #73b5f8 100%);
+  background-image: -o-linear-gradient(bottom, #60a6ec 0%, #73b5f8 100%);
+  background-image: linear-gradient(bottom, #60a6ec 0%, #73b5f8 100%);
   display: inline-block;
   font-size: 14px;
   padding: 2px 31px;
@@ -13139,8 +13159,13 @@ you can use the generic selector below, but it's slower:
   top: 50%;
 }
 .hero-mini-btn:hover {
-  color: #ccc;
+  color: #f2f2f2;
   text-decoration: none;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU3OWVlNiIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNjhhZGYzIiBzdG9wLW9wYWNpdHk9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+  background-image: -moz-linear-gradient(bottom, #579ee6 0%, #68adf3 100%);
+  background-image: -webkit-linear-gradient(bottom, #579ee6 0%, #68adf3 100%);
+  background-image: -o-linear-gradient(bottom, #579ee6 0%, #68adf3 100%);
+  background-image: linear-gradient(bottom, #579ee6 0%, #68adf3 100%);
 }
 .hero-mini-btn-wrapper {
   padding-bottom: 10px;
@@ -13173,7 +13198,7 @@ you can use the generic selector below, but it's slower:
   -webkit-transform: translate(0, 0);
 }
 .nav-open #main-nav {
-  background: #FFF;
+  background: #333;
   color: #299BC9;
   -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14);
   -moz-box-shadow: 0 1px 4px rgba(0,0,0,.14);
@@ -13181,14 +13206,65 @@ you can use the generic selector below, but it's slower:
   color: 0 1px 4px rgba(0,0,0,.14);
 }
 .nav-open #main-nav:hover {
-  background: #FFF;
+  background: #333;
   color: #299BC9;
 }
 .nav-open #main-nav a {
-  color: inherit;
+  color: #f2f2f2;
 }
 .nav-open #main-nav a:hover {
-  color: inherit;
+  color: #e5e5e5;
+}
+.nav-open #main-nav span.tradestation-logo {
+  color: #48D;
+}
+.nav-open #main-nav span.trade-text {
+  color: #f2f2f2;
+}
+#main-nav.detached {
+  position: fixed;
+  background: #333;
+  color: #299BC9;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.14);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,.14);
+  box-shadow: 0 1px 4px rgba(0,0,0,.14);
+  color: 0 1px 4px rgba(0,0,0,.14);
+  -webkit-transition: -webkit-transform 0.1s, background 0.1s, color 0.1s;
+  transition: transform .1s,background .1s,color .1s;
+}
+#main-nav.detached a {
+  color: #f2f2f2;
+}
+#main-nav.detached a:hover {
+  color: #e5e5e5;
+}
+#main-nav.detached span.tradestation-logo {
+  color: #48D;
+}
+#main-nav.detached span.trade-text {
+  color: #f2f2f2;
+}
+#main-nav.detached:hover {
+  background: #333;
+}
+#main-nav.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transition: transform .2s,background .3s,color .3s;
+  -webkit-transition: -webkit-transform 0.2s, background 0.3s, color 0.3s;
+}
+#main-nav.hidden {
+  opacity: 0;
+  -webkit-transform: translate(0, -60px);
+  -moz-transform: translate(0, -60px);
+  -ms-transform: translate(0, -60px);
+  -o-transform: translate(0, -60px);
+  transform: translate(0, -60px);
+  -webkit-transition: -webkit-transform 0.2s, background 0.3s, color 0.3s, opacity 0 0.3s;
+  -moz-transition: -moz-transform 0.2s, background 0.3s, color 0.3s, opacity 0 0.3s;
+  -o-transition: -o-transform 0.2s, background 0.3s, color 0.3s, opacity 0 0.3s;
+  transition: transform .2s,background .3s,color .3s,opacity 0 .3s;
 }
 #main-nav {
   position: fixed;
@@ -13203,9 +13279,14 @@ you can use the generic selector below, but it's slower:
   transform: translate(0, 0);
   -webkit-transition: -webkit-transform 0.2s, background 0.3s, color 0.3s;
   transition: transform .2s,background .3s,color .3s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 #main-nav:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 #main-nav a {
@@ -13221,7 +13302,7 @@ you can use the generic selector below, but it's slower:
   height: 100%;
   width: 100%;
   margin-top: 60px;
-  background: url('../images/bg-menu.png');
+  background: url('../images/bg-grey.png');
   -webkit-transform: translate(0, -110%);
   transform: translate(0, -110%);
   overflow-y: scroll;
@@ -13277,6 +13358,10 @@ you can use the generic selector below, but it's slower:
 .menu-topic {
   position: relative;
 }
+.tradestation-logo {
+  font-size: 24px;
+  margin-right: 3px;
+}
 .objects {
   font-size: 21px;
   left: -30px;
@@ -13288,6 +13373,9 @@ you can use the generic selector below, but it's slower:
 }
 .getting-started {
   left: -28px;
+}
+.trade-link:hover {
+  text-decoration: none;
 }
 .hiw-p {
   margin-top: 10px;
