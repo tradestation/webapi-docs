@@ -8262,6 +8262,8 @@ a.badge:focus {
 /* shell.less  */
 body {
   padding-top: 0;
+  font-family: 'proxima_nova_rgregular', "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
   font-size: 19px;
   text-rendering: optimizeLegibility;
 }
