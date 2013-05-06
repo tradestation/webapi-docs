@@ -37,6 +37,11 @@ weight: 4
 | Stream        | 400           | Invalid Request             |         |
 |               | 401           | Not Entitled                |         |
 |               | 404           | Symbol not found            |         |
+|               | 200           | Error                       | Timeout |
+|               | 200           | Error                       | No Data |
+|               | 200           | Error                       | Not Entitled |
+|               | 200           | Error                       | Invalid Symbol |
+|               | 200           | End                         | Stream Ends |
 |               |               |                             |         |
 | General       | 500           | CAL down                    |         |
 |               | 400           | Invalid URI                 | Not Found |
