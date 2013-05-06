@@ -5606,7 +5606,7 @@ a.badge:focus {
 /* shell.less  */
 body {
   padding-top: 0;
-  font-family: 'proxima_nova_rgregular', "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
+  font-family: /*'proxima_nova_rgregular',*/ "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 19px;
   text-rendering: optimizeLegibility;
@@ -10650,6 +10650,7 @@ you can use the generic selector below, but it's slower:
   left: 0;
   z-index: 900;
   width: 100%;
+  text-transform: capitalize;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   -webkit-transition: -webkit-transform 0.2s, background 0.3s, color 0.3s;
