@@ -5611,7 +5611,7 @@ body {
   font-size: 19px;
   text-rendering: optimizeLegibility;
 }
-.span3 {
+#how-it-works .span3 {
   width: 298px;
 }
 #main-nav {

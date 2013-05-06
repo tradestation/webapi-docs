@@ -5611,7 +5611,7 @@ body {
   font-size: 19px;
   text-rendering: optimizeLegibility;
 }
-.span3 {
+#how-it-works .span3 {
   width: 298px;
 }
 #main-nav {
@@ -10700,7 +10700,6 @@ you can use the generic selector below, but it's slower:
   font-size: 26px;
   font-weight: bold;
   margin-left: 0;
-  text-transform: capitalize;
 }
 .nav-open #main-nav-drop {
   -webkit-transform: translate(0, 0);
