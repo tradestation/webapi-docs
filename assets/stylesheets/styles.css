@@ -13348,6 +13348,7 @@ you can use the generic selector below, but it's slower:
   font-size: 26px;
   font-weight: bold;
   margin-left: 0;
+  text-transform: capitalize;
 }
 .nav-open #main-nav-drop {
   -webkit-transform: translate(0, 0);
