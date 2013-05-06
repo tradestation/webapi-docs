@@ -18,7 +18,7 @@
 													{% capture title %}{{doc.title | upcase}}{% endcapture %}
 													{% capture category %}{{page.category | replace: '-', ' ' | upcase}}{% endcapture %}
 													{% if title == category %}
-									<li><div class="menu-topic" style="text-transform: capitalize"><a href="{{site.baseurl}}/en/{{page.category}}">{{page.category | replace: '-', ' '}}</a></div></li>								
+									<li><div class="menu-topic"><a href="{{site.baseurl}}/en/{{page.category}}">{{page.category | replace: '-', ' '}}</a></div></li>								
 													{% endif %}
 												{% endif %}{% endfor %}
 												{% for docweight in (1..10) %}
@@ -33,13 +33,13 @@
 													{% endfor %}
 												{% endfor %}
 												{% for doc in site.pages %}
-													{% if doc.category == page.category %}
+													{% unless doc.category == 'objects' %}{% if doc.category == page.category %}
 														{% capture title %}{{doc.title | upcase }}{% endcapture %}
 														{% capture category %}{{ page.category | replace: '-', ' ' | upcase}}{% endcapture %}
 														{% unless title == category %}{% unless doc.weight %}
 									<li><a href="{{site.baseurl}}{{doc.url}}">{{doc.title}}</a></li>
 														{% endunless %}{% endunless %}
-													{% endif %}
+													{% endif %}{% endunless %}
 												{% endfor %}
 								</ul>
 							</div>
