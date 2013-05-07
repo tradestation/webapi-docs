@@ -8262,7 +8262,7 @@ a.badge:focus {
 /* shell.less  */
 body {
   padding-top: 0;
-  font-family: /*'proxima_nova_rgregular',*/ "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
+  font-family: 'proxima_nova_rgregular', "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 19px;
   text-rendering: optimizeLegibility;
@@ -12838,7 +12838,7 @@ ul.icons li [class*=" icon-"] {
 @font-face {
   font-family: 'proxima_nova_rgregular';
   src: url('../font/proximanova-regular.eot');
-  src: url('../font/proximanova-regular.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-regular.woff') format('woff'), url('../font/proximanova-regular.ttf') format('truetype'), url('../font/proximanova-regular.svg#proxima_nova_rgregular') format('svg');
+  src: url('../font/proximanova-regular.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-regular.svg#proxima_nova_rgregular') format('svg'), url('../font/proximanova-regular.woff') format('woff'), url('../font/proximanova-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
