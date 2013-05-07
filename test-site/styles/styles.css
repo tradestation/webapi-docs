@@ -8262,7 +8262,7 @@ a.badge:focus {
 /* shell.less  */
 body {
   padding-top: 0;
-  font-family: 'proxima_nova_rgregular', "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
+  font-family: /*'proxima_nova'*/, "Helvetica Neue", Helvetica, 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 19px;
   text-rendering: optimizeLegibility;
@@ -12836,18 +12836,17 @@ ul.icons li [class*=" icon-"] {
   content: "\f115";
 }
 @font-face {
-  font-family: 'proxima_nova_rgregular';
+  font-family: 'proxima_nova';
   src: url('../font/proximanova-regular.eot');
   src: url('../font/proximanova-regular.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-regular.svg#proxima_nova_rgregular') format('svg'), url('../font/proximanova-regular.woff') format('woff'), url('../font/proximanova-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'proxima_nova_rgbold';
+  font-family: 'proxima_nova';
   src: url('../font/proximanova-bold.eot');
-  src: url('../font/proximanova-bold.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-bold.woff') format('woff'), url('../font/proximanova-bold.ttf') format('truetype'), url('../font/proximanova-bold.svg#proxima_nova_rgbold') format('svg');
-  font-weight: normal;
-  font-style: normal;
+  src: url('../font/proximanova-bold.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-bold.svg#proxima_nova_rgbold') format('svg'), url('../font/proximanova-bold.woff') format('woff'), url('../font/proximanova-bold.ttf') format('truetype');
+  font-weight: bold;
 }
 @font-face {
   font-family: 'proxima_novasemibold';
