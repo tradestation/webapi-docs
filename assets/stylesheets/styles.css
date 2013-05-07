@@ -13166,29 +13166,31 @@ you can use the generic selector below, but it's slower:
 
 }
 #animate-device {
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  -ms-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  -ms-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+  opacity: 0;
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  -ms-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-delay: 0.15s;
+  -moz-animation-delay: 0.15s;
+  -o-animation-delay: 0.15s;
+  -ms-animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 #animate-tagline,
 #animate-tagline-btn {
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  -ms-animation-duration: 0.8s;
-  animation-duration: 0.8s;
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  -ms-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  -o-animation-duration: 0.4s;
+  -ms-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-delay: 0.15s;
+  -moz-animation-delay: 0.15s;
+  -o-animation-delay: 0.15s;
+  -ms-animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 .hero-mini-btn {
   -webkit-background-clip: padding-box;
@@ -13253,6 +13255,7 @@ you can use the generic selector below, but it's slower:
 }
 .nav-open #main-nav-drop {
   -webkit-transform: translate(0, 0);
+  opacity: 0;
 }
 .nav-open #main-nav {
   background: #333;
