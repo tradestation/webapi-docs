@@ -975,7 +975,7 @@ h4,
 h5,
 h6 {
   margin: 11.5px 0;
-  font-family: "Helvetica Neue", 'Lato', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 23px;
   color: #333333;
@@ -8262,7 +8262,7 @@ a.badge:focus {
 /* shell.less  */
 body {
   padding-top: 0;
-  font-family: /*'proxima_nova_rgregular',*/ "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
+  font-family: 'proxima_nova_rgregular', "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 19px;
   text-rendering: optimizeLegibility;
@@ -12838,7 +12838,7 @@ ul.icons li [class*=" icon-"] {
 @font-face {
   font-family: 'proxima_nova_rgregular';
   src: url('../font/proximanova-regular.eot');
-  src: url('../font/proximanova-regular.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-regular.woff') format('woff'), url('../font/proximanova-regular.ttf') format('truetype'), url('../font/proximanova-regular.svg#proxima_nova_rgregular') format('svg');
+  src: url('../font/proximanova-regular.eot?#iefix') format('embedded-opentype'), url('../font/proximanova-regular.svg#proxima_nova_rgregular') format('svg'), url('../font/proximanova-regular.woff') format('woff'), url('../font/proximanova-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -13513,7 +13513,6 @@ td {
 }
 thead tr:first-child > th {
   border-top: none;
-  font-family: 'proxima_nova_rgbold', "Helvetica Neue", Helvetica, 'Open Sans', Arial, "Lucida Grande", sans-serif;
 }
 tbody > tr:nth-child(odd) > td,
 tbody > tr:nth-child(odd) > th {

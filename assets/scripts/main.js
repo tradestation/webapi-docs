@@ -23,7 +23,7 @@ $(window).scroll(function () {
 });
 
 
-// Page Animations
+// Page Animations On Scroll
 
 $(function () {
   $('#animate-device').one('inview', function (event, visible) {
@@ -43,6 +43,4 @@ $(function () {
       $(this).addClass('animated fadeInRight');
     }
   });
-
-
 });
