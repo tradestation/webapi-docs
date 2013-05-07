@@ -1,0 +1,9 @@
+.hero-intro-btn {
+  width: 339px;
+  height: 83px;
+  background-color: #5093d7;
+}
+@include border-radius(5px);
+@include background-clip(padding-box);
+@include box-shadow(inset 0 2px 1px rgba(117, 175, 232, 0.75));
+@include background-image(linear-gradient(bottom, #5193d7 0%, #61a2e3 100%));
