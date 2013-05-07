@@ -81,7 +81,7 @@ Example Response:
 
     [{
         "__type": "EquitiesOptionsOrderConfirmation:#TradeStation.Web.Services.DataContracts",
-        "Account": "543061 QA",
+        "Account": "987654 MyName",
         "Duration": "Day",
         "RelationIdentifier": null,
         "Route": "Intelligent",

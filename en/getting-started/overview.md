@@ -37,18 +37,18 @@ Here is a simple example of requesting a list of accounts for a particular user:
     Date: Fri, 18 Mar 2011 18:21:45 GMT
 
     [{
-        "Key": 114275,
-        "Name": "543061 QA",
+        "Key": 987654,
+        "Name": "9876543 MyName",
         "Type": "C",
         "TypeDescription": "Cash"
     }, {
-        "Key": 114276,
-        "Name": "5430611 QA",
+        "Key": 876543,
+        "Name": "8765432 MyName",
         "Type": "M",
         "TypeDescription": "Margin"
     }, {
-        "Key": 114277,
-        "Name": "5430612 QA",
+        "Key": 765432,
+        "Name": "7654321 MyName",
         "Type": "F",
         "TypeDescription": "Futures"
     }]

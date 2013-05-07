@@ -44,7 +44,7 @@ Example Response:
     Content-Type: application/JSON; charset=utf-8
     
     [{
-        "AccountID": "543061 QA",
+        "AccountID": "987654 MyName",
         "AskPrice": 42.88,
         "AskPriceDisplay": "42.88",
         "AssetType": "EQ",

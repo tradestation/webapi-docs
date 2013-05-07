@@ -58,7 +58,7 @@ Example Response ([Position](../../objects/position) object details):
     Date: Wed, 05 Jan 2011 18:18:32 GMT
     
     [{
-        "AccountID": "543061 QA",
+        "AccountID": "987654 MyName",
         "AskPrice": 36.96,
         "AskPriceDisplay": "36.96",
         "AssetType": "EQ",
@@ -87,7 +87,7 @@ Example Response ([Position](../../objects/position) object details):
         "Symbol": "A",
         "TimeStamp": "3\/30\/2011 2:51:49 PM"
     }, {
-        "AccountID": "543061 QA",
+        "AccountID": "876543 MyName",
         "AskPrice": 5.11,
         "AskPriceDisplay": "5.11",
         "AssetType": "EQ",
