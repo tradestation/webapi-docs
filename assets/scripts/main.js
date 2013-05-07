@@ -26,9 +26,23 @@ $(window).scroll(function () {
 // Page Animations
 
 $(function () {
-  $('img.scroll-animate').one('inview', function (event, visible) {
+  $('#animate-device').one('inview', function (event, visible) {
     if (visible) {
       $(this).addClass('animated fadeInUp');
     }
   });
+
+  $('#animate-tagline').one('inview', function (event, visible) {
+    if (visible) {
+      $(this).addClass('animated fadeInLeft');
+    }
+  });
+
+  $('#animate-tagline-btn').one('inview', function (event, visible) {
+    if (visible) {
+      $(this).addClass('animated fadeInRight');
+    }
+  });
+
+
 });
