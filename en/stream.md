@@ -22,4 +22,3 @@ The Streaming Service provides the consumer with asynchronous streaming quotes. 
 * [Quote/Snapshots](quote-snapshots) | Retrieves a full quote object for any change in quote information for a symbol list
 * [BarChart](barchart) | Retrieves quote information that can be used to build a chart
 * [TickBars](tickbars) | Streams tick bars
-* [JobSet](jobset) | Streams events from an EasyLanguage analysis technique running on a remote server
