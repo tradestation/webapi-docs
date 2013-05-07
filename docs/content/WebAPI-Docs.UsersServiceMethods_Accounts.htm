@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>TradeStation WebAPI</title>
+<link href="css/base.css?v=1" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=1" rel="stylesheet" type="text/css">
+<script src="js/modernizr-1.7.min.js"></script>
+</head>
+<body>
+<header><h1>TradeStation WebAPI</h1></header>
+<div id="main" role="main">
+<div id="pageTitle">
+			
+			Users Service : Accounts
+			
+		</div>
+
+		<a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.UsersServiceMethods_Accounts&amp;Section=0" class="editsectionlink"></a><h3 class="separator">Summary:<a target="mainFrame" class="headeranchor" id="Summary:_0" href="#Summary:_0" title="Link to this Section">&#0182;</a></h3>Requesting accounts associated to a particular user<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.UsersServiceMethods_Accounts&amp;Section=1" class="editsectionlink"></a><h3 class="separator">Details:<a target="mainFrame" class="headeranchor" id="Details:_1" href="#Details:_1" title="Link to this Section">&#0182;</a></h3><ul><li>Method: <b>GET</b></li><li>Path /users/{userid}/accounts</li><li>URI Parameters:<ul><li>{userid}<br /></li></ul></li></ul><br /><ul><li>Authentication: Requires a valid access token.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.UsersServiceMethods_Accounts&amp;Section=2" class="editsectionlink"></a><h3 class="separator">Returns:<a target="mainFrame" class="headeranchor" id="Returns:_2" href="#Returns:_2" title="Link to this Section">&#0182;</a></h3> 
+<a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_AccountInfo.htm" title="DataObject : AccountInfo">AccountInfo</a> object<br /><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.UsersServiceMethods_Accounts&amp;Section=3" class="editsectionlink"></a><h3 class="separator">Errors:<a target="mainFrame" class="headeranchor" id="Errors:_3" href="#Errors:_3" title="Link to this Section">&#0182;</a></h3>
+<ul><li>401 | Unauthorized</li><li>5xx | Unknown internal service error. Contact TradeStation.<br /></li></ul><br /><a target="mainFrame" href="WebAPI-Docs.Edit.aspx?Page=WebAPI-Docs.UsersServiceMethods_Accounts&amp;Section=4" class="editsectionlink"></a><h3 class="separator">Examples:<a target="mainFrame" class="headeranchor" id="Examples:_4" href="#Examples:_4" title="Link to this Section">&#0182;</a></h3>
+Example Request:
+<pre>
+GET https&#58;//api.tradestation.com/users/userid/accounts HTTP/1.1
+Authorization&#58; Bearer Ym5BcWVGVHB5NjNKSkJ2bjFHR0FrMEVYekF0M3VuMlZZ
+Accept&#58; application/JSON
+Host&#58; api.tradestation.com
+</pre><br />Example Response: (<a target="mainFrame" class="pagelink" href="WebAPI-Docs.DataObject_AccountInfo.htm" title="DataObject : AccountInfo">AccountInfo object details</a>)
+<pre>
+HTTP/1.1 200 OK
+Cache-Control&#58; private
+Content-Length&#58; 205
+Content-Type&#58; application/JSON; charset=utf-8
+Server&#58; Microsoft-IIS/7.5
+X-AspNet-Version&#58; 4.0.30319
+X-Powered-By&#58; ASP.NET
+Date&#58; Thu, 06 Jan 2011 17&#58;21&#58;43 GMT
+
+&#91;&#123;"Key"&#58;114275,"Name"&#58;"543061 QA","Type"&#58;"C","TypeDescription"&#58;"Cash"&#125;,&#123;"Key"&#58;114276,"Name"&#58;"5430611 QA","Type"&#58;"M","TypeDescription"&#58;"Margin"&#125;,&#123;"Key"&#58;114277,"Name"&#58;"5430612 QA","Type"&#58;"F","TypeDescription"&#58;"Futures"&#125;,&#123;"Key"&#58;114278,"Name"&#58;"FX543061 QA","Type"&#58;"X","TypeDescription"&#58;"Forex"&#125;&#93;
+</pre>
+
+	</div>
+	
+	
+</div>
+<footer></footer>
+</body>
+</html>
