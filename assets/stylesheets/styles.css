@@ -7944,6 +7944,10 @@ a.badge:focus {
   }
 }
 @media (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
@@ -8038,8 +8042,17 @@ a.badge:focus {
   #page-container .hero-text {
     font-size: 49px;
   }
+  #page-container .hero-description {
+    font-size: 24px;
+  }
   .container {
     margin: 0 30px;
+  }
+  #main-nav {
+    font-size: 14px;
+  }
+  .tradestation-logo {
+    font-size: 15px;
   }
 }
 @media (max-width: 480px) {
@@ -8106,6 +8119,7 @@ body {
   font-weight: 300;
   font-size: 19px;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 #how-it-works .span3 {
   width: 298px;
