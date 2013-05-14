@@ -8054,6 +8054,9 @@ a.badge:focus {
   .tradestation-logo {
     font-size: 15px;
   }
+  .footer-icons {
+    font-size: 36px;
+  }
 }
 @media (max-width: 480px) {
   .nav-collapse {
