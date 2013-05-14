@@ -35,7 +35,7 @@ permalink: position/
 | MarketValue           | decimal | Total Market Value of held position |
 | OpenProfitLoss        | decimal | Profit and Loss for position |
 | OpenProfitLossPercent | decimal | Profit and Loss for position in percent format |
-| OpenProfitLossQty     | integer | |
+| OpenProfitLossQty     | decimal | |
 | Quantity              | integer | Quantity held |
 | RequiredMargin        | decimal | In denomination of asset |
 | SettlePrice           | decimal | |
