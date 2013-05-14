@@ -21,7 +21,7 @@ Requesting all the positions for a particular user
 
 ### Returns
 
-[Positions](../../objects/positions) object
+[Positions](../../objects/position) object
 
 ### Errors
 
