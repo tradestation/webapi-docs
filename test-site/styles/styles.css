@@ -8055,13 +8055,13 @@ a.badge:focus {
   .footer-icons {
     font-size: 20px;
   }
-  .hero-intro-button {
+  .hero-intro-btn {
     padding: 17px 22px;
   }
   .home-hero {
-    margin-top: 22px;
     font-size: 25px;
-    margin-top: 120px;
+    margin-top: 103px;
+    padding-top: 0;
   }
 }
 @media (max-width: 480px) {
