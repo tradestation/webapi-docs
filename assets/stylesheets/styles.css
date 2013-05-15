@@ -8123,6 +8123,10 @@ a.badge:focus {
   }
 }
 /* shell.less  */
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   padding-top: 0;
   font-family: /*'proxima_nova'*/, "Helvetica Neue", Helvetica, 'Open Sans', Arial, sans-serif;
