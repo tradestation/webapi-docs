@@ -13344,7 +13344,7 @@ tbody > tr:nth-child(odd) > th {
     margin: 0;
   }
   .footer-icons li {
-    margin-right: 10px;
+    margin-right: 18px;
     padding-bottom: 0;
   }
   .footer-icons li:last-child {
@@ -13357,11 +13357,17 @@ tbody > tr:nth-child(odd) > th {
     margin-top: 65px;
     text-align: left;
   }
+  .featurette-image {
+    margin-top: 20px;
+  }
   footer {
-    height: 273px;
+    height: 267px;
   }
   .footer-symbols {
     font-size: 45px;
+  }
+  #main-nav-drop {
+    padding-top: 90px;
   }
 }
 @media (max-width: 480px) {
