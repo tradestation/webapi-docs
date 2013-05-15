@@ -13367,7 +13367,7 @@ tbody > tr:nth-child(odd) > th {
     font-size: 45px;
   }
   #main-nav-drop {
-    padding-top: 90px;
+    padding-top: 90px !important;
   }
 }
 @media (max-width: 480px) {
