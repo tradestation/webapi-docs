@@ -7,7 +7,7 @@ permalink: overview/
 weight: 1
 ---
 
-The WebAPI is a collection of RESTful web services for interacting with TradeStation. These services accept and/or return object data via standard HTTP requests.
+Some fix here: The WebAPI is a collection of RESTful web services for interacting with TradeStation. These services accept and/or return object data via standard HTTP requests.
 
 The WebAPI exposes streaming barchart resources, however, this data is throttled.
 
