@@ -13297,8 +13297,20 @@ tbody > tr:nth-child(odd) > th {
   .modal.fade.in {
     top: 20px;
   }
+  .nav {
+    padding: 13px 0;
+  }
+  #main-nav {
+    font-size: 27px;
+  }
+  #main-nav .trade-text {
+    font-size: 20px;
+  }
+  .featurette {
+    margin-top: 58px;
+  }
   #page-container .hero-text {
-    font-size: 44px;
+    font-size: 42px !important;
     font-weight: bold;
   }
   #page-container .hero-description {
@@ -13307,9 +13319,6 @@ tbody > tr:nth-child(odd) > th {
   }
   .container {
     margin: 0 30px;
-  }
-  #main-nav {
-    font-size: 24px;
   }
   .footer-icons {
     font-size: 20px;
@@ -13324,13 +13333,35 @@ tbody > tr:nth-child(odd) > th {
     padding-top: 0;
   }
   h1 {
-    font-size: 43px;
+    font-size: 25px;
+    line-height: 1;
+  }
+  .footer-icons {
+    padding-top: 64px;
+  }
+  .footer-icons ul,
+  .footer-icons ol {
+    margin: 0;
   }
   .footer-icons li {
-    margin-right: 5px;
+    margin-right: 10px;
+    padding-bottom: 0;
+  }
+  .footer-icons li:last-child {
+    margin-right: 0;
   }
   .hero-wrapper {
     height: 412px;
+  }
+  .feature-text-b {
+    margin-top: 65px;
+    text-align: left;
+  }
+  footer {
+    height: 305px;
+  }
+  .footer-symbols {
+    font-size: 45px;
   }
 }
 @media (max-width: 480px) {

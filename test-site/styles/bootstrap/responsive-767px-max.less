@@ -117,20 +117,35 @@
 
   // Custom WebAPI Styles
 
+  .nav {
+    padding: 13px 0;
+  }
+
   #main-nav {
+
+    font-size: 27px;
+    // line-height: 43px;
+
+    .trade-text {
+      font-size: 20px;
+    }
+
     .container {
   //    margin: 0 10px;
     }
   }
   
+  .featurette {
+    margin-top: 58px;
+  }
 
   #page-container {
-    .containter {
- //     margin: 0 10px;
+    .container {
+
     }
     
     .hero-text {
-      font-size: 44px;
+      font-size: 42px !important;
       font-weight: bold;
     }
 
@@ -144,12 +159,8 @@
       margin: 0 30px;
     }
 
-    #main-nav {
-      font-size: 24px;
-    } 
-
     .tradestation-logo {
-    //  font-size: 15px;
+      // font-size: 15px;
     }
 
     .footer-icons {
@@ -168,18 +179,43 @@
     }
 
     h1 {
-      font-size: 43px;
+      font-size: 25px;
+      line-height: 1;
     }
 
     .footer-icons {
 
+      padding-top: 64px;
+
+      ul, ol {
+        margin: 0;
+      }
+
       li {
-        margin-right: 5px;
+        margin-right: 10px;
+        padding-bottom: 0;
+
+        &:last-child {
+          margin-right: 0;
+        } 
       }
     }
 
     .hero-wrapper {
       height: 412px;
+    }
+
+    .feature-text-b {
+      margin-top: 65px;
+      text-align: left;
+    }
+
+    footer {
+      height: 305px;
+    }
+
+    .footer-symbols {
+      font-size: 45px;
     }
 
 }
