@@ -8125,7 +8125,7 @@ a.badge:focus {
 /* shell.less  */
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body {
   padding-top: 0;
