@@ -6504,9 +6504,9 @@ footer li {
   font-size: 17px;
 }
 .center {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 @charset "UTF-8";
 /*
@@ -12488,6 +12488,10 @@ tbody > tr:nth-child(odd) > th {
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .row {
     margin-left: -20px;
     *zoom: 1;
