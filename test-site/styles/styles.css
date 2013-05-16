@@ -13430,4 +13430,9 @@ tbody > tr:nth-child(odd) > th {
   #page-container .hero-text {
     font-size: 49px;
   }
+  .center-image {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
