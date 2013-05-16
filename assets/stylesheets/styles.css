@@ -12492,6 +12492,10 @@ tbody > tr:nth-child(odd) > th {
   body {
     overflow-x: hidden;
   }
+  #how-it-works .span3 {
+    width: 30%;
+    margin-bottom: 120px;
+  }
   .row {
     margin-left: -20px;
     *zoom: 1;
@@ -13375,6 +13379,10 @@ tbody > tr:nth-child(odd) > th {
   }
 }
 @media (max-width: 480px) {
+  #how-it-works .span3 {
+    width: 100%;
+    margin-bottom: 60px;
+  }
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
@@ -13429,5 +13437,10 @@ tbody > tr:nth-child(odd) > th {
   }
   #page-container .hero-text {
     font-size: 49px;
+  }
+  .center-image {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
