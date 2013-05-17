@@ -13214,6 +13214,10 @@ tbody > tr:nth-child(odd) > th {
   body {
     overflow-x: hidden;
   }
+  #how-it-works .span3 {
+    width: 100%;
+    margin-bottom: 60px;
+  }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
