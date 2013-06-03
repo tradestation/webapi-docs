@@ -6508,6 +6508,15 @@ footer li {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+.centered-text {
+  text-align: center;
+}
+.featurette-tablet {
+  margin-top: 30px;
+}
+.phone-footer {
+  width: 284px !important;
+}
 @charset "UTF-8";
 /*
 Animate.css - http://daneden.me/animate
@@ -13441,10 +13450,5 @@ tbody > tr:nth-child(odd) > th {
   }
   #page-container .hero-text {
     font-size: 49px;
-  }
-  .center-image {
-    float: none !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
 }
