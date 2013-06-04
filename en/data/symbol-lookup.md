@@ -18,7 +18,7 @@ Returns a list of Symbols based on search criteria
 * Path: `/data/symbols/search/{criteria}`
 * URI Parameters:
 
-  * {criteria} = key/value paris search criteria:
+  * {criteria} = key/value pairs search criteria:
   
     * `C`: Asset categories. (Optional) Possible values
       * Future or FU

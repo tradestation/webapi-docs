@@ -32,7 +32,7 @@ Requesting accounts associated to a particular user
 
 Example Request:
 
-    GET https://api.tradestation.com/users/userid/accounts HTTP/1.1
+    GET https://api.tradestation.com/v2/users/userid/accounts HTTP/1.1
     Authorization: Bearer Ym5BcWVGVHB5NjNKSkJ2bjFHR0FrMEVYekF0M3VuMlZZ
     Accept: application/JSON
     Host: api.tradestation.com
