@@ -17,7 +17,7 @@ Resource for updating an open order. You cannot update an order that has been fi
 | Limit Orders                     | Quantity, Stop Price             | Market                        |
 | Stop Orders                      | Quantity, Stop Price             | Market                        |
 | Stop Limit Orders                | Quantity, Stop Price, Stop Limit | Market                        |
-| Stop Market Training Stop Orders | Quantity, Trail Amount           |                               |
+| Stop Market Training Stop Orders | Quantity                         |                               |
 
 ### Details
 
