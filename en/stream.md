@@ -21,4 +21,4 @@ The Streaming Service provides the consumer with asynchronous streaming quotes. 
 * [Quote/Changes](quote-changes) | Retrieves only changes in quote information for a symbol list
 * [Quote/Snapshots](quote-snapshots) | Retrieves a full quote object for any change in quote information for a symbol list
 * [BarChart](barchart) | Retrieves quote information that can be used to build a chart
-* [TickBars](tickbars) | Streams tick bars
+* [TickBars](tick-bars) | Streams tick bars

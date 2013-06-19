@@ -38,13 +38,8 @@ Example Request:
 Example Response:
 
     HTTP/1.1 200 OK
-    Cache-Control: private
     Transfer-Encoding: chunked
     Content-Type: text/plain
-    Server: Microsoft-IIS/7.5
-    X-AspNet-Version: 4.0.30319
-    Access-Control-Allow-Origin: *
-    Date: Thu, 13 Sep 2012 21:19:51 GMT
 
     {
         "TimeStamp": "\/Date(1347566399000)\/",
@@ -52,7 +47,6 @@ Example Response:
         "Close": 683.18,
         "TotalVolume": 200
     }
-
     {
         "TimeStamp": "\/Date(1347566400000)\/",
         "Status": 805306389,
