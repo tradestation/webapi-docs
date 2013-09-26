@@ -49,6 +49,7 @@ permalink: quote/
 | StrikePriceDisplay | string | Symbol's strike price; This is for Options symbols only |
 | Symbol | string | Symbol name |
 | SymbolRoot | string | |
+| TradeTime | string | Time of Quote in UTC |
 | Volume | integer | Today's volume |
 
 ### Display Type Options
