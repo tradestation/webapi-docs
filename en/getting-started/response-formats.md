@@ -47,4 +47,5 @@ If no format is specified, the defaulted format is `application/json`.
     }]
 
 *Notes:*
+
 * *Documentation examples use json format but support xml formatting unless otherwise specified.*
