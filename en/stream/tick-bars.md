@@ -8,7 +8,7 @@ weight: 4
 
 ### Summary
 
-Streams tick bar information for a particular symbol starting from a given number of bars back. If no number of bars back are specified, the request will stream real-time tick bars. The max value for bars back = 10.
+Streams tick bar information for a particular symbol starting from a given number of bars back. The max value for bars back = 10.
 
 ### Details
 
