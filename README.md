@@ -6,6 +6,8 @@ This is the source code repository for the TradeStation WebAPI Documentation.
 
 We believe that the community needs quality documentation to foster innovation. You can inspect the source code for this documentation and make improvements to it. If you want to contribute, please do so! Fork it, hack on it, and send back your changes!
 
+# Edited for completion
+
 ## Structure
 
 The source is structured into the following directories:
