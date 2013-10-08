@@ -24,6 +24,7 @@ permalink: order-detail/
 | Legs | [Leg](../leg/) | |
 | LimitPriceText | string | LimitPrice with decimal precision applied |
 | OrderID | integer | |
+| OrderConfirmId | string | Not Required, enables detecting duplicate orders.  Must be 25-char max length and unique for API Key, user, and order |
 | Originator | integer | FDCN Id of the user that placed the order |
 | Quantity | integer | Quantity of shares in the order |
 | QuantityLeft | integer | Quantity remaining to execute on order |
