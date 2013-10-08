@@ -11,4 +11,4 @@ permalink: order-confirmation/
 | Duration       | string | |
 | Account        | string | |
 | SummaryMessage | string | |
-| OrderConfirmId | string | Optional - Maximum of 25-character length & must be unique per API Key and User for 90 days |
+| OrderConfirmId | string | Unique id generated per order per API Key and User |
