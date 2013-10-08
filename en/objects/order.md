@@ -19,6 +19,7 @@ permalink: order/
 | AccountKey | string | |
 | GTDDate | string | |
 | TradeAction | string | |
+| OrderConfirmId | string | Optional - 25-char max. Must be unique id per order per API Key and User |
 | AdvancedOptions | [Advanced Options](../advanced-options) | Used for Trailing Stop orders |
 | OSOs | [Group Order](../group-order/) | |
 
