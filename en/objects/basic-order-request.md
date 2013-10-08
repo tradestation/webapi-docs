@@ -21,7 +21,8 @@ Requires order data formatted as json or xml
         "Route": "Intelligent",
         "StopPrice": "0.00",
         "Symbol": "GOOG",
-        "TradeAction": "Buy"
+        "TradeAction": "Buy",
+        "OrderConfirmId": "0044750066"
     }
 
 ### Field Defintions and Valid Inputs
@@ -78,6 +79,10 @@ Requires order data formatted as json or xml
 * OrderID - *Not used in basic order*
 
   * Valid Input: Empty String
+* OrderConfirmId - { Not required, used to detect dupliate orders }
+
+  * 25-char max length
+  * must be unique per API key, per order, per user 
 * OrderType {Required}
 
   * Valid inputs:
