@@ -117,11 +117,12 @@ permalink: order/
   * Valid string input format: MM/DD/YYYY
 * LimitPrice {Required For Limit and StopLimit Orders}
 * OrderID - *Not used in send order*
-* OrderConfirmId - { Not required, used to detect dupliate orders }
-  * 25-char max length
-  * must be unique per API key, per order, per user
 
   * Valid Input: Empty String
+* OrderConfirmId - { Not required, used to detect dupliate orders }
+
+  * 25-char max length
+  * must be unique per API key, per order, per user
 * OrderType {Required}
 
   * Valid inputs:
