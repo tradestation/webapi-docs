@@ -67,6 +67,7 @@ Example Response ([Order Detail](../../objects/order-detail) object details)
         "AdvancedOptions": "",
         "AssetType": "OP",
         "CommissionFee": 0.0000,
+        "UnbundledRouteFee": 0.0000,
         "ContractExpireDate": "8\/20\/2011 12:00:00 AM",
         "ConversionRate": 0,
         "Country": null,
