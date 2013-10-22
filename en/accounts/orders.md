@@ -30,7 +30,7 @@ List of [Order Detail](../../objects/order-detail) object
 
 ### Results Filter
 
-This endpoint accomodates the [Open Data Protocol](http://www.odata.org/developers/protocols/uri-conventions#FilterSystemQueryOption) which can be used to filter responses.
+This endpoint accomodates a subset of the [Open Data Protocol](http://www.odata.org/developers/protocols/uri-conventions#FilterSystemQueryOption) which can be used with the $filter querystring parameter to filter responses.
 
 Example orders request that filters results for symbol = AAPL
 
