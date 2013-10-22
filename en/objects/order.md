@@ -19,6 +19,7 @@ permalink: order/
 | AccountKey | string | |
 | GTDDate | string | |
 | TradeAction | string | |
+| OrderConfirmId | string | 25-char max. Must be unique id per order per API Key and User |
 | AdvancedOptions | [Advanced Options](../advanced-options) | Used for Trailing Stop orders |
 | OSOs | [Group Order](../group-order/) | |
 
@@ -36,7 +37,8 @@ permalink: order/
         "Route": "Intelligent",
         "StopPrice": "0.00",
         "Symbol": "GOOG",
-        "TradeAction": "Buy"
+        "TradeAction": "Buy",
+        "OrderConfirmId": "0044750066"
     }
 
 ### Example OSO JSON
@@ -50,6 +52,7 @@ permalink: order/
         "Duration": "DYP",
         "AccountKey": "123456",
         "TradeAction": "Buy",
+        "OrderConfirmId": "0044750066",
         "AdvancedOptions": {
             "TrailingStop": null
         },
@@ -64,6 +67,7 @@ permalink: order/
                         "Duration": "DYP",
                         "AccountKey": "123456",
                         "TradeAction": "Sell",
+                        "OrderConfirmId": "0044750067",
                         "AdvancedOptions": {
                             "TrailingStop": null
                         },
@@ -115,6 +119,10 @@ permalink: order/
 * OrderID - *Not used in send order*
 
   * Valid Input: Empty String
+* OrderConfirmId - { Not required, used to detect dupliate orders }
+
+  * 25-char max length
+  * must be unique per API key, per order, per user
 * OrderType {Required}
 
   * Valid inputs:

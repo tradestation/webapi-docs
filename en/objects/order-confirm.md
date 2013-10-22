@@ -11,3 +11,4 @@ permalink: order-confirmation/
 | Duration       | string | |
 | Account        | string | |
 | SummaryMessage | string | |
+| OrderConfirmId | string | Unique id generated per order per API Key and User |
