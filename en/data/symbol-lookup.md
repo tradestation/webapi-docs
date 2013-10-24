@@ -129,7 +129,7 @@ The user must provide either the description, root, and category=futures
 
 ### Examples
 
-Example Request:
+Example Stock Request:
 
     GET https://api.tradestation.com/v2/data/symbols/search/n=msf&c=stock HTTP/1.1
     Authorization: Bearer accesstokengoeshere
@@ -169,4 +169,67 @@ Example Response: ([Symbol](../../objects/symbol) object details)
         "Error": null,
         "Exchange": "OTC",
         "Name": "BPMSF"
+    }]
+    
+Example StockOption Request:
+
+    GET https://api.tradestation.com/v2/data/symbols/search/r=aapl&category=stockoption HTTP/1.1
+    Authorization: Bearer accesstokengoeshere
+    Accept: application/JSON
+    Content-Type: application/x-www-form-urlencoded
+    Host: api.tradestation.com
+
+Example Response: ([Symbol](../../objects/symbol) object details)
+
+    [{
+        "Category": "StockOption",
+        "Country": "United States",
+        "Currency": "USD",
+        "Description": "Apple Inc [AAPL] Oct 2013 520.000 Call",
+        "Error": null,
+        "Exchange": "OPRA",
+        "ExchangeID": 299,
+        "ExpirationDate": "\/Date(1382673600000)\/",
+        "FutureType": "None",
+        "LotSize": 0,
+        "MinMove": -3.0105,
+        "Name": "AAPL 131025C520",
+        "OptionType": "Call",
+        "PointValue": 100,
+        "Root": "AAPL",
+        "StrikePrice": 520
+    }, {
+        "Category": "StockOption",
+        "Country": "United States",
+        "Currency": "USD",
+        "Description": "Apple Inc [AAPL] Oct 2013 520.000 Put",
+        "Error": null,
+        "Exchange": "OPRA",
+        "ExchangeID": 299,
+        "ExpirationDate": "\/Date(1382673600000)\/",
+        "FutureType": "None",
+        "LotSize": 0,
+        "MinMove": -3.0105,
+        "Name": "AAPL 131025P520",
+        "OptionType": "Put",
+        "PointValue": 100,
+        "Root": "AAPL",
+        "StrikePrice": 520
+    }, {
+        "Category": "StockOption",
+        "Country": "United States",
+        "Currency": "USD",
+        "Description": "Apple Inc [AAPL] Oct 2013 530.000 Call",
+        "Error": null,
+        "Exchange": "OPRA",
+        "ExchangeID": 299,
+        "ExpirationDate": "\/Date(1382673600000)\/",
+        "FutureType": "None",
+        "LotSize": 0,
+        "MinMove": -3.0105,
+        "Name": "AAPL 131025C530",
+        "OptionType": "Call",
+        "PointValue": 100,
+        "Root": "AAPL",
+        "StrikePrice": 530
     }]
