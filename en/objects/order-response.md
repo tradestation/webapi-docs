@@ -2,7 +2,7 @@
 layout: en
 title: Order Response
 category: objects
-permalink: order/
+permalink: order-response/
 ---
 
 | Field | Type | Description |
