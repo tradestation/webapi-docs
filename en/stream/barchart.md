@@ -8,7 +8,7 @@ weight: 3
 
 ### Summary
 
-Streams barchart information for a particular symbol from a given start date, bars back, or trading days back. This resource can also return a barchart for a given time-span. For Minute charts, teh maximum date range for 1 minute bars is 40 calendar days. For 2 minute bars it's 80, 3 minute bars 120 days. Maximum date range = Minute interval * 40.
+Streams barchart information for a particular symbol from a given start date, bars back, or trading days back. This resource can also return a barchart for a given time-span. For Minute charts, the maximum date range for 1 minute bars is 40 calendar days. For 2 minute bars it's 80, 3 minute bars 120 days. Maximum date range = Minute interval * 40.
 
 * When requesting barcharts with an explicit timestamp, the `closed` bars between the timestamps will be returned.
 
