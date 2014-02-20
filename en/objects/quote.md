@@ -78,7 +78,8 @@ permalink: quote/
 | 19         | 32nds and Eighths      | .00390625 |
 | 20         | 32nds and Tenths       | .003125 |
 | 21         | 64ths and Halves       | .0078125 |
-| 22         | 6 Decimals             | .000001 |
+| 22         | 64ths and Tenths       | .0015625 |
+| 23         | 6 Decimals             | .000001 |
 
 ### Japanese Equities Specific Quote Properties
 
