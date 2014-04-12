@@ -39,5 +39,8 @@
 			ga('create', 'UA-2089198-28', 'github.io');
 			ga('send', 'pageview');
 		</script>
+                {% for js in page.customjs %}
+                <script type="text/javascript" src="{{ js }}"></script>
+                {% endfor %}
 	</body>
 </html>
