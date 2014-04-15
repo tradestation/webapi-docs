@@ -3,7 +3,7 @@ layout: en
 title: Response Formats
 category: getting-started
 permalink: response-formats/
-weight: 3
+weight: 4
 ---
 
 The TradeStation WebAPI currently supports JSON and XML request/response body formats for all non-streaming methods. The streaming services use JSON exclusively. JSON is the preferred format because it is lighter weight and generally faster to parse.
