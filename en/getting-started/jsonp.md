@@ -3,7 +3,7 @@ layout: en
 title: JSONP Overview
 category: getting-started
 permalink: jsonp-overview/
-weight: 5
+weight: 6
 ---
 
 ### Errors

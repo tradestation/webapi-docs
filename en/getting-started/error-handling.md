@@ -3,7 +3,7 @@ layout: en
 title: Error Handling
 category: getting-started
 permalink: error-handling/
-weight: 4
+weight: 5
 ---
 
 | Service       | HTTP Code     | Error                       | Message |
