@@ -129,7 +129,7 @@ Upon successful authentication; The user agent(browser) will be redirected to th
 **Example Redirect**
 
     HTTP 301 Redirect
-    RedirectURL = https://exampleclientapp.com/authcode.aspx?auth_code=AFF345CD12B
+    RedirectURL = https://exampleclientapp.com/authcode.aspx?code=AFF345CD12B
 
 note:
 
