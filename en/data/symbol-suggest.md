@@ -22,7 +22,7 @@ Returns a list of symbol objects that have a symbol name or a description that c
   * Culture
 
     * ja-jp
-* Authentication: Currently only available to TradeStation. Requires a Client Access Token at a minimum
+* Authentication: Requires a valid access token
 
 ### Returns
 
