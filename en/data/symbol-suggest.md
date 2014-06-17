@@ -30,7 +30,7 @@ A collection of [Symbol](../../objects/symbol) objects
 
 ### Results Filter
 
-This endpoint accomodates a subset of the [Open Data Protocol](http://www.odata.org/developers/protocols/uri-conventions#FilterSystemQueryOption) which can be used with the $top and $filter querystring parameters to filter responses.
+This endpoint accomodates a subset of the [Open Data Protocol](http://docs.oasis-open.org/odata/odata/v4.0/os/part2-url-conventions/odata-v4.0-os-part2-url-conventions.html#_Toc372793792) which can be used with the $top and $filter querystring parameters to filter responses.
 
 Example symbols suggest request that filters result set to the top 20 where Country = United States and Category = Stock.
 
