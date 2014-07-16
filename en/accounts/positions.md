@@ -40,7 +40,7 @@ Example positions request that filters results in symbol = AAPL
 
 Example Request:
 
-    GET https://api.tradestation.com/accounts/114275/positions HTTP/1.1
+    GET https://api.tradestation.com/v2/accounts/114275/positions HTTP/1.1
     Authorization: Bearer b0R4MHZ5WjhVUVBzQW5w
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded
