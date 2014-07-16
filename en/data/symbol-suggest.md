@@ -46,7 +46,7 @@ Example symbols suggest request that filters result set to the top 20 where Coun
 Request:
 
     GET https://api.tradestation.com/v2/data/symbols/suggest/msf HTTP/1.1
-    Authorization: T1dEaXUwTGgxZEw
+    Authorization: Bearer T1dEaXUwTGgxZEw
     Host: api.tradestation.com
     Content-Length: 0
     Content-Type: application/json
