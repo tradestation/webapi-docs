@@ -11,6 +11,13 @@ weight: 3
 Streams barchart information for a particular symbol from a given start date, bars back, or trading days back. This resource can also return a barchart for a given time-span. For Minute charts, the maximum date range for 1 minute bars is 40 calendar days. For 2 minute bars it's 80, 3 minute bars 120 days. Maximum date range = Minute interval * 40.
 
 * When requesting barcharts with an explicit timestamp, the `closed` bars between the timestamps will be returned.
+* When requesting a stream of daily bars, at least 1 closed daily bar must be included in the range, otherwise a NO DATA AVAILABLE response will be returned.
+
+__Example:__
+*If current day = Saturday 9/6/2014
+*When requesting  /v2/stream/barchart/MSFT/1/daily/09-06-2014
+*Then response = NO DATA AVAILABLE
+_There is no daily bar that currently exists in the range with start date = 09-06-2014 since MSFT does not trade on Saturday, out of session._
 
 ### Details
 
