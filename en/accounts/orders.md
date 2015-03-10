@@ -30,7 +30,7 @@ List of [Order Detail](../../objects/order-detail) object
 
 ### Results Filter
 
-This endpoint accomodates a subset of the [Open Data Protocol](http://www.odata.org/developers/protocols/uri-conventions#FilterSystemQueryOption) which can be used with the $filter querystring parameter to filter responses.
+This endpoint accommodates a subset of the [Open Data Protocol](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398094) which can be used with the $filter querystring parameter to filter responses.
 
 Example orders request that filters results for symbol = AAPL
 
@@ -50,7 +50,7 @@ Example Request:
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
-    
+
 Example Response ([Order Detail](../../objects/order-detail) object details)
 
     HTTP/1.1 200 OK
@@ -61,7 +61,7 @@ Example Response ([Order Detail](../../objects/order-detail) object details)
     X-AspNet-Version: 4.0.30319
     X-Powered-By: ASP.NET
     Date: Wed, 05 Jan 2011 18:11:17 GMT
-    
+
     [{
         "AccountID": "QA",
         "AdvancedOptions": "",

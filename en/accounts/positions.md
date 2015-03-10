@@ -25,7 +25,7 @@ Requesting position information for a particular account
 
 ### Retults Filter
 
-This endpoint accomodates a subset of the [Open Data Protocol](http://www.odata.org/developers/protocols/uri-conventions#FilterSystemQueryOption) which can be used with the $filter querystring parameter to filter responses.
+This endpoint accomodates a subset of the [Open Data Protocol](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398094) which can be used with the $filter querystring parameter to filter responses.
 
 Example positions request that filters results in symbol = AAPL
 
@@ -56,7 +56,7 @@ Example Response ([Position](../../objects/position) object details):
     X-AspNet-Version: 4.0.30319
     X-Powered-By: ASP.NET
     Date: Wed, 05 Jan 2011 18:18:32 GMT
-    
+
     [{
         "AccountID": "987654 MyName",
         "AskPrice": 36.96,
