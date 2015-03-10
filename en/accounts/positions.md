@@ -23,9 +23,9 @@ Requesting position information for a particular account
 
 [Position](../../objects/position) object
 
-### Retults Filter
+### Results Filter
 
-This endpoint accomodates a subset of the [Open Data Protocol](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398094) which can be used with the $filter querystring parameter to filter responses.
+This endpoint accommodates a subset of the [Open Data Protocol](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398094) which can be used with the $filter querystring parameter to filter responses.
 
 Example positions request that filters results in symbol = AAPL
 
