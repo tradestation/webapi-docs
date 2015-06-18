@@ -34,7 +34,6 @@ Resource for updating an open order. You cannot update an order that has been fi
     * OrderType
     * Quantity
     * Price field(s) used in original order
-    * Trailing Stop parameters to change
 
 *JSONP*
 
