@@ -30,7 +30,7 @@ Request symbol information for a given symbol
 
 Example Request:
 
-    GET https://api.tradestation.com/data/symbol/msft HTTP/1.1
+    GET https://api.tradestation.com/v2/data/symbol/msft HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/JSON
     Host: api.tradestation.com
