@@ -19,7 +19,7 @@ Resource for placing orders
   * none
 * Request Body:
 
-  * [Order](../../objects/order) object serialized in JSON or XML
+  * [Order](../../objects/order) object serialized in JSON or XML. The Order Symbol must be UPPERCASE.
 
 *JSONP*
 
