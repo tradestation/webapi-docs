@@ -16,7 +16,7 @@ Requesting order information for a particular account
 * To request orders that are currently open and/or were created or executed today
   * Path `/accounts/{accountkey}/orders`
   * Path `/accounts/{accountkey1,accountkey2,etc}/orders`
-* To request orders that were made since a given date, max of 30 days back.
+* To request orders that were made since a given date, max of 14 days back.
   * Path `/accounts/{accountkey}/orders?since={date}`
   * Path `/accounts/{accountkey1,accountkey2,etc}/orders?since={date}`
 * URI Parameters:
