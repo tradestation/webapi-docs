@@ -2,6 +2,10 @@
 
 This is the source code repository for the TradeStation WebAPI Documentation.
 
+*DEPRECATION WARNING*: This documentation is now obsolete and kept only for 
+historical reference. Instead, please use the new OpenAPI Spec (Swagger) located
+at: http://tradestation.github.io/api-docs 
+
 ## Introduction
 
 We believe that the community needs quality documentation to foster innovation. You can inspect the source code for this documentation and make improvements to it. If you want to contribute, please do so! Fork it, hack on it, and send back your changes!
