@@ -1,6 +1,3 @@
 baseurl: /webapi-docs
 relative_permalinks: true
 encoding: utf-8
-
-gems:
-  - jekyll-redirect-from
