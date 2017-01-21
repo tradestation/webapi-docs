@@ -1,2 +1,4 @@
 baseurl: /webapi-docs
 encoding: utf-8
+gems:
+  - jekyll-redirect-from
