@@ -1,0 +1,141 @@
+HOST: https://sim.api.tradestation.com/v2
+
+--- WebAPI Documentation ---
+---
+The WebAPI is a collection of RESTful web services for interacting with TradeStation. These services accept and/or return object data bia standard HTTP requests.
+
+All requests are made via HTTPS URIs that represent objects as a hierarchy of resources and/or actions. The data object format is either JSON or XML and is determined by the request's accept header. Security is based on the OAuth 2.0 spec and all requests require a user access token be included.
+
+We are currently on Version 2 of the WebAPI - baseurl = [https://api.tradestation.com/v2](https://api.tradestation.com/v2)
+
+Here is a simple example of requesting a list of accounts for a particular user:
+
+```
+--REQUEST--
+GET https://api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
+Authorization: QUNCSmI
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+Host: api.tradestation.com
+
+--RESPONSE--
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Length: 218
+Content-Type: application/json; charset=utf-8
+Server: Microsoft-IIS/7.5
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Fri, 18 Mar 2011 18:21:45 GMT
+
+[{
+    "Key": 114275,
+    "Name": "543061 QA",
+    "Type": "C",
+    "TypeDescription": "Cash"
+}, {
+    "Key": 114276,
+    "Name": "5430611 QA",
+    "Type": "M",
+    "TypeDescription": "Margin"
+}, {
+    "Key": 114277,
+    "Name": "5430612 QA",
+    "Type": "F",
+    "TypeDescription": "Futures"
+}]
+```
+
+Other Notes:
+
+* URLs are NOT case sensitive
+* all data is assumed to be UTF8 encoded
+
+---
+--
+Security Overview
+
+Tradestation WebAPI authorization is based on the OAuth 2.0 specification
+
+All WebAPI clients require an Access Token in order to access protected resources. The application flow for obtaining a token will vary from application to application but all tokens are issued via the `/security/authorize` service which grants tokens based on "Grant Types". Currently, WebAPI supports OAuth 2.0's Authorization Code, Client Credentials, and Password grant types.
+
+The WebAPI issues Access Tokens of type Bearer.
+
+```
+Bearer Token
+    A security token with the property that any party in possession of
+    the token (a "bearer") can use the token in any way that any other
+    party in possession of it can. Using a bearer token does not
+    require a bearer to prove possession of crptographic key material
+    (proof-of-possession).
+```
+
+Notes:
+
+* Users authorizing an API client must have their Multi-Factor questions and answers defined, otherwise Authorization will fail.
+* The Password grant type is disabled since it requires the end-user to provide login credentials to the API Client directly.
+* All requests require HTTPS. Some examples may be from a test environment and use HTTP for demonstration only.
+
+--
+--
+Accounts Service
+
+The Accounts Service provides the consumer with resources to access balance, positions, and orders for a particular account.
+
+Service URI: `/accounts/{accountkey}/{method}`
+
+Resources:
+
+* Balances | Retrieves balance information for a given account
+* Positions | Retrieves the positions for a given account
+* Orders | Retrieves order information for a given account
+
+--
+-- Balance Resources --
+Requesting balance information for a particular account
+
+GET /accounts/{accountkey}/balances{?oauth_token}
+> Accept: application/json
+< 200
+< Content-Type: application/json
+[
+{
+    "__type":"EquityAccount:#TradeStation.Web.Services.DataContracts",
+    "Alias":"",
+    "BODEquity":50000000.0000,
+    "BODNetCash":50000000.0000,
+    "ClosedPositions":[],
+    "DisplayName":"2213568 QA",
+    "Key":243557,
+    "MarketValue":0,
+    "Name":"2213568 QA",
+    "RealTimeAccountBalance":50000000.0000,
+    "RealTimeBuyingPower":50000000.000000,
+    "RealTimeEquity":50000000.000000,
+    "RealTimeRealizedProfitLoss":0.0000,
+    "RealTimeUnrealizedGains":0.000000,
+    "RealTimeUnrealizedProfitLoss":0,
+    "Status":"A",
+    "StatusDescription":"Active",
+    "Type":"C",
+    "TypeDescription":"Cash",
+    "UnclearedDeposit":0.0000,
+    "BODAccountBalance":50000000.0000,
+    "BODDayTradingMarginableEquitiesBuyingPower":50000000.0000,
+    "BODOptionBuyingPower":50000000.0000,
+    "BODOptionValue":0.0000,
+    "BODOvernightBuyingPower":50000000.0000,
+    "CanDayTrade":true,
+    "Commission":0,
+    "DayTrades":0,
+    "DayTradingQualified":true,
+    "OptionApprovalLevel":5,
+    "PatternDayTrader":false,
+    "RealTimeCostOfPositions":0.0000,
+    "RealTimeDayTradingMarginableEquitiesBuyingPower":50000000.000000,
+    "RealTimeOptionBuyingPower":50000000.0000,
+    "RealTimeOptionValue":0.0000000000,
+    "RealTimeOvernightBuyingPower":50000000.000000,
+    "UnsettledFund":0.0000
+}
+]
